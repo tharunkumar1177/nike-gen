@@ -77,12 +77,30 @@ jobs:
           key: hf-${{ inputs.topic }}-${{ hashFiles(format('{0}/audio/model.json', inputs.topic)) }}
 
       - name: Check
+        id: check
         if: steps.detect.outputs.framework == 'remotion'
         working-directory: ${{ inputs.topic }}
         run: |
           npm run typecheck
           npm run lint
-          npm run format:check
+          if ! npm run format:check; then
+            npx prettier --write . > /dev/null
+            git diff > "$RUNNER_TEMP/format.patch"
+            echo "format_failed=true" >> "$GITHUB_OUTPUT"
+            exit 1
+          fi
+
+      - name: Upload formatting patch
+        if: failure() && steps.check.outputs.format_failed == 'true'
+        uses: actions/upload-artifact@v5
+        with:
+          name: ${{ inputs.topic }}-format-patch
+          path: ${{ runner.temp }}/format.patch
+
+      - name: Install browser
+        if: steps.detect.outputs.framework == 'remotion'
+        working-directory: ${{ inputs.topic }}
+        run: npx remotion browser ensure
 
       - name: Build
         if: steps.detect.outputs.framework == 'remotion'

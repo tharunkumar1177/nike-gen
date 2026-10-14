@@ -3,7 +3,7 @@
 ## Phase 3 — Content (per CURRICULUM.md)
 
 ### 3.1 Foundations (20 lessons, built first)
-- [ ] Lesson 1 — Matter, states, phase diagrams (`matter-states-phase-diagrams/`, Remotion, in progress)
+- [x] Lesson 1 — Matter, states, phase diagrams (`matter-states-phase-diagrams/`, Remotion, 180 s narrated)
 - [ ] Lesson 2 — Atomic structure: nucleus, isotopes, mass spectra
 - [ ] Lesson 3 — Quantum model: orbitals s/p/d/f, shapes, nodes
 - [ ] Lesson 4 — Electron configuration, Aufbau, Hund, Pauli
