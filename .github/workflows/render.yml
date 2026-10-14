@@ -1,0 +1,97 @@
+name: Render
+
+on:
+  workflow_dispatch:
+    inputs:
+      topic:
+        description: Topic folder to render
+        required: true
+        type: choice
+        options:
+          - matter-states-phase-diagrams
+
+permissions:
+  contents: read
+
+concurrency:
+  group: render-${{ inputs.topic }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  render:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    env:
+      TOPIC: ${{ inputs.topic }}
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Detect framework
+        id: detect
+        run: |
+          if [ ! -d "$TOPIC" ]; then
+            echo "::error::Topic folder '$TOPIC' does not exist on ${{ github.ref_name }}."
+            exit 1
+          fi
+          if [ -f "$TOPIC/package.json" ] && grep -q '"remotion"' "$TOPIC/package.json"; then
+            echo "framework=remotion" >> "$GITHUB_OUTPUT"
+          else
+            echo "::error::No supported framework found in '$TOPIC'."
+            exit 1
+          fi
+          if [ -f "$TOPIC/package-lock.json" ]; then
+            echo "lockfile=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "lockfile=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Set up Node
+        if: steps.detect.outputs.framework == 'remotion'
+        uses: actions/setup-node@v5
+        with:
+          node-version: 24
+
+      - name: Generate lockfile
+        if: steps.detect.outputs.framework == 'remotion' && steps.detect.outputs.lockfile == 'false'
+        working-directory: ${{ inputs.topic }}
+        run: npm install --package-lock-only --no-audit --no-fund
+
+      - name: Upload generated lockfile
+        if: steps.detect.outputs.framework == 'remotion' && steps.detect.outputs.lockfile == 'false'
+        uses: actions/upload-artifact@v5
+        with:
+          name: ${{ inputs.topic }}-lockfile
+          path: ${{ inputs.topic }}/package-lock.json
+          if-no-files-found: error
+
+      - name: Install dependencies
+        if: steps.detect.outputs.framework == 'remotion'
+        working-directory: ${{ inputs.topic }}
+        run: npm ci --no-audit --no-fund
+
+      - name: Cache TTS model
+        if: steps.detect.outputs.framework == 'remotion'
+        uses: actions/cache@v4
+        with:
+          path: ${{ inputs.topic }}/.cache/huggingface
+          key: hf-${{ inputs.topic }}-${{ hashFiles(format('{0}/audio/model.json', inputs.topic)) }}
+
+      - name: Check
+        if: steps.detect.outputs.framework == 'remotion'
+        working-directory: ${{ inputs.topic }}
+        run: |
+          npm run typecheck
+          npm run lint
+          npm run format:check
+
+      - name: Build
+        if: steps.detect.outputs.framework == 'remotion'
+        working-directory: ${{ inputs.topic }}
+        run: npm run build
+
+      - name: Upload render
+        uses: actions/upload-artifact@v5
+        with:
+          name: ${{ inputs.topic }}
+          path: ${{ inputs.topic }}/out/
+          if-no-files-found: error
