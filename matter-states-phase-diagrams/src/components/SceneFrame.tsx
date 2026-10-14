@@ -1,10 +1,5 @@
 import { createContext, useContext, type ReactNode } from "react";
-import {
-  AbsoluteFill,
-  interpolate,
-  Sequence,
-  useCurrentFrame,
-} from "remotion";
+import { AbsoluteFill, interpolate, Sequence, useCurrentFrame } from "remotion";
 import { CROSSFADE, VIDEO } from "../theme";
 
 const LeadContext = createContext(0);

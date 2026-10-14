@@ -11,12 +11,31 @@ const VIEWPORT_SCALE = 0.6;
 const LABEL_OFFSET = 30;
 const DRAW_FRAMES = 20;
 
-const VIEWPORTS: { kind: StateKind; label: string; at: Point; labelAt: Point }[] =
-  [
-    { kind: "gas", label: "Gas", at: { x: 960, y: 240 }, labelAt: { x: 1130, y: 240 } },
-    { kind: "solid", label: "Solid", at: { x: 660, y: 760 }, labelAt: { x: 660, y: 920 } },
-    { kind: "liquid", label: "Liquid", at: { x: 1260, y: 760 }, labelAt: { x: 1260, y: 920 } },
-  ];
+const VIEWPORTS: {
+  kind: StateKind;
+  label: string;
+  at: Point;
+  labelAt: Point;
+}[] = [
+  {
+    kind: "gas",
+    label: "Gas",
+    at: { x: 960, y: 240 },
+    labelAt: { x: 1130, y: 240 },
+  },
+  {
+    kind: "solid",
+    label: "Solid",
+    at: { x: 660, y: 760 },
+    labelAt: { x: 660, y: 920 },
+  },
+  {
+    kind: "liquid",
+    label: "Liquid",
+    at: { x: 1260, y: 760 },
+    labelAt: { x: 1260, y: 920 },
+  },
+];
 
 type Change = {
   label: string;
@@ -27,12 +46,48 @@ type Change = {
 };
 
 const CHANGES: Change[] = [
-  { label: "Melting", from: { x: 780, y: 730 }, to: { x: 1140, y: 730 }, endothermic: true, start: 150 },
-  { label: "Vaporization", from: { x: 1226, y: 641 }, to: { x: 1046, y: 329 }, endothermic: true, start: 162 },
-  { label: "Sublimation", from: { x: 694, y: 641 }, to: { x: 874, y: 329 }, endothermic: true, start: 186 },
-  { label: "Freezing", from: { x: 1140, y: 790 }, to: { x: 780, y: 790 }, endothermic: false, start: 282 },
-  { label: "Condensation", from: { x: 994, y: 359 }, to: { x: 1174, y: 671 }, endothermic: false, start: 294 },
-  { label: "Deposition", from: { x: 926, y: 359 }, to: { x: 746, y: 671 }, endothermic: false, start: 318 },
+  {
+    label: "Melting",
+    from: { x: 780, y: 730 },
+    to: { x: 1140, y: 730 },
+    endothermic: true,
+    start: 150,
+  },
+  {
+    label: "Vaporization",
+    from: { x: 1226, y: 641 },
+    to: { x: 1046, y: 329 },
+    endothermic: true,
+    start: 162,
+  },
+  {
+    label: "Sublimation",
+    from: { x: 694, y: 641 },
+    to: { x: 874, y: 329 },
+    endothermic: true,
+    start: 186,
+  },
+  {
+    label: "Freezing",
+    from: { x: 1140, y: 790 },
+    to: { x: 780, y: 790 },
+    endothermic: false,
+    start: 282,
+  },
+  {
+    label: "Condensation",
+    from: { x: 994, y: 359 },
+    to: { x: 1174, y: 671 },
+    endothermic: false,
+    start: 294,
+  },
+  {
+    label: "Deposition",
+    from: { x: 926, y: 359 },
+    to: { x: 746, y: 671 },
+    endothermic: false,
+    start: 318,
+  },
 ];
 
 const PARTNER: Record<string, string> = {
@@ -54,7 +109,9 @@ function midpoint(change: Change): Point {
 /** Label sits beside its arrow, rotated along it, on the side away from the opposite process. */
 function labelPlacement(change: Change) {
   const mid = midpoint(change);
-  const partner = CHANGES.find((other) => other.label === PARTNER[change.label]);
+  const partner = CHANGES.find(
+    (other) => other.label === PARTNER[change.label],
+  );
   const other = partner ? midpoint(partner) : mid;
   const dx = change.to.x - change.from.x;
   const dy = change.to.y - change.from.y;
@@ -98,12 +155,23 @@ export function ChangesScene() {
           ))}
         </g>
         {CHANGES.map((change) => {
-          const drawn = progress(frame, change.start, change.start + DRAW_FRAMES);
-          const color = change.endothermic ? colors.endothermic : colors.exothermic;
+          const drawn = progress(
+            frame,
+            change.start,
+            change.start + DRAW_FRAMES,
+          );
+          const color = change.endothermic
+            ? colors.endothermic
+            : colors.exothermic;
           const place = labelPlacement(change);
           return (
             <g key={change.label}>
-              <Arrow from={change.from} to={change.to} color={color} drawn={drawn} />
+              <Arrow
+                from={change.from}
+                to={change.to}
+                color={color}
+                drawn={drawn}
+              />
               <text
                 x={place.x}
                 y={place.y}
@@ -161,8 +229,23 @@ function Legend({ opacity }: { opacity: number }) {
       }}
     >
       {rows.map((row) => (
-        <div key={row.text} style={{ display: "flex", alignItems: "center", gap: 16, color: row.color }}>
-          <div style={{ width: 40, height: 8, borderRadius: 4, background: row.color }} />
+        <div
+          key={row.text}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: 16,
+            color: row.color,
+          }}
+        >
+          <div
+            style={{
+              width: 40,
+              height: 8,
+              borderRadius: 4,
+              background: row.color,
+            }}
+          />
           {row.text}
         </div>
       ))}

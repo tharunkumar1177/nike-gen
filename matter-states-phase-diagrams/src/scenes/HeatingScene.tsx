@@ -26,8 +26,22 @@ const VERTICES: [number, number][] = [
 const POINTS = VERTICES.map(([heat, temp]) => ({ x: toX(heat), y: toY(temp) }));
 
 const PLATEAUS = [
-  { from: 1, to: 2, start: 234, temp: 0, label: "Solid + Liquid", labelAt: { x: 492, y: 650 } },
-  { from: 3, to: 4, start: 270, temp: 100, label: "Liquid + Gas", labelAt: { x: 1248, y: 350 } },
+  {
+    from: 1,
+    to: 2,
+    start: 234,
+    temp: 0,
+    label: "Solid + Liquid",
+    labelAt: { x: 492, y: 650 },
+  },
+  {
+    from: 3,
+    to: 4,
+    start: 270,
+    temp: 100,
+    label: "Liquid + Gas",
+    labelAt: { x: 1248, y: 350 },
+  },
 ];
 
 const STATE_LABELS = [
@@ -59,7 +73,12 @@ export function HeatingScene() {
   return (
     <AbsoluteFill>
       <svg width={1920} height={1080} style={{ position: "absolute" }}>
-        <g opacity={frameIn} stroke={colors.axis} strokeWidth={4} strokeLinecap="round">
+        <g
+          opacity={frameIn}
+          stroke={colors.axis}
+          strokeWidth={4}
+          strokeLinecap="round"
+        >
           <line x1={BOX.left} y1={BOX.bottom} x2={BOX.right} y2={BOX.bottom} />
           <line x1={BOX.left} y1={BOX.bottom} x2={BOX.left} y2={BOX.top} />
         </g>
@@ -143,7 +162,14 @@ export function HeatingScene() {
         Temperature (°C)
       </div>
       {STATE_LABELS.map((label) => (
-        <Text key={label.text} x={label.at.x} y={label.at.y} size={32} weight={500} opacity={statesIn}>
+        <Text
+          key={label.text}
+          x={label.at.x}
+          y={label.at.y}
+          size={32}
+          weight={500}
+          opacity={statesIn}
+        >
           {label.text}
         </Text>
       ))}

@@ -11,7 +11,12 @@ export type Substance = {
   solidGas: Curve;
   solidLiquid: Curve;
   liquidGas: Curve;
-  regions: { solid: string; liquid: string; gas: string; supercritical: string };
+  regions: {
+    solid: string;
+    liquid: string;
+    gas: string;
+    supercritical: string;
+  };
   labels: { solid: Point; liquid: Point; gas: Point };
 };
 

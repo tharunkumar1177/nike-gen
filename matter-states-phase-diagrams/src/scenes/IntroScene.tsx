@@ -59,12 +59,7 @@ export function IntroScene() {
       >
         Matter
       </Text>
-      <Text
-        x={960}
-        y={440}
-        size={type.body}
-        opacity={progress(frame, 90, 120)}
-      >
+      <Text x={960} y={440} size={type.body} opacity={progress(frame, 90, 120)}>
         Anything with mass that occupies space.
       </Text>
       <svg width={1920} height={1080} style={{ position: "absolute" }}>

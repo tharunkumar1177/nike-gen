@@ -100,7 +100,8 @@ function padTrack(rate, length) {
   for (let i = 0; i < length; i += 1) {
     const rise = Math.min(1, i / fadeIn);
     const fall = Math.min(1, (length - 1 - i) / fadeOut);
-    pad[i] *= gain * Math.sin((Math.PI / 2) * rise) * Math.sin((Math.PI / 2) * fall);
+    pad[i] *=
+      gain * Math.sin((Math.PI / 2) * rise) * Math.sin((Math.PI / 2) * fall);
   }
   return pad;
 }

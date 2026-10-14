@@ -69,16 +69,39 @@ export function DiagramScene() {
             fill={colors.accent}
             opacity={0.15 * progress(s6, 570, 600) * anatomyLabels}
           />
-          <Dot at={WATER_POINTS.melting} shown={pop(frame, fps, 510) * anatomyLabels} />
-          <Dot at={WATER_POINTS.boiling} shown={pop(frame, fps, 510)} scale={water.scale} />
+          <Dot
+            at={WATER_POINTS.melting}
+            shown={pop(frame, fps, 510) * anatomyLabels}
+          />
+          <Dot
+            at={WATER_POINTS.boiling}
+            shown={pop(frame, fps, 510)}
+            scale={water.scale}
+          />
           <Dot at={WATER.triple} shown={pop(s6, fps, 60)} scale={water.scale} />
-          <Dot at={WATER.critical} shown={pop(s6, fps, 240)} scale={water.scale} />
+          <Dot
+            at={WATER.critical}
+            shown={pop(s6, fps, 240)}
+            scale={water.scale}
+          />
           <g opacity={anatomyLabels} fontFamily={FONT}>
-            <RegionLabels opacity={pop(frame, fps, 180)} labels={WATER.labels} />
-            <SvgLabel at={{ x: 320, y: WATER.atmY - 20 }} color={colors.axis} opacity={progress(frame, 420, 450)}>
+            <RegionLabels
+              opacity={pop(frame, fps, 180)}
+              labels={WATER.labels}
+            />
+            <SvgLabel
+              at={{ x: 320, y: WATER.atmY - 20 }}
+              color={colors.axis}
+              opacity={progress(frame, 420, 450)}
+            >
               1 atm
             </SvgLabel>
-            <SvgLabel at={{ x: 640, y: 510 }} anchor="end" color={colors.accent} opacity={progress(frame, 510, 540, Easing.ease)}>
+            <SvgLabel
+              at={{ x: 640, y: 510 }}
+              anchor="end"
+              color={colors.accent}
+              opacity={progress(frame, 510, 540, Easing.ease)}
+            >
               Normal melting point
             </SvgLabel>
             <SvgLabel
@@ -88,10 +111,19 @@ export function DiagramScene() {
             >
               Normal boiling point
             </SvgLabel>
-            <SvgLabel at={{ x: 720, y: 726 }} color={colors.accent} opacity={progress(s6, 90, 120)}>
+            <SvgLabel
+              at={{ x: 720, y: 726 }}
+              color={colors.accent}
+              opacity={progress(s6, 90, 120)}
+            >
               Triple point
             </SvgLabel>
-            <SvgLabel at={{ x: 1330, y: 310 }} anchor="end" color={colors.accent} opacity={progress(s6, 270, 300)}>
+            <SvgLabel
+              at={{ x: 1330, y: 310 }}
+              anchor="end"
+              color={colors.accent}
+              opacity={progress(s6, 270, 300)}
+            >
               Critical point
             </SvgLabel>
             <SvgLabel
@@ -291,34 +323,66 @@ function CompareLabels({ frame }: { frame: number }) {
         ["Gas", labels.gas, colors.gas],
       ] as const
     ).map(([text, at, color]) => (
-      <ScreenLabel key={text} at={project(at, t)} anchor="middle" color={color} opacity={opacity}>
+      <ScreenLabel
+        key={text}
+        at={project(at, t)}
+        anchor="middle"
+        color={color}
+        opacity={opacity}
+      >
         {text}
       </ScreenLabel>
     ));
 
   return (
     <AbsoluteFill>
-      <Text x={510} y={270} size={type.body} weight={700} opacity={progress(frame, 15, 45)}>
+      <Text
+        x={510}
+        y={270}
+        size={type.body}
+        weight={700}
+        opacity={progress(frame, 15, 45)}
+      >
         Water
       </Text>
-      <Text x={1410} y={270} size={type.body} weight={700} opacity={progress(frame, 150, 180)}>
+      <Text
+        x={1410}
+        y={270}
+        size={type.body}
+        weight={700}
+        opacity={progress(frame, 150, 180)}
+      >
         Carbon dioxide (CO<sub>2</sub>)
       </Text>
 
       {regions(
-        { solid: { x: 420, y: 700 }, liquid: { x: 850, y: 420 }, gas: { x: 900, y: 800 } },
+        {
+          solid: { x: 420, y: 700 },
+          liquid: { x: 850, y: 420 },
+          gas: { x: 900, y: 800 },
+        },
         water,
         waterIn,
       )}
-      <ScreenLabel at={project({ x: 320, y: WATER.atmY - 34 }, water)} color={colors.axis} opacity={waterIn}>
+      <ScreenLabel
+        at={project({ x: 320, y: WATER.atmY - 34 }, water)}
+        color={colors.axis}
+        opacity={waterIn}
+      >
         1 atm
       </ScreenLabel>
-      <ScreenLabel at={{ x: waterCritical.x + 20, y: waterCritical.y + 54 }} opacity={waterIn}>
+      <ScreenLabel
+        at={{ x: waterCritical.x + 20, y: waterCritical.y + 54 }}
+        opacity={waterIn}
+      >
         Critical point
         <br />
         374 °C, 218 atm
       </ScreenLabel>
-      <ScreenLabel at={{ x: waterBoiling.x + 16, y: waterBoiling.y + 45 }} opacity={waterIn}>
+      <ScreenLabel
+        at={{ x: waterBoiling.x + 16, y: waterBoiling.y + 45 }}
+        opacity={waterIn}
+      >
         Normal boiling point
         <br />
         100 °C
@@ -334,15 +398,27 @@ function CompareLabels({ frame }: { frame: number }) {
       </ScreenLabel>
 
       {regions(CO2.labels, co2, co2Regions)}
-      <ScreenLabel at={{ x: 1440, y: 454 }} anchor="end" color={colors.accent} rise={10} opacity={co2Regions}>
+      <ScreenLabel
+        at={{ x: 1440, y: 454 }}
+        anchor="end"
+        color={colors.accent}
+        rise={10}
+        opacity={co2Regions}
+      >
         positive slope
       </ScreenLabel>
-      <ScreenLabel at={{ x: co2Triple.x + 15, y: co2Triple.y + 32 }} opacity={co2Points}>
+      <ScreenLabel
+        at={{ x: co2Triple.x + 15, y: co2Triple.y + 32 }}
+        opacity={co2Points}
+      >
         Triple point
         <br />
         −56.6 °C, 5.1 atm
       </ScreenLabel>
-      <ScreenLabel at={{ x: co2Critical.x - 159, y: co2Critical.y + 52 }} opacity={co2Points}>
+      <ScreenLabel
+        at={{ x: co2Critical.x - 159, y: co2Critical.y + 52 }}
+        opacity={co2Points}
+      >
         Critical point
         <br />
         31 °C, 73 atm

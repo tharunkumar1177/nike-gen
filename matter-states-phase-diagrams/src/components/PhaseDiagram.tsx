@@ -98,8 +98,18 @@ export function PhaseDiagram({ substance, progress: p, scale = 1 }: Props) {
           />
         </g>
       ) : null}
-      <g opacity={p.axes} stroke={colors.axis} strokeWidth={4} strokeLinecap="round">
-        <line x1={PLOT.left} y1={PLOT.bottom} x2={PLOT.right} y2={PLOT.bottom} />
+      <g
+        opacity={p.axes}
+        stroke={colors.axis}
+        strokeWidth={4}
+        strokeLinecap="round"
+      >
+        <line
+          x1={PLOT.left}
+          y1={PLOT.bottom}
+          x2={PLOT.right}
+          y2={PLOT.bottom}
+        />
         <line x1={PLOT.left} y1={PLOT.bottom} x2={PLOT.left} y2={PLOT.top} />
       </g>
       {[substance.solidGas, substance.solidLiquid, substance.liquidGas].map(

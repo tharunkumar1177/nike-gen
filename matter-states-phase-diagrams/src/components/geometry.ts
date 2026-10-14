@@ -27,8 +27,14 @@ export function pointOn(curve: Curve, t: number): Point {
       };
     case "quad":
       return {
-        x: u * u * curve.from.x + 2 * u * t * curve.control.x + t * t * curve.to.x,
-        y: u * u * curve.from.y + 2 * u * t * curve.control.y + t * t * curve.to.y,
+        x:
+          u * u * curve.from.x +
+          2 * u * t * curve.control.x +
+          t * t * curve.to.x,
+        y:
+          u * u * curve.from.y +
+          2 * u * t * curve.control.y +
+          t * t * curve.to.y,
       };
     case "cubic":
       return {
