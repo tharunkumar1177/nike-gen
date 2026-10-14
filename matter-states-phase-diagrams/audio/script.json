@@ -1,0 +1,62 @@
+{
+  "fps": 30,
+  "durationInFrames": 5400,
+  "voice": {
+    "id": "af_heart",
+    "speed": 1,
+    "peakDbfs": -3
+  },
+  "pad": {
+    "chordHz": [130.81, 196, 246.94, 329.63],
+    "peakDbfs": -24,
+    "duckDb": -8,
+    "duckAttackMs": 120,
+    "duckReleaseMs": 600,
+    "fadeInFrames": 60,
+    "fadeOutFrames": 120
+  },
+  "lines": [
+    {
+      "scene": "intro-matter",
+      "text": "Everything around us is matter: anything with mass that occupies space. Matter includes pure substances with a constant composition, and mixtures, which are physical combinations of two or more pure substances.",
+      "startFrame": 30,
+      "endByFrame": 570
+    },
+    {
+      "scene": "states-particles",
+      "text": "Matter exists in three states. In a solid, intermolecular forces dominate. Particles vibrate in fixed positions, giving definite shape and volume. In a liquid, particles slide past each other, taking the container's shape. In a gas, particles are far apart in rapid, random motion, filling the container.",
+      "startFrame": 630,
+      "endByFrame": 1470
+    },
+    {
+      "scene": "phase-changes",
+      "text": "Heat transfer drives phase changes. Adding heat causes endothermic changes: melting, vaporization, or sublimation into gas. Removing heat causes exothermic changes: freezing, condensation, or deposition into solid.",
+      "startFrame": 1530,
+      "endByFrame": 2070
+    },
+    {
+      "scene": "heating-curve",
+      "text": "A heating curve plots temperature against heat added. Slopes show heat raising kinetic energy. During plateaus at zero and one hundred degrees Celsius, temperature stays constant. Heat goes into overcoming intermolecular forces, raising potential energy until the phase change finishes.",
+      "startFrame": 2130,
+      "endByFrame": 2880
+    },
+    {
+      "scene": "phase-diagram-anatomy",
+      "text": "A phase diagram plots pressure against temperature. Regions show where a single phase is stable. Boundary curves are equilibrium states where two phases perfectly coexist. A line at one atmosphere crosses the curves at the normal melting and boiling points.",
+      "startFrame": 2940,
+      "endByFrame": 3660
+    },
+    {
+      "scene": "critical-triple-points",
+      "text": "The curves meet at the triple point, where all three phases coexist. The liquid-gas curve ends at the critical point. Above this is a single supercritical fluid. Below the triple-point pressure, no liquid can exist.",
+      "startFrame": 3720,
+      "endByFrame": 4380
+    },
+    {
+      "scene": "water-vs-co2",
+      "text": "Water's solid-liquid curve slopes negative because ice is less dense than water. Carbon dioxide's slope is positive. Its triple point is five point one atmospheres. Since one atmosphere is well below this, dry ice sublimes directly into gas.",
+      "startFrame": 4440,
+      "endByFrame": 5100
+    }
+  ]
+}
