@@ -20,7 +20,6 @@ const WATER_OFFSET = { x: 127 - 180 * PANEL_SCALE, y: 340 - 200 * PANEL_SCALE };
 const CO2_OFFSET = { x: 987 - 180 * PANEL_SCALE, y: WATER_OFFSET.y };
 
 const WATER_POINTS = normalPoints(WATER);
-const CO2_POINTS = normalPoints(CO2);
 
 type Transform = { scale: number; x: number; y: number };
 
