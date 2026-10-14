@@ -427,10 +427,7 @@ function CompareLabels({ frame }: { frame: number }) {
           opacity: co2Points,
         }}
       />
-      <ScreenLabel
-        at={{ x: 1590, y: co2Critical.y + 142 }}
-        opacity={co2Points}
-      >
+      <ScreenLabel at={{ x: 1590, y: co2Critical.y + 142 }} opacity={co2Points}>
         Critical point
         <br />
         31 °C, 73 atm
