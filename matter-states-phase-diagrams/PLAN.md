@@ -134,6 +134,8 @@ Implementation deviations (geometry fixes, no content change):
 - [x] Scope confirmed
 - [x] Brief
 - [x] Design plan
-- [x] Build (first pass)
-- [ ] CI green, stills reviewed
-- [ ] Merged
+- [x] Build
+- [x] CI green, stills reviewed ([run 38596713622](https://github.com/tharunkumar1177/nike-gen/actions/runs/38596713622))
+- [x] Merged
+
+Remaining known nit: the bold "Sublimation" tag in scene 7 slightly overlaps the CO2 solid–gas curve; still readable.
