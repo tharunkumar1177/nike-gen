@@ -106,7 +106,7 @@ Concept: temperature and pressure compete with intermolecular forces (IMFs) to d
 
 ### Stills
 
-Frames 300, 1050, 1800, 2500, 3300, 4050, 4800, 5250.
+Frames 450, 1250, 1800, 2500, 3460, 4200, 4980, 5250 (moved later from the designer's list so each scene has finished building).
 
 ### Frame-by-frame
 
@@ -126,7 +126,8 @@ Implementation deviations (geometry fixes, no content change):
 - Scene 4 "Gas" label moved to (1545, 300) to clear the curve; the y-axis title sits at x 140, inside the safe margin.
 - Scenes 5–7 run as one continuous sequence, so water shrinks into the comparison without a cut. Scene 7 coordinates were converted into the shared diagram space; scene 7 labels are drawn at 32 px in screen space and placed to avoid collisions.
 - Closing-card bullets wrap to two lines inside the 1200 px card.
-- Narration sync will be re-checked against the real line durations from the first CI log.
+- Measured Kokoro narration runs at about 138 wpm; every line fits its window (longest: scene 2, 20.7 s). Re-synced from those timings: "Mixtures" now enters at 270; scene 6 supercritical edges at 360, label at 400, triple-point band at 420, band label at 450.
+- Review fixes after the first render: water "1 atm" label moved below the line; scene 7 water critical-point label sits above-left of its point, and the CO2 critical-point label sits below-right with a leader line; CO2 "1 atm" label moved to the right end of its line; heating-curve "Solid" and "Liquid" labels moved off the curve.
 
 ## Status
 

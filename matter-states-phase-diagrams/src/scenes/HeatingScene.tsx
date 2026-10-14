@@ -45,8 +45,8 @@ const PLATEAUS = [
 ];
 
 const STATE_LABELS = [
-  { text: "Solid", at: { x: 270, y: 750 } },
-  { text: "Liquid", at: { x: 740, y: 530 } },
+  { text: "Solid", at: { x: 350, y: 800 } },
+  { text: "Liquid", at: { x: 690, y: 520 } },
   { text: "Gas", at: { x: 1545, y: 300 } },
 ];
 

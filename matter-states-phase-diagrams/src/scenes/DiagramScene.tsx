@@ -56,8 +56,8 @@ export function DiagramScene() {
               boundaries: pop(frame, fps, 60),
               regions: progress(frame, 150, 180, Easing.ease),
               atm: pop(frame, fps, 420),
-              supercriticalEdges: pop(s6, fps, 420),
-              supercriticalFill: progress(s6, 450, 480, Easing.ease),
+              supercriticalEdges: pop(s6, fps, 360),
+              supercriticalFill: progress(s6, 380, 410, Easing.ease),
               slope: progress(s7, 40, 70),
             }}
           />
@@ -67,7 +67,7 @@ export function DiagramScene() {
             width={PLOT.right - PLOT.left}
             height={PLOT.bottom - WATER.triple.y}
             fill={colors.accent}
-            opacity={0.15 * progress(s6, 570, 600) * anatomyLabels}
+            opacity={0.15 * progress(s6, 420, 450) * anatomyLabels}
           />
           <Dot
             at={WATER_POINTS.melting}
@@ -90,7 +90,7 @@ export function DiagramScene() {
               labels={WATER.labels}
             />
             <SvgLabel
-              at={{ x: 320, y: WATER.atmY - 20 }}
+              at={{ x: 320, y: WATER.atmY + 24 }}
               color={colors.axis}
               opacity={progress(frame, 420, 450)}
             >
@@ -130,7 +130,7 @@ export function DiagramScene() {
               at={{ x: 1488, y: 268 }}
               anchor="middle"
               color={colors.axis}
-              opacity={progress(s6, 480, 510)}
+              opacity={progress(s6, 400, 430)}
             >
               Supercritical fluid
             </SvgLabel>
@@ -138,7 +138,7 @@ export function DiagramScene() {
               at={{ x: 960, y: 780 }}
               anchor="middle"
               color={colors.accent}
-              opacity={progress(s6, 600, 630)}
+              opacity={progress(s6, 450, 480)}
             >
               Below the triple-point pressure, no liquid can exist
             </SvgLabel>
@@ -358,7 +358,7 @@ function CompareLabels({ frame }: { frame: number }) {
       {regions(
         {
           solid: { x: 420, y: 700 },
-          liquid: { x: 850, y: 420 },
+          liquid: { x: 760, y: 300 },
           gas: { x: 900, y: 800 },
         },
         water,
@@ -372,7 +372,8 @@ function CompareLabels({ frame }: { frame: number }) {
         1 atm
       </ScreenLabel>
       <ScreenLabel
-        at={{ x: waterCritical.x + 20, y: waterCritical.y + 54 }}
+        at={{ x: waterCritical.x - 18, y: waterCritical.y - 40 }}
+        anchor="end"
         opacity={waterIn}
       >
         Critical point
@@ -408,15 +409,26 @@ function CompareLabels({ frame }: { frame: number }) {
         positive slope
       </ScreenLabel>
       <ScreenLabel
-        at={{ x: co2Triple.x + 15, y: co2Triple.y + 32 }}
+        at={{ x: co2Triple.x + 15, y: co2Triple.y + 38 }}
         opacity={co2Points}
       >
         Triple point
         <br />
         −56.6 °C, 5.1 atm
       </ScreenLabel>
+      <div
+        style={{
+          position: "absolute",
+          left: co2Critical.x - 1,
+          top: co2Critical.y + 14,
+          width: 2,
+          height: 86,
+          background: colors.axis,
+          opacity: co2Points,
+        }}
+      />
       <ScreenLabel
-        at={{ x: co2Critical.x - 159, y: co2Critical.y + 52 }}
+        at={{ x: 1590, y: co2Critical.y + 142 }}
         opacity={co2Points}
       >
         Critical point
@@ -424,7 +436,8 @@ function CompareLabels({ frame }: { frame: number }) {
         31 °C, 73 atm
       </ScreenLabel>
       <ScreenLabel
-        at={project({ x: 320, y: CO2.atmY + 34 }, co2)}
+        at={project({ x: 1600, y: CO2.atmY - 30 }, co2)}
+        anchor="end"
         color={colors.axis}
         opacity={progress(frame, 330, 360)}
       >

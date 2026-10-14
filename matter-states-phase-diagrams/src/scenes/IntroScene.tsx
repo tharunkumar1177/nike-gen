@@ -26,9 +26,9 @@ const BRANCHES: Branch[] = [
     name: "Mixtures",
     detail: "Physical combinations",
     x: 1420,
-    line: [280, 310],
-    node: 310,
-    sub: [380, 410],
+    line: [240, 270],
+    node: 270,
+    sub: [330, 360],
   },
 ];
 

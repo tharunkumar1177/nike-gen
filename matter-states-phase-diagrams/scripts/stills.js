@@ -1,7 +1,7 @@
 import { execFileSync } from "node:child_process";
 import { mkdirSync } from "node:fs";
 
-const FRAMES = [300, 1050, 1800, 2500, 3300, 4050, 4800, 5250];
+const FRAMES = [450, 1250, 1800, 2500, 3460, 4200, 4980, 5250];
 
 mkdirSync("out/stills", { recursive: true });
 for (const frame of FRAMES) {
