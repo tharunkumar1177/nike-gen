@@ -15,7 +15,12 @@ const SIZE = 350;
 const CY = 500;
 const LABEL_Y = 760;
 
-const ORBITALS: { orbital: OrbitalId; cx: number; axis: "x" | "y" | "z"; label: number }[] = [
+const ORBITALS: {
+  orbital: OrbitalId;
+  cx: number;
+  axis: "x" | "y" | "z";
+  label: number;
+}[] = [
   { orbital: "2px", cx: 420, axis: "x", label: 120 },
   { orbital: "2py", cx: 960, axis: "y", label: 150 },
   { orbital: "2pz", cx: 1500, axis: "z", label: 180 },

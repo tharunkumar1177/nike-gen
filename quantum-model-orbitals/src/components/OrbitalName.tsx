@@ -37,7 +37,9 @@ export function OrbitalName({
     <span>
       <span style={{ fontStyle: "italic" }}>{letter}</span>
       {sub ? (
-        <sub style={{ fontSize: "0.62em", verticalAlign: "-0.28em" }}>{sub}</sub>
+        <sub style={{ fontSize: "0.62em", verticalAlign: "-0.28em" }}>
+          {sub}
+        </sub>
       ) : null}
     </span>
   );

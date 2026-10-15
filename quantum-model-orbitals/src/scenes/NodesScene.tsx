@@ -14,7 +14,15 @@ const l = <i>l</i>;
 const RULES: { cx: number; start: number; text: ReactNode }[] = [
   { cx: 480, start: 60, text: <>Total = {n}−1</> },
   { cx: 960, start: 150, text: <>Angular = {l}</> },
-  { cx: 1440, start: 240, text: <>Radial = {n}−{l}−1</> },
+  {
+    cx: 1440,
+    start: 240,
+    text: (
+      <>
+        Radial = {n}−{l}−1
+      </>
+    ),
+  },
 ];
 
 const COLUMNS = [300, 560, 760, 1060, 1360, 1660];
@@ -22,17 +30,35 @@ const HEADERS: ReactNode[] = [
   "Orbital",
   n,
   l,
-  <>Radial = {n}−{l}−1</>,
+  <>
+    Radial = {n}−{l}−1
+  </>,
   <>Angular = {l}</>,
   <>Total = {n}−1</>,
 ];
 
-const ROWS: { thumb: OrbitalId; y: number; start: number; cells: string[] }[] = [
-  { thumb: "2s", y: 540, start: 400, cells: ["2s", "2", "0", "1", "0", "1"] },
-  { thumb: "3pz", y: 660, start: 550, cells: ["3p", "3", "1", "1", "1", "2"] },
-  { thumb: "3dxy", y: 780, start: 700, cells: ["3d", "3", "2", "0", "2", "2"] },
-  { thumb: "4fxyz", y: 900, start: 850, cells: ["4f", "4", "3", "0", "3", "3"] },
-];
+const ROWS: { thumb: OrbitalId; y: number; start: number; cells: string[] }[] =
+  [
+    { thumb: "2s", y: 540, start: 400, cells: ["2s", "2", "0", "1", "0", "1"] },
+    {
+      thumb: "3pz",
+      y: 660,
+      start: 550,
+      cells: ["3p", "3", "1", "1", "1", "2"],
+    },
+    {
+      thumb: "3dxy",
+      y: 780,
+      start: 700,
+      cells: ["3d", "3", "2", "0", "2", "2"],
+    },
+    {
+      thumb: "4fxyz",
+      y: 900,
+      start: 850,
+      cells: ["4f", "4", "3", "0", "3", "3"],
+    },
+  ];
 
 export function NodesScene() {
   const frame = useSceneFrame();

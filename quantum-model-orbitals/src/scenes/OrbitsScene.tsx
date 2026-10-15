@@ -23,7 +23,10 @@ export function OrbitsScene() {
   const bohr = fadeWindow(frame, 100, 130, 180, 220);
   const electronAngle = frame * 0.09;
   const cloud = fadeWindow(frame, 170, 230, 470, 530);
-  const psiLabel = Math.min(pop(frame, fps, 160), 1 - progress(frame, 285, 315));
+  const psiLabel = Math.min(
+    pop(frame, fps, 160),
+    1 - progress(frame, 285, 315),
+  );
   const densityLabel = progress(frame, 285, 315);
   const map = fadeWindow(frame, 470, 530, 610, 670);
   const surface = progress(frame, 610, 670);
@@ -88,7 +91,11 @@ export function OrbitsScene() {
             cx={CX}
             cy={CY}
             size={boundarySize}
-            rotY={lerp(0, 45, progress(frame, 610, 1050, (t) => t))}
+            rotY={lerp(
+              0,
+              45,
+              progress(frame, 610, 1050, (t) => t),
+            )}
             opacity={0.9 * surface}
           />
         </Stage3D>

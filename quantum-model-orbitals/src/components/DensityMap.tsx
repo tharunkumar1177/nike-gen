@@ -43,7 +43,11 @@ function renderMap(
     for (let col = 0; col < RESOLUTION; col += 1) {
       const u = -halfWidth + ((col + 0.5) * 2 * halfWidth) / RESOLUTION;
       const value =
-        plane === "xz" ? psi(u, 0, v) : plane === "xy" ? psi(u, v, 0) : psi(0, u, v);
+        plane === "xz"
+          ? psi(u, 0, v)
+          : plane === "xy"
+            ? psi(u, v, 0)
+            : psi(0, u, v);
       values[row * RESOLUTION + col] = value;
       max = Math.max(max, value * value);
     }

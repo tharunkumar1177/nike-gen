@@ -51,9 +51,7 @@ function layVoice(clips, rate, length) {
   const overruns = [];
   for (const { line, samples } of clips) {
     const start = frameToSample(line.startFrame, rate);
-    const endFrame = Math.ceil(
-      ((start + samples.length) / rate) * script.fps,
-    );
+    const endFrame = Math.ceil(((start + samples.length) / rate) * script.fps);
     console.log(
       `${line.scene}: ${(samples.length / rate).toFixed(2)} s, frames ${line.startFrame}-${endFrame} (limit ${line.endByFrame})`,
     );
@@ -85,7 +83,8 @@ function padTrack(rate, length) {
     const t = i / rate;
     let sample = 0;
     chordHz.forEach((hz, index) => {
-      const swell = 0.6 + 0.4 * Math.sin(2 * Math.PI * (0.03 + index * 0.011) * t);
+      const swell =
+        0.6 + 0.4 * Math.sin(2 * Math.PI * (0.03 + index * 0.011) * t);
       sample +=
         swell *
         (Math.sin(2 * Math.PI * hz * t) +

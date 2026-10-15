@@ -106,7 +106,14 @@ export function RadialPlot({
         stroke={colors.axis}
         strokeWidth={3}
       />
-      <line x1={x} y1={y} x2={x} y2={y + h} stroke={colors.axis} strokeWidth={3} />
+      <line
+        x1={x}
+        y1={y}
+        x2={x}
+        y2={y + h}
+        stroke={colors.axis}
+        strokeWidth={3}
+      />
       {ticks.map((r) => (
         <g key={r}>
           <line
@@ -211,7 +218,10 @@ export function RadialPlot({
         }
         const d = values
           .slice(0, last + 1)
-          .map((v, i) => `${i === 0 ? "M" : "L"}${px((i * rMax) / SAMPLES)},${py(v)}`)
+          .map(
+            (v, i) =>
+              `${i === 0 ? "M" : "L"}${px((i * rMax) / SAMPLES)},${py(v)}`,
+          )
           .join(" ");
         return (
           <path

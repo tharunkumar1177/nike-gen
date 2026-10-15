@@ -180,7 +180,10 @@ function extract(
     const cy = uz * vx - ux * vz;
     const cz = ux * vy - uy * vx;
     const facing =
-      cx * ((normals[a * 3] ?? 0) + (normals[b * 3] ?? 0) + (normals[c * 3] ?? 0)) +
+      cx *
+        ((normals[a * 3] ?? 0) +
+          (normals[b * 3] ?? 0) +
+          (normals[c * 3] ?? 0)) +
       cy *
         ((normals[a * 3 + 1] ?? 0) +
           (normals[b * 3 + 1] ?? 0) +
@@ -220,7 +223,11 @@ function extract(
             const [lone, a, b, c] = (
               inner.length === 1 ? [...inner, ...outer] : [...outer, ...inner]
             ) as [number, number, number, number];
-            triangle(edgeVertex(lone, a), edgeVertex(lone, b), edgeVertex(lone, c));
+            triangle(
+              edgeVertex(lone, a),
+              edgeVertex(lone, b),
+              edgeVertex(lone, c),
+            );
           } else if (inner.length === 2) {
             const [p, q] = inner as [number, number];
             const [r, s] = outer as [number, number];

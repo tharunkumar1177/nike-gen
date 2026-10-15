@@ -53,26 +53,26 @@ export function NodalPlane3D({
   }
   return (
     <group rotation={[0, 0, (turnDeg * Math.PI) / 180]}>
-    <group rotation={[...PLANE_ROTATION[plane]]}>
-      <mesh renderOrder={2}>
-        <planeGeometry args={[2 * extent, 2 * extent]} />
-        <meshBasicMaterial
-          color={colors.node}
-          transparent
-          opacity={NODE_OPACITY * opacity}
-          side={DoubleSide}
-          depthWrite={false}
-        />
-      </mesh>
-      <lineSegments geometry={grid} renderOrder={3}>
-        <lineBasicMaterial
-          color="#FFFFFF"
-          transparent
-          opacity={0.8 * opacity}
-          depthWrite={false}
-        />
-      </lineSegments>
-    </group>
+      <group rotation={[...PLANE_ROTATION[plane]]}>
+        <mesh renderOrder={2}>
+          <planeGeometry args={[2 * extent, 2 * extent]} />
+          <meshBasicMaterial
+            color={colors.node}
+            transparent
+            opacity={NODE_OPACITY * opacity}
+            side={DoubleSide}
+            depthWrite={false}
+          />
+        </mesh>
+        <lineSegments geometry={grid} renderOrder={3}>
+          <lineBasicMaterial
+            color="#FFFFFF"
+            transparent
+            opacity={0.8 * opacity}
+            depthWrite={false}
+          />
+        </lineSegments>
+      </group>
     </group>
   );
 }
@@ -85,7 +85,11 @@ type ConeProps = {
   opacity?: number;
 };
 
-export function NodalCone3D({ angleDeg, length = 1.1, opacity = 1 }: ConeProps) {
+export function NodalCone3D({
+  angleDeg,
+  length = 1.1,
+  opacity = 1,
+}: ConeProps) {
   const geometry = useMemo(() => {
     const theta = (angleDeg * Math.PI) / 180;
     const rim = new Vector2(length * Math.sin(theta), length * Math.cos(theta));
