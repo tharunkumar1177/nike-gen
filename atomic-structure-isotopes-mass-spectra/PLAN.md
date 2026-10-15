@@ -133,5 +133,5 @@ Implementation deviations (layout fixes, no content change):
 - [x] Brief
 - [x] Design plan
 - [x] Build
-- [ ] CI green, stills reviewed
-- [ ] Recorded on main
+- [x] CI green ([run 38710278276](https://github.com/tharunkumar1177/nike-gen/actions/runs/38710278276)); stills render to `out/stills/` but were not downloaded for review, per the instruction to only confirm the CI build
+- [x] Recorded on main (committed directly to `main`, no PR, as requested)
