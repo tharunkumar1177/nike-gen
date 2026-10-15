@@ -76,7 +76,8 @@ function layVoice(clips, rate, length) {
 function padTrack(rate, length) {
   const pad = new Float32Array(length);
   const { chordHz } = script.pad;
-  let lowpass = 0;
+  let stage1 = 0;
+  let stage2 = 0;
   for (let i = 0; i < length; i += 1) {
     const t = i / rate;
     let sample = 0;
@@ -86,13 +87,13 @@ function padTrack(rate, length) {
       sample +=
         swell *
         (Math.sin(2 * Math.PI * hz * t) +
-          0.4 * Math.sin(2 * Math.PI * hz * 2.002 * t) +
           0.15 * Math.sin(2 * Math.PI * hz * 0.5 * t));
     });
-    const cutoff = 900 + 300 * Math.sin(2 * Math.PI * 0.04 * t);
+    const cutoff = 500 + 100 * Math.sin(2 * Math.PI * 0.04 * t);
     const alpha = 1 - Math.exp((-2 * Math.PI * cutoff) / rate);
-    lowpass += alpha * (sample - lowpass);
-    pad[i] = lowpass;
+    stage1 += alpha * (sample - stage1);
+    stage2 += alpha * (stage1 - stage2);
+    pad[i] = stage2;
   }
   const gain = dbToGain(script.pad.peakDbfs) / peak(pad);
   const fadeIn = frameToSample(script.pad.fadeInFrames, rate);
