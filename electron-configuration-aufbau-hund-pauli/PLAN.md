@@ -128,6 +128,7 @@ Implementation deviations (layout fixes, no content change):
 - Scene 5 restores the storyboard label "4s lies above 3d in ions" (y 720), omitted from the frame plan.
 - Scene 6 restores the storyboard label "Lowest total energy"; the 4s¹ accent is an s-colour highlight chip, not `#D32F2F`, which means "forbidden" elsewhere.
 - Closing card widened from 1400 to 1600 px so the longest takeaway fits on one line.
+- After the first render: cues re-synced to measured Kokoro durations (scenes 1–6: 20.70, 15.68, 18.30, 17.77, 17.15, 16.05 s; every line ends before its limit, scene 6 by 18 frames). Diagonal grid moved down 50 px (rows y 300–750) so the 1s arrow clears the title; harpoon barbs lengthened (16×22 px) so arrows don't read as "1"; closing card trimmed to 620 px tall at y 230 to remove dead space.
 
 ## Status
 

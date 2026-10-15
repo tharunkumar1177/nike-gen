@@ -15,8 +15,8 @@ function Harpoon({ x, spin }: { x: number; spin: Spin }) {
   if (spin.shown <= 0) return null;
   const d =
     spin.dir === "up"
-      ? `M ${x} 100 L ${x} 20 L ${x - 12} 36`
-      : `M ${x} 20 L ${x} 100 L ${x + 12} 84`;
+      ? `M ${x} 100 L ${x} 20 L ${x - 16} 42`
+      : `M ${x} 20 L ${x} 100 L ${x + 16} 78`;
   return (
     <path
       d={d}

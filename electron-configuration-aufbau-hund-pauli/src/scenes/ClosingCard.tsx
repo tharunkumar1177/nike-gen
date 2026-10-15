@@ -3,7 +3,7 @@ import { fadeIn, lerp } from "../components/anim";
 import { useSceneFrame } from "../components/SceneFrame";
 import { colors, FONT, type, VIDEO } from "../theme";
 
-const CARD = { left: 160, top: 140, width: 1600, height: 800 } as const;
+const CARD = { left: 160, top: 230, width: 1600, height: 620 } as const;
 
 const TAKEAWAYS = [
   { text: "Pauli: max two electrons per orbital, opposite spins.", at: 60 },

@@ -8,7 +8,7 @@ import { colors, type, VIDEO } from "../theme";
 const SCENE = "aufbau-diagonal";
 
 const COLUMN = { s: 810, p: 960, d: 1110 } as const;
-const ROW = { 1: 250, 2: 400, 3: 550, 4: 700 } as const;
+const ROW = { 1: 300, 2: 450, 3: 600, 4: 750 } as const;
 const KIND_COLOR = { s: colors.sText, p: colors.pText, d: colors.dText };
 
 type Label = { name: string; kind: keyof typeof COLUMN; n: 1 | 2 | 3 | 4 };
@@ -34,34 +34,34 @@ type Arrow = {
 /** Each arrow passes its labels at fraction `t` of its length as the label is spoken. */
 const ARROWS: Arrow[] = [
   {
-    from: [885, 175],
-    to: [735, 325],
+    from: [885, 225],
+    to: [735, 375],
     passes: [{ label: "1s", t: 0.5, phrase: "one s" }],
   },
   {
-    from: [885, 325],
-    to: [735, 475],
+    from: [885, 375],
+    to: [735, 525],
     passes: [{ label: "2s", t: 0.5, phrase: "two s" }],
   },
   {
-    from: [1035, 325],
-    to: [735, 625],
+    from: [1035, 375],
+    to: [735, 675],
     passes: [
       { label: "2p", t: 0.25, phrase: "two p" },
       { label: "3s", t: 0.75, phrase: "three s" },
     ],
   },
   {
-    from: [1035, 475],
-    to: [735, 775],
+    from: [1035, 525],
+    to: [735, 825],
     passes: [
       { label: "3p", t: 0.25, phrase: "three p" },
       { label: "4s", t: 0.75, phrase: "four s" },
     ],
   },
   {
-    from: [1185, 475],
-    to: [885, 775],
+    from: [1185, 525],
+    to: [885, 825],
     passes: [
       { label: "3d", t: 0.25, phrase: "three d" },
       { label: "4p", t: 0.75, phrase: "four p" },

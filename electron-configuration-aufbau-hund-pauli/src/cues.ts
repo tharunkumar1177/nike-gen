@@ -1,14 +1,14 @@
 import script from "../audio/script.json";
 import { SCENES, type NarratedScene } from "./theme";
 
-/** Narration pace per scene, in frames per word. */
-const FRAMES_PER_WORD: Record<NarratedScene, number> = {
-  "orbitals-pauli": 12.5,
-  "aufbau-diagonal": 12.5,
-  "hunds-rule": 12.5,
-  "notation-order": 12.5,
-  "shorthand-ions": 12.5,
-  "chromium-copper": 12.5,
+/** Kokoro clip lengths in seconds, as logged by `audio/generate.js` in CI. */
+const MEASURED_SECONDS: Record<NarratedScene, number> = {
+  "orbitals-pauli": 20.7,
+  "aufbau-diagonal": 15.68,
+  "hunds-rule": 18.3,
+  "notation-order": 17.77,
+  "shorthand-ions": 17.15,
+  "chromium-copper": 16.05,
 };
 
 const normalize = (word: string) =>
@@ -34,10 +34,8 @@ export function cue(scene: NarratedScene, phrase: string, offset = 0) {
   if (index < 0) {
     throw new Error(`"${phrase}" is not in the ${scene} narration.`);
   }
+  const framesPerWord = (MEASURED_SECONDS[scene] * script.fps) / spoken.length;
   return Math.round(
-    line.startFrame -
-      SCENES[scene].from +
-      index * FRAMES_PER_WORD[scene] +
-      offset,
+    line.startFrame - SCENES[scene].from + index * framesPerWord + offset,
   );
 }
