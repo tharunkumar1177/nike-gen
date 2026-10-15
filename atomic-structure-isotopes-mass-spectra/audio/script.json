@@ -7,8 +7,8 @@
     "peakDbfs": -3
   },
   "pad": {
-    "chordHz": [146.83, 220, 293.66, 369.99],
-    "peakDbfs": -24,
+    "chordHz": [73.42, 110, 146.83, 185],
+    "peakDbfs": -28,
     "duckDb": -8,
     "duckAttackMs": 120,
     "duckReleaseMs": 600,
