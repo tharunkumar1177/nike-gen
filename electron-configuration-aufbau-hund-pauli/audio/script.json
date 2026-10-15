@@ -1,0 +1,56 @@
+{
+  "fps": 30,
+  "durationInFrames": 5400,
+  "voice": {
+    "id": "af_heart",
+    "speed": 1,
+    "peakDbfs": -3
+  },
+  "pad": {
+    "chordHz": [146.83, 220, 293.66, 369.99],
+    "peakDbfs": -24,
+    "duckDb": -8,
+    "duckAttackMs": 120,
+    "duckReleaseMs": 600,
+    "fadeInFrames": 60,
+    "fadeOutFrames": 120
+  },
+  "lines": [
+    {
+      "scene": "orbitals-pauli",
+      "text": "Electrons occupy subshells. An s subshell holds two, p holds six, and d holds ten. Electrons have a quantum property called spin, which isn't literal rotation. The Pauli exclusion principle limits each orbital to two electrons with opposite spins. Two up spins in one box is strictly forbidden.",
+      "startFrame": 30,
+      "endByFrame": 770
+    },
+    {
+      "scene": "aufbau-diagonal",
+      "text": "The Aufbau principle fills lower energy orbitals first. The diagonal rule is a helpful guide, though it has exceptions. Following the arrows, we fill one s, two s, two p, three s, three p, four s, three d, and then four p.",
+      "startFrame": 930,
+      "endByFrame": 1610
+    },
+    {
+      "scene": "hunds-rule",
+      "text": "Hund's rule applies to equal energy orbitals. For carbon, nitrogen, and oxygen, we place one electron in each box with parallel spins before pairing. Putting two electrons in the first box while leaving others empty is allowed by Pauli, but creates a higher energy state.",
+      "startFrame": 1780,
+      "endByFrame": 2530
+    },
+    {
+      "scene": "notation-order",
+      "text": "We write this as an electron configuration. For oxygen, it is one s two, two s two, two p four. For iron, we continue filling up to three d six. Notice the written configuration groups subshells by shell number, even though four s fills before three d.",
+      "startFrame": 2730,
+      "endByFrame": 3370
+    },
+    {
+      "scene": "shorthand-ions",
+      "text": "We often use noble gas shorthand, replacing the inner core with argon. A common pitfall is assuming last in, first out for ions. In transition metal ions, four s lies above three d, so iron two plus loses the four s electrons first.",
+      "startFrame": 3630,
+      "endByFrame": 4260
+    },
+    {
+      "scene": "chromium-copper",
+      "text": "Chromium and copper have measured ground states of argon core, three d five, four s one, and argon core, three d ten, four s one. These are simply their lowest total energy configurations; half-filled stability is a simplification.",
+      "startFrame": 4530,
+      "endByFrame": 5030
+    }
+  ]
+}

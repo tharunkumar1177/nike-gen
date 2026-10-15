@@ -11,6 +11,7 @@ on:
           - matter-states-phase-diagrams
           - atomic-structure-isotopes-mass-spectra
           - quantum-model-orbitals
+          - electron-configuration-aufbau-hund-pauli
 
 permissions:
   contents: read

@@ -6,7 +6,7 @@
 - [x] Lesson 1 — Matter, states, phase diagrams (`matter-states-phase-diagrams/`, Remotion, 180 s narrated)
 - [x] Lesson 2 — Atomic structure: nucleus, isotopes, mass spectra (`atomic-structure-isotopes-mass-spectra/`, Remotion, 180 s narrated)
 - [ ] Lesson 3 — Quantum model: orbitals s/p/d/f, shapes, nodes (`quantum-model-orbitals/`, Remotion + three.js, ~270 s narrated)
-- [ ] Lesson 4 — Electron configuration, Aufbau, Hund, Pauli
+- [x] Lesson 4 — Electron configuration, Aufbau, Hund, Pauli (`electron-configuration-aufbau-hund-pauli/`, Remotion, 180 s narrated)
 - [ ] Lesson 5 — Periodic table construction & blocks
 - [ ] Lesson 6 — Periodic trends: radius, IE, EA, electronegativity
 - [ ] Lesson 7 — Moles, stoichiometry, limiting reagents
