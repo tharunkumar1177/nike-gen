@@ -1,0 +1,56 @@
+{
+  "fps": 30,
+  "durationInFrames": 5400,
+  "voice": {
+    "id": "af_heart",
+    "speed": 1,
+    "peakDbfs": -3
+  },
+  "pad": {
+    "chordHz": [146.83, 220, 293.66, 369.99],
+    "peakDbfs": -24,
+    "duckDb": -8,
+    "duckAttackMs": 120,
+    "duckReleaseMs": 600,
+    "fadeInFrames": 60,
+    "fadeOutFrames": 120
+  },
+  "lines": [
+    {
+      "scene": "subatomic-particles",
+      "text": "Atoms are built from subatomic particles. The nucleus is tiny and dense, about one hundred thousand times smaller than the atom. It contains protons, with a positive one charge and mass of about one unit, and neutrons, which are neutral and also weigh about one unit. Electrons have almost zero mass and surround the nucleus.",
+      "startFrame": 30,
+      "endByFrame": 870
+    },
+    {
+      "scene": "nuclide-isotopes",
+      "text": "An element is defined by its atomic number, its number of protons. Mass number is the sum of protons and neutrons. Isotopes are atoms of the same element with different numbers of neutrons. For example, stable chlorine isotopes have seventeen protons, but chlorine thirty-five has eighteen, and chlorine thirty-seven has twenty.",
+      "startFrame": 930,
+      "endByFrame": 1770
+    },
+    {
+      "scene": "mass-spectrometer",
+      "text": "A mass spectrometer reveals these isotopes. It ionizes the sample to cations with a plus one charge, then accelerates them. A magnetic field deflects the ions based on their mass to charge ratio. Heavier ions bend less. Finally, a detector counts how many hit each spot.",
+      "startFrame": 1830,
+      "endByFrame": 2620
+    },
+    {
+      "scene": "reading-spectrum",
+      "text": "The mass spectrum plots relative percent abundance against mass to charge ratio. For plus one ions, the x axis shows isotopic mass directly. Chlorine has a tall peak at thirty-four point nine seven units, and a smaller peak at thirty-six point nine seven units.",
+      "startFrame": 2680,
+      "endByFrame": 3420
+    },
+    {
+      "scene": "abundance-puzzle",
+      "text": "Out of one hundred atoms, roughly seventy-six are chlorine thirty-five and twenty-four are chlorine thirty-seven. The periodic table lists thirty-five point four five units, but no single atom weighs that. The simple average of thirty-six is wrong because the mixture is uneven.",
+      "startFrame": 3480,
+      "endByFrame": 4220
+    },
+    {
+      "scene": "weighted-average",
+      "text": "Instead, we calculate a weighted average by abundance. We multiply the mass of chlorine thirty-five by zero point seven five seven six, and add the chlorine thirty-seven mass times zero point two four two four. This yields thirty-five point four five units.",
+      "startFrame": 4280,
+      "endByFrame": 5070
+    }
+  ]
+}

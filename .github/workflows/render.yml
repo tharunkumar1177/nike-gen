@@ -9,6 +9,7 @@ on:
         type: choice
         options:
           - matter-states-phase-diagrams
+          - atomic-structure-isotopes-mass-spectra
 
 permissions:
   contents: read
