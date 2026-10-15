@@ -19,7 +19,13 @@ export type RadialMarker = {
   opacity: number;
   /** Label offset from the axis, in px above the plot floor. */
   labelLift?: number;
+  /** Which side of the marker line the label sits on. */
+  side?: "left" | "right";
+  /** 0–1 extra emphasis on the marker line. */
+  pulse?: number;
 };
+
+export type LegendEntry = { label: string; color: string };
 
 type Props = {
   /** Top-left corner and size of the axes box, in px. */
@@ -32,6 +38,7 @@ type Props = {
   tickStep: number;
   curves: RadialCurve[];
   markers?: RadialMarker[];
+  legend?: LegendEntry[];
   xLabel: string;
   yLabel: string;
   opacity?: number;
@@ -65,6 +72,7 @@ export function RadialPlot({
   tickStep,
   curves,
   markers = [],
+  legend = [],
   xLabel,
   yLabel,
   opacity = 1,
@@ -111,7 +119,7 @@ export function RadialPlot({
           />
           <text
             x={px(r)}
-            y={y + h + 40}
+            y={y + h + 38}
             textAnchor="middle"
             fontFamily={FONT}
             fontSize={type.label - 6}
@@ -124,7 +132,7 @@ export function RadialPlot({
       ))}
       <text
         x={x + w / 2}
-        y={y + h + 84}
+        y={y + h + 80}
         textAnchor="middle"
         fontFamily={FONT}
         fontSize={type.label}
@@ -150,17 +158,18 @@ export function RadialPlot({
           <g key={m.label} opacity={m.opacity}>
             <line
               x1={px(m.r)}
-              y1={y + 12}
+              y1={y + h - (m.labelLift ?? h * 0.82)}
               x2={px(m.r)}
               y2={y + h}
-              stroke={m.color}
-              strokeWidth={2.5}
+              stroke={colors.node}
+              strokeWidth={2.5 + 3 * (m.pulse ?? 0)}
               strokeDasharray="10 8"
             />
             <circle cx={px(m.r)} cy={y + h} r={8} fill={m.color} />
             <text
-              x={px(m.r) + 12}
+              x={px(m.r) + (m.side === "left" ? -12 : 12)}
               y={y + h - (m.labelLift ?? h * 0.82)}
+              textAnchor={m.side === "left" ? "end" : "start"}
               fontFamily={FONT}
               fontSize={type.label - 4}
               fontWeight={500}
@@ -171,6 +180,29 @@ export function RadialPlot({
           </g>
         ) : null,
       )}
+      {legend.map((entry, index) => (
+        <g key={entry.label}>
+          <line
+            x1={x + w - 150}
+            y1={y + 24 + index * 42}
+            x2={x + w - 90}
+            y2={y + 24 + index * 42}
+            stroke={entry.color}
+            strokeWidth={5}
+            strokeLinecap="round"
+          />
+          <text
+            x={x + w - 74}
+            y={y + 35 + index * 42}
+            fontFamily={FONT}
+            fontSize={type.label - 4}
+            fontWeight={500}
+            fill={colors.text}
+          >
+            {entry.label}
+          </text>
+        </g>
+      ))}
       {curves.map((curve, index) => {
         const values = data[index] ?? [];
         const last = Math.round(curve.progress * SAMPLES);

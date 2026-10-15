@@ -12,6 +12,7 @@ export type OrbitalId =
   | "2px"
   | "2py"
   | "2pz"
+  | "3pz"
   | "3dxy"
   | "3dxz"
   | "3dyz"
@@ -36,6 +37,7 @@ const SPECS: Record<OrbitalId, Spec> = {
   "2px": { n: 2, l: 1, angular: (x) => x },
   "2py": { n: 2, l: 1, angular: (_x, y) => y },
   "2pz": { n: 2, l: 1, angular: (_x, _y, z) => z },
+  "3pz": { n: 3, l: 1, angular: (_x, _y, z) => z },
   "3dxy": { n: 3, l: 2, angular: (x, y) => x * y },
   "3dxz": { n: 3, l: 2, angular: (x, _y, z) => x * z },
   "3dyz": { n: 3, l: 2, angular: (_x, y, z) => y * z },

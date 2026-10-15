@@ -7,6 +7,7 @@ const NAMES: Record<OrbitalId, [shell: string, sub: string]> = {
   "2px": ["2p", "x"],
   "2py": ["2p", "y"],
   "2pz": ["2p", "z"],
+  "3pz": ["3p", "z"],
   "3dxy": ["3d", "xy"],
   "3dxz": ["3d", "xz"],
   "3dyz": ["3d", "yz"],

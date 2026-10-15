@@ -1,0 +1,62 @@
+{
+  "fps": 30,
+  "durationInFrames": 8100,
+  "voice": {
+    "id": "af_heart",
+    "speed": 1,
+    "peakDbfs": -3
+  },
+  "pad": {
+    "chordHz": [146.83, 220, 277.18, 369.99],
+    "peakDbfs": -26,
+    "duckDb": -8,
+    "duckAttackMs": 120,
+    "duckReleaseMs": 600,
+    "fadeInFrames": 60,
+    "fadeOutFrames": 150
+  },
+  "lines": [
+    {
+      "scene": "orbits-fail",
+      "text": "Bohr's fixed orbits are incompatible with the uncertainty principle. The quantum-mechanical model gives no path, only a wavefunction, psi. Psi squared gives the probability density of finding the electron at a point. The boundary surface is not a hard edge; density fades continuously. We draw an orbital as a surface enclosing about ninety percent of the probability.",
+      "startFrame": 30,
+      "endByFrame": 900
+    },
+    {
+      "scene": "quantum-numbers",
+      "text": "Orbitals are described by quantum numbers. The principal number, n, determines size and energy. The angular number, l, determines shape, using letters s, p, d, and f for l equals zero, one, two, and three. The magnetic number, m sub l, determines orientation, giving one, three, five, or seven orbitals per subshell. Electron spin is a separate property, not part of the orbital.",
+      "startFrame": 1080,
+      "endByFrame": 2010
+    },
+    {
+      "scene": "s-orbitals-nodes",
+      "text": "The s orbitals are spheres. A cross-section of the one s orbital shows continuous density. The two s and three s orbitals have radial nodes, spherical surfaces where psi is zero, so the probability density is zero. A node is not a barrier the electron can't cross. The radial probability distribution shows the outer peak moves outward as n grows. Two s has one node at two a naught; three s has two nodes at one point nine and seven point one a naught.",
+      "startFrame": 2130,
+      "endByFrame": 3360
+    },
+    {
+      "scene": "p-orbitals",
+      "text": "The three p orbitals are dumbbells along the x, y, and z axes. The electron has no figure-eight path, only a probability density. Both lobes form a single orbital with opposite phase signs. This sign indicates wave amplitude, not electric charge, determining how orbitals overlap. The plane separating the lobes is an angular node.",
+      "startFrame": 3480,
+      "endByFrame": 4410
+    },
+    {
+      "scene": "d-orbitals",
+      "text": "There are five d orbitals. Four are cloverleaves: d x y, d x z, d y z, and d x squared minus y squared. The fifth, d z squared, has two lobes on the z axis and a torus in the x y plane. All d orbitals have two angular nodes. For the cloverleaves, these are planes. For d z squared, the nodes are two cones at fifty-four point seven degrees from the z axis.",
+      "startFrame": 4530,
+      "endByFrame": 5460
+    },
+    {
+      "scene": "f-orbitals",
+      "text": "The seven f orbitals are shown here in the general set, such as f z cubed and f x y z. They have complex shapes with three angular nodes, which can be planes or cones. The alternating phase colours show how the wave amplitude changes sign across each node.",
+      "startFrame": 5580,
+      "endByFrame": 6450
+    },
+    {
+      "scene": "node-counting",
+      "text": "We can count nodes using simple rules. Total nodes equal n minus one. Angular nodes equal l, and radial nodes equal n minus l minus one. For example, two s has one radial node and zero angular nodes. Three p has one radial and one angular node. Three d has zero radial and two angular nodes. Four f has zero radial and three angular nodes.",
+      "startFrame": 6630,
+      "endByFrame": 7650
+    }
+  ]
+}

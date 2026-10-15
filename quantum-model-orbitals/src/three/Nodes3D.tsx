@@ -17,6 +17,8 @@ type PlaneProps = {
   extent?: number;
   /** 0–1 multiplier on the nodal-surface opacity. */
   opacity?: number;
+  /** Extra turn about the z axis in degrees, e.g. 45 for the x = y plane. */
+  turnDeg?: number;
 };
 
 const PLANE_ROTATION = {
@@ -43,12 +45,14 @@ export function NodalPlane3D({
   plane,
   extent = 1.15,
   opacity = 1,
+  turnDeg = 0,
 }: PlaneProps) {
   const grid = useMemo(() => gridGeometry(extent), [extent]);
   if (opacity <= 0) {
     return null;
   }
   return (
+    <group rotation={[0, 0, (turnDeg * Math.PI) / 180]}>
     <group rotation={[...PLANE_ROTATION[plane]]}>
       <mesh renderOrder={2}>
         <planeGeometry args={[2 * extent, 2 * extent]} />
@@ -68,6 +72,7 @@ export function NodalPlane3D({
           depthWrite={false}
         />
       </lineSegments>
+    </group>
     </group>
   );
 }

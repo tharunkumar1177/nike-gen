@@ -99,7 +99,8 @@ Radial polynomial factors (normalisation is irrelevant because the 90% boundary 
 4. 3D. p_x, p_y, p_z; p_z highlighted with blue and amber lobes; grey nodal plane between the lobes.
    "The three p orbitals are dumbbells along the x, y, and z axes. The electron does not travel a figure-eight path; there is only a probability density. The two lobes are a single orbital with opposite phase signs. This is the sign of the wave amplitude, not electric charge, and it matters for overlap. The plane between the lobes is an angular node."
 5. 3D. Five d orbitals; four cloverleaves; d_z² highlighted with lobes and torus; nodal cones at 54.7°.
-   Narration: being revised (first draft claimed the cloverleaves are "named for their planes", which is not in the brief).
+   "There are five d orbitals. Four are cloverleaves: d x y, d x z, d y z, and d x squared minus y squared. The fifth, d z squared, has two lobes on the z axis and a torus in the x y plane. All d orbitals have two angular nodes. For the cloverleaves, these are planes. For d z squared, the nodes are two cones at fifty-four point seven degrees from the z axis."
+   (Revised after review; the first draft claimed the cloverleaves are "named for their planes". Scene 4's line was also tightened to 55 words.)
 6. 3D. Seven f orbitals, general set, rotating slowly; phase colours alternate across nodes.
    "The seven f orbitals are shown here in the general set, such as f z cubed and f x y z. They have complex shapes with three angular nodes, which can be planes or cones. The alternating phase colours show how the wave amplitude changes sign across each node."
 7. Rules (total n−1, angular l, radial n−l−1) and an example table: 2s, 3p, 3d, 4f.
@@ -124,13 +125,31 @@ Frame plans should be expressed with these building blocks. All positions are in
 
 ### Frame-by-frame
 
-Pending `designer` (sequences: scenes 1–2, 3, 4–5, 6–8).
+The `designer` delivered four sequences (scenes 1–2, 3, 4–5, 6–8). Exact coordinates and timings live in `src/scenes/*`. Summary (scene-local frames):
+
+- Scene 1: title 0–120; Bohr orbit with an orbiting electron; 3000-dot 1s ψ² cloud at 70 px/a₀; "Wavefunction ψ" at 160, swapped for "ψ²: Probability Density" at 300; 1s density map 470–670; translucent 1s 90% surface from 610 with "90% Boundary Surface".
+- Scene 2: title at 30; table columns at x 300/500/800/1200; rows n (120), l (225), m_l (500); spin card at 720.
+- Scene 3: 3D 1s sphere 30–140, then 1s/2s/3s density maps (half-widths 5/10/15 a₀) with dashed node rings; amber "not a barrier" callout 580–740; r²R² plot out to 20 a₀ from 750, curves drawn 780–880; node markers at 970 (2 a₀) and 1100 (1.90 and 7.10 a₀), with the rings pulsing.
+- Scene 4: 2p_x/2p_y/2p_z at size 350, rotating 0.2°/frame about z; axes and labels at 120/150/180; phase legend at 400; nodal plane on 2p_z at 660.
+- Scene 5: five 3d orbitals at size 280 (rows y 380/740); labels 110–280; d_z² pulse at 340; cloverleaf nodal plane pairs at 570; d_z² cones at 690.
+- Scene 6: seven 4f orbitals at size 240 (4 + 3 grid), staggered 15 frames, rotating 0.2°/frame about y; three nodal planes on f_xyz at 300.
+- Scene 7: rules at 60/150/240; table header at 350; rows 2s/3p/3d/4f at 400/550/700/850, each with an 80 px 3D thumbnail.
+- Scene 8: card title at 0; takeaway lines at 60/90/120/150.
+
+Implementation deviations (geometry and legibility only, no content change):
+
+- Scene 1: the title fades out at 90–120 so the Bohr orbit has time on screen (100–220). The 1s boundary surface uses the same 70 px/a₀ scale as the cloud and density map, rather than the plan's 700 px, so the 90% surface is shown at its true size.
+- Scene 2: the spin text is 40 px so it fits inside its 1200 px card.
+- Scene 3: panels are 340 px at y 345 with labels at y 140, inside the safe margin. The plot is at y 630–870 so the axis title fits. The callout is dark text on an amber pill, because amber text on white is unreadable. The "2 a₀" and "1.90 a₀" labels sit above the plot on opposite sides of their lines because the nodes are only 0.1 a₀ apart. Curve legend added. Marker labels are coloured by curve.
+- Scenes 4–5: the plan's base rotX 20° duplicates the default 20° view elevation, so it is not applied (it would tilt p_z off vertical). Small axis letters were added at the p axis tips. A "Nodal cones at 54.7°" label sits beside d_z². Orbital labels are 40 px for subscript legibility.
+- Scene 6: the caption reads "Seven 4f orbitals, general set".
+- Scene 7: thumbnails are 2s, 3p_z, 3d_xy, and 4f_xyz.
 
 ## Status
 
 - [x] Scope confirmed
-- [ ] Brief
-- [ ] Design plan
-- [ ] Build
+- [x] Brief
+- [x] Design plan
+- [x] Build
 - [ ] CI green, stills reviewed
 - [ ] Merged
