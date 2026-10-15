@@ -19,11 +19,11 @@ const T = {
   title: 0,
   titleOut: 80,
   atom: 90,
-  zoom: [120, 180],
-  nucleusLabel: 200,
-  protons: 330,
-  neutrons: 500,
-  electrons: 620,
+  zoom: [110, 170],
+  nucleusLabel: 180,
+  protons: 310,
+  neutrons: 470,
+  electrons: 580,
 } as const;
 
 type Nucleon = { x: number; y: number; proton: boolean };

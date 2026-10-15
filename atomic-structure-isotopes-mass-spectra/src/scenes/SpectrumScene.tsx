@@ -23,7 +23,7 @@ const T = {
   yTicks: [60, 90],
   yTitle: 80,
   xTicks: [120, 150],
-  xTitle: 180,
+  xTitle: 175,
 } as const;
 
 type Peak = {
@@ -44,7 +44,7 @@ const PEAKS: Peak[] = [
     abundance: "75.76 %",
     fill: colors.cl35,
     text: colors.cl35Text,
-    grow: 330,
+    grow: 300,
   },
   {
     mz: 36.97,
@@ -53,7 +53,7 @@ const PEAKS: Peak[] = [
     abundance: "24.24 %",
     fill: colors.cl37,
     text: colors.cl37Text,
-    grow: 480,
+    grow: 445,
   },
 ];
 

@@ -21,7 +21,7 @@ const T = {
   fieldLabel: 250,
   paths: [380, 440],
   deflectLabel: 400,
-  detectLabel: 470,
+  detectLabel: 455,
 } as const;
 
 const EMIT_START = 120;

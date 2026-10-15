@@ -6,11 +6,11 @@ import { colors, type, VIDEO } from "../theme";
 
 const T = {
   atomicNumber: 30,
-  massNumber: 190,
-  isotopes: 300,
-  symbols: 450,
-  cl35: 565,
-  cl37: 640,
+  massNumber: 180,
+  isotopes: 280,
+  symbols: 430,
+  cl35: 540,
+  cl37: 615,
 } as const;
 
 type Nuclide = {

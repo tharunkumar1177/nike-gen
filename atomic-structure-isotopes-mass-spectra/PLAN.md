@@ -125,12 +125,13 @@ Implementation deviations (layout fixes, no content change):
 - Scene 4: bar labels lifted about 20 px off the bar tops.
 - Scenes 5–6: legend moved to x 220–490 to clear the grid; equation laid out as one centred row so its terms can't overlap.
 - Narration accuracy edits: neutrons "also weigh about one unit"; dropped "exactly" before 35.45.
+- Re-synced after the first render to measured Kokoro durations (scene 1–6: 21.6, 21.7, 19.1, 18.2, 18.3, 18.1 s; about 12–12.5 frames per word). Every line ends at least 190 frames before its limit.
 
 ## Status
 
 - [x] Scope confirmed
 - [x] Brief
 - [x] Design plan
-- [ ] Build
+- [x] Build
 - [ ] CI green, stills reviewed
 - [ ] Recorded on main
