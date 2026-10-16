@@ -9,7 +9,7 @@ This repository produces educational motion graphics, one topic per folder. **Gu
 - Build production-grade code only. No mocked UI or placeholder data.
 - Never write the brand word (N-I-K-E, any case) in code, files, names, or commits.
 - GitHub Actions CI is the only build authority. Nothing runs locally.
-- Read CI logs with `gh`. If `gh` is unavailable, stop and ask me for the logs.
+- Read CI logs with `gh`. If `gh` is unavailable, stop and ask admin for the logs.
 - Never read `prompts.md`.
 - Just check whether the code is compiling in CI; no need to download the rendered video file
 
@@ -31,23 +31,17 @@ Don't call `productmind` directly. `researcher` and `designer` use it to learn w
 Delegate all research and anything the viewer sees or hears. Don't write scene code until the topic's brief and design plan exist. If either is wrong or incomplete, send it back instead of improvising.
 
 ### Choosing the framework
-
-Pick the best fit for each topic and state the choice and reason when confirming scope:
-
-- **Remotion (React/TypeScript):** narrated explainers, kinetic text, animated charts and data.
-- **Manim (Python):** math, equations, geometry, algorithms, and data structures.
-- **Lottie / SVG / CSS:** lightweight, looping animations meant to embed in web or app pages.
-- **ffmpeg pipelines:** assembling image sequences, overlays, audio, and transitions.
-- **Still frames:** diagrams, infographics, or storyboards where motion adds nothing.
+Follow (Style)[style.md].
 
 Don't switch a topic's framework after building starts without user approval. Pin dependencies to versions checked against their registry; lockfiles come from CI, never by hand.
 
 ### Topic folders
 
-- Create a new folder at the repo root for every topic, named after it in lowercase kebab-case (for example `binary-search`). Never reuse an existing folder; ask if the name is taken or ambiguous.
+- Create a new folder at the repo root for every topic, named `<roadmap number>-<topic>` in lowercase kebab-case (for example `05-periodic-table-blocks`). Never reuse an existing folder; ask if the name is taken or ambiguous.
+- The main checkout always stays on `main`. Do topic work in worktrees, created only with `git worktree add .worktrees/<folder> -b topic/<folder>`; never outside the repo root.
 - Each folder is self-contained: its own dependencies, source, assets, and a `PLAN.md` (brief summary, design plan, status). Topics never import from each other.
 - Each folder provides lint and type or format checks where the framework supports them, plus a build that writes the deliverable to `out/` and key frames to `out/stills/`.
-- `promo/` is an example Remotion project, not a topic. Read it for structure; never modify it, list it as a topic, or copy its content.
+- `matter-states-phase-diagrams/` is an example Remotion project, not a topic. Read it for structure; never modify it, list it as a topic, or copy its content.
 
 ### Render workflow
 
@@ -67,11 +61,7 @@ Your context window is about 300k tokens; treat it as the scarcest resource.
 - Read CI narrowly with `gh run view <id> --log-failed`.
 - Update `ROADMAP.md` and `PLAN.md` at the end of each topic, or sooner if your context gets heavy.
 
-### Session start
 
-1. Run `gh auth status`. If it fails, follow the `gh` guardrail and stop.
-2. Read `ROADMAP.md` if it exists and resume the next unchecked topic.
-3. If `render.yml` isn't on the default branch, build and merge it first.
 
 ### Topic loop
 

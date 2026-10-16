@@ -81,32 +81,10 @@ git push -u origin main
 
 ### AGENT Instruction definition guidelines
 
-- AGENT instruction should not be - too descriptive/ specific or too vague, It should be inbetween somewhere.
+- AGENT instruction should not be - too prescriptive or too vague, It should be inbetween somewhere.
 - Do not elaborate or exaggerate instruction for the AGENT; keep it clean and concise
 
 
-
-### Image Generation Rules
-Generate the UI wireframe in plain white background image
-If the user enables image generation:
-- Generate images that are **visually identical or extremely close** to the provided UI reference
-- Do not change style, colors, or composition
-- Keep consistency with the design system
-After generating images:
-- Place them inside the `assets/` folder
-- Use clear and organized naming:
-- assets/images/
-
-Use these assets properly in the UI.
-
-
-
------------------------
-### ASD
-ASD-STE100 
-### Writing
-Explain it in /ASD
-Follow ASD-STE100 about 80% of the way - most of the clarity without losing a natural tone
 
 - Diagrams/ web pages / Explainer videos (create a 3Blue1Brown style video explainer on X. ElevenLabs for audio narration)
 
@@ -121,8 +99,6 @@ Follow ASD-STE100 about 80% of the way - most of the clarity without losing a na
 - `is_background: true` — the main agent starts the subagent and keeps working without waiting for it to finish.
 
 - Fork - Agents Window > Right Click
-
-- Custom Commands `.cursor/commands/command.md`
 
 - Keyboard Shortcuts —— `Cmd+I` (open agent), `Cmd+/` (change models)
 
@@ -369,3 +345,93 @@ It did unstage your `.gitignore`, `README.md` and `prompts.md` without changing 
 
 Nothing was rewritten on GitHub, so there was no force-push. The commit's contents weren't lost either: a corrected version is on `main` through [PR #3](https://github.com/tharunkumar1177/tron/pull/3), and the original stays in git's local history log until it expires.
 
+---------------
+
+The next level up is **upper-division undergraduate**: second- or third-year students taking physical chemistry or chemical thermodynamics. The current video assumes intro chemistry. At this level, viewers already know the vocabulary and expect the "why" in equations.
+
+For this topic, that level would usually add:
+
+- **Chemical potential:** phases coexist where their chemical potentials are equal, and the curves on the diagram are where that holds.
+- **Clapeyron equation:** the slope of each boundary is dP/dT = ΔH / (T·ΔV). This explains water's negative solid–liquid slope directly, because ice has a larger volume than liquid water. The current video only gives the density argument in words.
+- **Clausius–Clapeyron equation:** relates vapour pressure to temperature. It also explains why the liquid–gas curve rises the way it does.
+- **Gibbs phase rule:** F = C − P + 2, which explains why a triple point is a single point and a two-phase boundary is a line.
+- **Real numbers and scales:** enthalpy values, log-pressure axes, and diagrams drawn to scale rather than schematically.
+- **Beyond one substance:** binary phase diagrams (liquid–vapour and solid–liquid, with eutectics) and P–V–T surfaces.
+
+After that comes **graduate or specialist level**: statistical-mechanics derivations, critical exponents and the behaviour near the critical point, and multiple solid phases (water has many forms of ice).
+
+If you want a second version at the upper-division level, it would need a new topic folder and its own scope confirmation, because the audience changes the brief and the script.
+
+-----------
+
+
+How should I fix the background sound for this lesson? (Only this topic's folder changes; then I re-render in Cl.)
+
+- Soften the pad: drop the detuned overtone, darker filter, lower chord, quieter level (Recommended)
+- Remove the pad entirely (narration only)
+- Keep the pad as-is, just make it quieter
+- Leave it as it is
+
+
+
+
+---
+
+### Choosing the framework
+
+Pick the best fit for each topic and state the choice and reason when confirming scope:
+
+- **Remotion (React/TypeScript):** narrated explainers, kinetic text, animated charts and data.
+- **Manim (Python):** math, equations, geometry, algorithms, and data structures.
+- **Lottie / SVG / CSS:** lightweight, looping animations meant to embed in web or app pages.
+- **ffmpeg pipelines:** assembling image sequences, overlays, audio, and transitions.
+- **Still frames:** diagrams, infographics, or storyboards where motion adds nothing.
+
+
+
+
+Pick the best fit for each topic and state the choice and reason when confirming scope:
+
+- **Remotion (React/TypeScript):** narrated explainers, kinetic text, animated charts and data.
+- **Manim (Python):** math, equations, geometry, algorithms, and data structures.
+- **Lottie / SVG / CSS:** lightweight, looping animations meant to embed in web or app pages.
+- **ffmpeg pipelines:** assembling image sequences, overlays, audio, and transitions.
+- **Still frames:** diagrams, infographics, or storyboards where motion adds nothing.
+---
+
+
+
+
+For complex topic / concept leave a brief note on the screen; but it shouldn't be look like a note but kinda caption yet note
+-> Print-friendly typography
+
+check whether AGENTS.md is checking for gh auth status in the beginning of the session.
+
+For new video generation, the folder should be - number followed by folder name <number in roadmap><folder name>.
+
+
+This repo has to be in the main branch, always; but agents can create worktree and work on various worktree.
+
+
+
+pitfalls box
+
+
+
+
+
+so they count as "inside" and the protections you want stay on.
+# add to .gitignore
+.worktrees/
+
+
+
+- Instruct the agent to Keep worktrees inside the workspace (.worktrees) - Put them under an ignored folder in the repo
+
+- add it to AGENTS.md so agents create new worktrees there, for example: "Create worktrees only with git worktree add .worktrees/<folder> -b topic/<folder>; never outside the repo root."
+
+
+### Session start
+
+1. Read `ROADMAP.md` if it exists and resume the next unchecked topic.
+2. If `render.yml` isn't on the default branch, build and merge it first.
