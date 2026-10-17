@@ -12,6 +12,7 @@ on:
           - atomic-structure-isotopes-mass-spectra
           - quantum-model-orbitals
           - electron-configuration-aufbau-hund-pauli
+          - 10-vsepr-geometry-gallery
 
 permissions:
   contents: read
