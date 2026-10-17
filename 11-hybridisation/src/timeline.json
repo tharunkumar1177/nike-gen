@@ -1,0 +1,55 @@
+{
+  "fps": 30,
+  "durationInFrames": 5183,
+  "scenes": [
+    {
+      "id": "problem-methane",
+      "from": 0,
+      "to": 794,
+      "lineStart": 60,
+      "lineFrames": 574
+    },
+    {
+      "id": "sp3-model",
+      "from": 764,
+      "to": 1692,
+      "lineStart": 814,
+      "lineFrames": 718
+    },
+    {
+      "id": "sp2-sp-pi-bonds",
+      "from": 1662,
+      "to": 2485,
+      "lineStart": 1712,
+      "lineFrames": 613
+    },
+    {
+      "id": "expanded-octet",
+      "from": 2455,
+      "to": 3292,
+      "lineStart": 2505,
+      "lineFrames": 627
+    },
+    {
+      "id": "worked-example",
+      "from": 3262,
+      "to": 4190,
+      "lineStart": 3312,
+      "lineFrames": 718
+    },
+    {
+      "id": "pitfalls",
+      "from": 4160,
+      "to": 4973,
+      "lineStart": 4210,
+      "lineFrames": 613
+    },
+    {
+      "id": "closing-card",
+      "from": 4943,
+      "to": 5183,
+      "lineStart": 4943,
+      "lineFrames": 0
+    }
+  ]
+}
