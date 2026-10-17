@@ -37,6 +37,29 @@ const LOBES = [
   { angle: -135, length: 130, opacity: 0.7 },
 ];
 const DRAW_ORDER = [3, 0, 1, 2];
+const HYBRID_SCALE = 1.3;
+/** The promoted electron travels above the 2p boxes, not through them. */
+const OVER_Y = 420;
+
+type Point = { x: number; y: number };
+
+/** Point at share `t` of the total length of a polyline. */
+function alongPath(points: Point[], t: number): Point {
+  const segments = points.slice(1).map((p, i) => {
+    const a = points[i]!;
+    return { a, b: p, length: Math.hypot(p.x - a.x, p.y - a.y) };
+  });
+  const total = segments.reduce((sum, s) => sum + s.length, 0);
+  let left = t * total;
+  for (const s of segments) {
+    if (left <= s.length) {
+      const f = s.length === 0 ? 1 : left / s.length;
+      return { x: lerp(s.a.x, s.b.x, f), y: lerp(s.a.y, s.b.y, f) };
+    }
+    left -= s.length;
+  }
+  return points[points.length - 1]!;
+}
 
 export function Sp3Scene() {
   const frame = useCurrentFrame();
@@ -57,8 +80,17 @@ export function Sp3Scene() {
   const sBoxY = lerp(S_BOX.y, ROW_Y, merge);
   const pBoxY = lerp(P_BOXES[0]!.y, ROW_Y, merge);
   const third = P_BOXES[2]!;
-  const moverX = lerp(S_BOX.x + 14, third.x, promote);
-  const moverY = lerp(S_BOX.y, third.y, promote) + (pBoxY - P_BOXES[0]!.y);
+  const mover = alongPath(
+    [
+      { x: S_BOX.x + 14, y: S_BOX.y },
+      { x: S_BOX.x + 14, y: OVER_Y },
+      { x: third.x, y: OVER_Y },
+      third,
+    ],
+    promote,
+  );
+  const moverX = mover.x;
+  const moverY = mover.y + (pBoxY - P_BOXES[0]!.y);
   const sUpX = lerp(S_BOX.x - 14, S_BOX.x, promote);
   const scaleAbout = (x: number, y: number, s: number) =>
     `translate(${x} ${y}) scale(${s}) translate(${-x} ${-y})`;
@@ -136,7 +168,11 @@ export function Sp3Scene() {
         </g>
         <g
           opacity={merge}
-          transform={scaleAbout(HYBRID_CENTRE.x, HYBRID_CENTRE.y, grow)}
+          transform={scaleAbout(
+            HYBRID_CENTRE.x,
+            HYBRID_CENTRE.y,
+            grow * HYBRID_SCALE,
+          )}
         >
           {DRAW_ORDER.map((i) => {
             const lobe = LOBES[i]!;

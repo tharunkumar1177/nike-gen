@@ -126,18 +126,18 @@ export function ExpandedScene() {
         />
         <AngleArc
           at={P}
-          from={0}
-          to={degrees(P, PCL5[4]!)}
-          radius={56}
+          from={degrees(P, PCL5[4]!)}
+          to={360 + degrees(P, PCL5[0]!)}
+          radius={52}
           label="120°"
-          labelRadius={100}
+          labelRadius={98}
           progress={tbp}
         />
         <Molecule centre={S} symbol="S" ligand="F" ligands={SF6} grow={sf6} />
         <AngleArc
           at={S}
-          from={-90}
-          to={degrees(S, SF6[4]!)}
+          from={degrees(S, SF6[4]!)}
+          to={90}
           radius={70}
           label="90°"
           labelRadius={115}

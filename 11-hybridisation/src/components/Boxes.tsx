@@ -51,8 +51,8 @@ export function Harpoon({
   const half = HARPOON / 2;
   const tip = up ? y - half : y + half;
   const tail = up ? y + half : y - half;
-  const barbX = up ? x - 14 : x + 14;
-  const barbY = up ? tip + 20 : tip - 20;
+  const barbX = up ? x - 18 : x + 18;
+  const barbY = up ? tip + 24 : tip - 24;
   return (
     <g opacity={opacity}>
       <line

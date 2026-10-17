@@ -22,8 +22,6 @@ const BEATS = {
 const Y = 560;
 const HYBRID_LOBE = 140;
 const P_LOBE = 128;
-const SKEW_LOBE = 90;
-const SKEW_ANGLE = 60;
 const ETHENE = { left: { x: 440, y: Y }, right: { x: 640, y: Y } };
 const ETHYNE = { left: { x: 1280, y: Y }, right: { x: 1480, y: Y } };
 
@@ -124,36 +122,36 @@ export function PiBondScene() {
   const p = pop(frame, fps, BEATS.p);
   const pi = fadeIn(frame, BEATS.pi);
 
-  const piY = (lobe: number, angle: number) =>
-    Y + (lobe / 2) * Math.sin((angle * Math.PI) / 180);
-
   return (
     <AbsoluteFill>
       <Title>sp² and sp Hybrids</Title>
       <Subtitle>π bonds from unhybridised p orbitals</Subtitle>
       <Stage>
-        {/* Ethyne second p set: tilted to suggest the perpendicular plane. */}
-        <g opacity={Math.min(1, p) * 0.75}>
-          {[ETHYNE.left, ETHYNE.right].map((c, i) => (
-            <g key={i} transform={scaleAbout(c.x, c.y, p)}>
-              <POrbital {...c} angle={SKEW_ANGLE} length={SKEW_LOBE} />
-            </g>
-          ))}
-        </g>
-        <PiBand
-          x1={ETHYNE.left.x + (SKEW_LOBE / 2) * Math.cos(Math.PI / 3)}
-          x2={ETHYNE.right.x + (SKEW_LOBE / 2) * Math.cos(Math.PI / 3)}
-          y={piY(SKEW_LOBE, SKEW_ANGLE)}
-          height={40}
-          opacity={pi * 0.75}
-        />
-        <PiBand
-          x1={ETHYNE.left.x - (SKEW_LOBE / 2) * Math.cos(Math.PI / 3)}
-          x2={ETHYNE.right.x - (SKEW_LOBE / 2) * Math.cos(Math.PI / 3)}
-          y={piY(SKEW_LOBE, SKEW_ANGLE + 180)}
-          height={40}
-          opacity={pi * 0.75}
-        />
+        {[ETHENE.left, ETHENE.right, ETHYNE.left, ETHYNE.right].map((c, i) => (
+          <g
+            key={i}
+            transform={scaleAbout(c.x, c.y, p)}
+            opacity={Math.min(1, p)}
+          >
+            <POrbital {...c} angle={90} length={P_LOBE} />
+          </g>
+        ))}
+        {[ETHENE, ETHYNE].map((pair, i) => (
+          <g key={i}>
+            <PiBand
+              x1={pair.left.x}
+              x2={pair.right.x}
+              y={Y - P_LOBE / 2 - 8}
+              opacity={pi}
+            />
+            <PiBand
+              x1={pair.left.x}
+              x2={pair.right.x}
+              y={Y + P_LOBE / 2 + 8}
+              opacity={pi}
+            />
+          </g>
+        ))}
 
         {ETHENE_SP2.map(({ c, angles }) =>
           angles.map((angle) => (
@@ -191,32 +189,6 @@ export function PiBondScene() {
           y={Y}
           opacity={spLabel}
         />
-
-        {[ETHENE.left, ETHENE.right, ETHYNE.left, ETHYNE.right].map((c, i) => (
-          <g
-            key={i}
-            transform={scaleAbout(c.x, c.y, p)}
-            opacity={Math.min(1, p)}
-          >
-            <POrbital {...c} angle={90} length={P_LOBE} />
-          </g>
-        ))}
-        {[ETHENE, ETHYNE].map((pair, i) => (
-          <g key={i}>
-            <PiBand
-              x1={pair.left.x}
-              x2={pair.right.x}
-              y={Y - P_LOBE / 2 - 8}
-              opacity={pi}
-            />
-            <PiBand
-              x1={pair.left.x}
-              x2={pair.right.x}
-              y={Y + P_LOBE / 2 + 8}
-              opacity={pi}
-            />
-          </g>
-        ))}
 
         <AngleArc
           at={ETHENE.left}
@@ -279,6 +251,12 @@ export function PiBondScene() {
           opacity={spLabel}
         >
           Ethyne · sp (50% s)
+        </SvgLabel>
+        <SvgLabel x={540} y={900} opacity={pi}>
+          5 σ, 1 π
+        </SvgLabel>
+        <SvgLabel x={1380} y={900} opacity={pi}>
+          3 σ, 2 π (one π shown)
         </SvgLabel>
         <SvgLabel
           x={120}

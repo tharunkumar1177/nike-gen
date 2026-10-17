@@ -1,54 +1,54 @@
 {
   "fps": 30,
-  "durationInFrames": 5183,
+  "durationInFrames": 5050,
   "scenes": [
     {
       "id": "problem-methane",
       "from": 0,
-      "to": 794,
+      "to": 763,
       "lineStart": 60,
-      "lineFrames": 574
+      "lineFrames": 543
     },
     {
       "id": "sp3-model",
-      "from": 764,
-      "to": 1692,
-      "lineStart": 814,
-      "lineFrames": 718
+      "from": 733,
+      "to": 1615,
+      "lineStart": 783,
+      "lineFrames": 672
     },
     {
       "id": "sp2-sp-pi-bonds",
-      "from": 1662,
-      "to": 2485,
-      "lineStart": 1712,
-      "lineFrames": 613
+      "from": 1585,
+      "to": 2378,
+      "lineStart": 1635,
+      "lineFrames": 583
     },
     {
       "id": "expanded-octet",
-      "from": 2455,
-      "to": 3292,
-      "lineStart": 2505,
-      "lineFrames": 627
+      "from": 2348,
+      "to": 3207,
+      "lineStart": 2398,
+      "lineFrames": 649
     },
     {
       "id": "worked-example",
-      "from": 3262,
-      "to": 4190,
-      "lineStart": 3312,
-      "lineFrames": 718
+      "from": 3177,
+      "to": 4018,
+      "lineStart": 3227,
+      "lineFrames": 631
     },
     {
       "id": "pitfalls",
-      "from": 4160,
-      "to": 4973,
-      "lineStart": 4210,
-      "lineFrames": 613
+      "from": 3988,
+      "to": 4840,
+      "lineStart": 4038,
+      "lineFrames": 652
     },
     {
       "id": "closing-card",
-      "from": 4943,
-      "to": 5183,
-      "lineStart": 4943,
+      "from": 4810,
+      "to": 5050,
+      "lineStart": 4810,
       "lineFrames": 0
     }
   ]
