@@ -23,7 +23,10 @@ const OUTER_PROTONS = NUCLEONS.filter(
 );
 
 const CUES = {
-  nucleus: cue("nuclear-stability", "A nucleus packs positively charged protons"),
+  nucleus: cue(
+    "nuclear-stability",
+    "A nucleus packs positively charged protons",
+  ),
   strong: cue("nuclear-stability", "The strong nuclear force holds them"),
   band: cue("nuclear-stability", "Stable nuclei lie in a narrow band"),
   heavy: cue("nuclear-stability", "more than eighty three protons"),

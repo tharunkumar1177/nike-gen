@@ -36,7 +36,10 @@ const CUES = {
   crowd: cue("half-life-concept", "but a large crowd decays"),
   half: cue("half-life-concept", "The time for half the nuclei to decay"),
   uranium: cue("half-life-concept", "four point five times ten to the nine"),
-  pitfall: cue("half-life-concept", "Heat, pressure, and amount do not change this"),
+  pitfall: cue(
+    "half-life-concept",
+    "Heat, pressure, and amount do not change this",
+  ),
 };
 
 export function HalfLifeScene() {

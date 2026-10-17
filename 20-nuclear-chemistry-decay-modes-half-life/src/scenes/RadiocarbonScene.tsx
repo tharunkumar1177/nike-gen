@@ -8,7 +8,10 @@ import { cue } from "../cues";
 import { colors, FONT } from "../theme";
 
 const CUES = {
-  cosmic: cue("radiocarbon-dating", "Cosmic rays constantly make carbon fourteen"),
+  cosmic: cue(
+    "radiocarbon-dating",
+    "Cosmic rays constantly make carbon fourteen",
+  ),
   intake: cue("radiocarbon-dating", "Living things take it in"),
   death: cue("radiocarbon-dating", "but when they die, the intake stops"),
   given: cue("radiocarbon-dating", "Let's date a wooden artifact"),

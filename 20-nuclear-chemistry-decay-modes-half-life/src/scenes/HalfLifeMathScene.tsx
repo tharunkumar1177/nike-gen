@@ -33,7 +33,11 @@ export function HalfLifeMathScene() {
         axes={1}
         curve={1}
         markers={[
-          { halfLives: 1, label: <HalfLabel den={2} />, reveal: reveal(CUES.half) },
+          {
+            halfLives: 1,
+            label: <HalfLabel den={2} />,
+            reveal: reveal(CUES.half),
+          },
           {
             halfLives: 2,
             label: <HalfLabel den={4} />,

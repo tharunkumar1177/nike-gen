@@ -9,7 +9,10 @@ import { cue } from "../cues";
 import { colors } from "../theme";
 
 const CUES = {
-  series: cue("balancing-equations", "Uranium two thirty eight takes fourteen steps"),
+  series: cue(
+    "balancing-equations",
+    "Uranium two thirty eight takes fourteen steps",
+  ),
   conserve: cue("balancing-equations", "conserve both the mass number, A"),
   pitfall: cue("balancing-equations", "beta minus raises Z by one"),
 };

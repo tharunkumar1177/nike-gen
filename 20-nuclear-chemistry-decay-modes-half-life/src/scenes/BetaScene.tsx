@@ -14,7 +14,10 @@ const CUES = {
   positron: cue("beta-decay-modes", "P E T scans use fluorine eighteen"),
   below: cue("beta-decay-modes", "Nuclei below the band are proton rich"),
   above: cue("beta-decay-modes", "Nuclei above the band are neutron rich"),
-  pitfall: cue("beta-decay-modes", "created in the decay, not taken from the shell"),
+  pitfall: cue(
+    "beta-decay-modes",
+    "created in the decay, not taken from the shell",
+  ),
 };
 
 function Equation({
@@ -33,7 +36,15 @@ function Equation({
   const { opacity, dy } = dropped(useSceneFrame(), appear);
   return (
     <>
-      <Text x={120} y={y - 50} size={26} weight={700} color={modeColor} opacity={opacity} dy={dy}>
+      <Text
+        x={120}
+        y={y - 50}
+        size={26}
+        weight={700}
+        color={modeColor}
+        opacity={opacity}
+        dy={dy}
+      >
         {mode}
       </Text>
       <Text x={120} y={y} size={48} opacity={opacity} dy={dy}>

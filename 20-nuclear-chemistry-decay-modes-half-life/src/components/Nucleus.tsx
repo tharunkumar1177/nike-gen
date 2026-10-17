@@ -50,10 +50,7 @@ export function Nucleus({
 }: Props) {
   if (opacity <= 0) return null;
   return (
-    <g
-      opacity={opacity}
-      transform={`translate(${x} ${y}) scale(${scale})`}
-    >
+    <g opacity={opacity} transform={`translate(${x} ${y}) scale(${scale})`}>
       {nucleons.map(({ dx, dy, proton }, i) => (
         <circle
           key={i}
