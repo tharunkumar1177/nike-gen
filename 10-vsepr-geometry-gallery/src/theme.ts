@@ -1,4 +1,5 @@
 import { loadFont } from "@remotion/google-fonts/Roboto";
+import timeline from "./timeline.json";
 
 const { fontFamily } = loadFont("normal", {
   weights: ["400", "500", "700"],
@@ -11,7 +12,7 @@ export const VIDEO = {
   width: 1920,
   height: 1080,
   fps: 30,
-  durationInFrames: 8100,
+  durationInFrames: timeline.durationInFrames,
 } as const;
 
 export const SAFE = 120;
@@ -45,15 +46,10 @@ export const type = {
   label: 32,
 } as const;
 
-/** Keys match the scene ids in `audio/script.json`. */
-export const SCENES = {
-  "concept-hero": { from: 0, to: 1300 },
-  "procedure-steps": { from: 1300, to: 2200 },
-  "sn-2-4-gallery": { from: 2200, to: 3950 },
-  "sn-5-family": { from: 3950, to: 5500 },
-  "sn-6-family": { from: 5500, to: 6750 },
-  pitfalls: { from: 6750, to: 7750 },
-  "closing-card": { from: 7750, to: 8100 },
-} as const;
+/**
+ * Scene windows laid out by `audio/generate.js` from the measured narration;
+ * keys match the scene ids in `audio/script.json`.
+ */
+export const SCENES = timeline.scenes;
 
 export type NarratedScene = Exclude<keyof typeof SCENES, "closing-card">;

@@ -4,7 +4,6 @@ import { env } from "@huggingface/transformers";
 import { KokoroTTS } from "kokoro-js";
 
 const MIX_CEILING_DBFS = -1;
-const SENTENCE_GAP_SECONDS = 0.2;
 
 const readJson = async (name) =>
   JSON.parse(await readFile(new URL(name, import.meta.url), "utf8"));
@@ -12,10 +11,13 @@ const readJson = async (name) =>
 const script = await readJson("./script.json");
 const model = await readJson("./model.json");
 const outputUrl = new URL("../public/soundtrack.wav", import.meta.url);
+const timelineUrl = new URL("../src/timeline.json", import.meta.url);
 
 const dbToGain = (db) => 10 ** (db / 20);
 const gainToDb = (gain) => 20 * Math.log10(gain);
 const frameToSample = (frame, rate) => Math.round((frame / script.fps) * rate);
+const samplesToFrames = (samples, rate) =>
+  Math.ceil((samples / rate) * script.fps);
 
 function peak(samples) {
   let max = 0;
@@ -25,6 +27,15 @@ function peak(samples) {
   return max;
 }
 
+function splitSentences(text) {
+  const sentences = text.match(/[^.!?]+[.!?]+/g) ?? [text];
+  return sentences.map((sentence) => sentence.trim()).filter(Boolean);
+}
+
+/**
+ * Kokoro truncates long inputs, so each sentence is synthesised separately
+ * and joined with a short pause.
+ */
 async function speakLines() {
   env.cacheDir = fileURLToPath(
     new URL("../.cache/huggingface/", import.meta.url),
@@ -36,65 +47,85 @@ async function speakLines() {
   });
   const clips = [];
   for (const line of script.lines) {
-    // Kokoro truncates long inputs, so each sentence is synthesised separately.
-    const parts = [];
-    let rate = 0;
-    for (const sentence of splitSentences(line.text)) {
-      const audio = await tts.generate(sentence, {
+    const sentences = [];
+    for (const text of splitSentences(line.text)) {
+      const audio = await tts.generate(text, {
         voice: script.voice.id,
         speed: script.voice.speed,
       });
-      parts.push(audio.audio);
-      rate = audio.sampling_rate;
+      sentences.push({
+        text,
+        samples: audio.audio,
+        rate: audio.sampling_rate,
+      });
     }
-    clips.push({ line, samples: joinWithGaps(parts, rate), rate });
+    clips.push({ line, sentences });
   }
   return clips;
 }
 
-function splitSentences(text) {
-  const sentences = text.match(/[^.!?]+[.!?]+/g) ?? [text];
-  return sentences.map((sentence) => sentence.trim()).filter(Boolean);
-}
-
-function joinWithGaps(parts, rate) {
-  const gap = Math.round(SENTENCE_GAP_SECONDS * rate);
-  const length =
-    parts.reduce((sum, part) => sum + part.length, 0) +
-    gap * (parts.length - 1);
-  const joined = new Float32Array(length);
-  let offset = 0;
-  parts.forEach((part, i) => {
-    joined.set(part, offset);
-    offset += part.length + (i < parts.length - 1 ? gap : 0);
+/**
+ * Lays scenes end to end from the measured clips: each narration starts
+ * `leadFrames` into its scene and the next one starts `gapFrames` after it
+ * ends, so the silence between topics is fixed.
+ */
+function layout(clips, rate) {
+  const gap = Math.round(script.timing.sentenceGapSeconds * rate);
+  const scenes = {};
+  const lines = [];
+  let from = 0;
+  clips.forEach(({ line, sentences }, i) => {
+    const startFrame =
+      i === 0 ? script.timing.firstStartFrame : from + script.timing.leadFrames;
+    let offset = 0;
+    const parts = sentences.map((sentence, k) => {
+      const part = {
+        text: sentence.text,
+        startFrame: startFrame + Math.floor((offset / rate) * script.fps),
+        frames: samplesToFrames(sentence.samples.length, rate),
+        samples: sentence.samples,
+        sampleOffset: offset,
+      };
+      offset += sentence.samples.length + (k < sentences.length - 1 ? gap : 0);
+      return part;
+    });
+    const endFrame = startFrame + samplesToFrames(offset, rate);
+    const to = endFrame + script.timing.gapFrames - script.timing.leadFrames;
+    scenes[line.scene] = { from, to };
+    lines.push({ scene: line.scene, startFrame, endFrame, parts });
+    console.log(
+      `${line.scene}: ${(offset / rate).toFixed(2)} s, narration ${startFrame}-${endFrame}, scene ${from}-${to}`,
+    );
+    from = to;
   });
-  return joined;
+  scenes[script.timing.closingScene] = {
+    from,
+    to: from + script.timing.closingFrames,
+  };
+  return {
+    scenes,
+    lines,
+    durationInFrames: from + script.timing.closingFrames,
+  };
 }
 
-function layVoice(clips, rate, length) {
+function layVoice(lines, rate, length) {
   const voice = new Float32Array(length);
   const active = new Uint8Array(length);
   const target = dbToGain(script.voice.peakDbfs);
-  for (const { line, samples } of clips) {
-    const start = frameToSample(line.startFrame, rate);
-    const end = start + samples.length;
-    const endFrame = Math.ceil((end / rate) * script.fps);
-    console.log(
-      `${line.scene}: ${(samples.length / rate).toFixed(2)} s, frames ${line.startFrame}-${endFrame} (limit ${line.endByFrame})`,
-    );
-    if (endFrame > line.endByFrame) {
-      throw new Error(
-        `${line.scene} narration ends at frame ${endFrame}, past ${line.endByFrame}.`,
-      );
-    }
-    const level = peak(samples);
+  for (const line of lines) {
+    const level = Math.max(...line.parts.map((part) => peak(part.samples)));
     if (level === 0) {
       throw new Error(`${line.scene} narration is silent.`);
     }
     const gain = target / level;
-    for (let i = 0; i < samples.length; i += 1) {
-      voice[start + i] += samples[i] * gain;
-      active[start + i] = 1;
+    const start = frameToSample(line.startFrame, rate);
+    for (const part of line.parts) {
+      const at = start + part.sampleOffset;
+      for (let i = 0; i < part.samples.length; i += 1) {
+        voice[at + i] += part.samples[i] * gain;
+        active[at + i] = 1;
+      }
     }
   }
   return { voice, active };
@@ -173,12 +204,20 @@ function toWav(samples, rate) {
 
 async function main() {
   const clips = await speakLines();
-  const rate = clips[0].rate;
-  if (clips.some((clip) => clip.rate !== rate)) {
+  const rate = clips[0].sentences[0].rate;
+  if (clips.some((clip) => clip.sentences.some((s) => s.rate !== rate))) {
     throw new Error("Narration clips have different sample rates.");
   }
-  const length = frameToSample(script.durationInFrames, rate);
-  const { voice, active } = layVoice(clips, rate, length);
+  const timeline = layout(clips, rate);
+  const { minSeconds, maxSeconds } = script.timing.totalSeconds;
+  const seconds = timeline.durationInFrames / script.fps;
+  if (seconds < minSeconds || seconds > maxSeconds) {
+    throw new Error(
+      `Timeline is ${seconds.toFixed(1)} s, outside ${minSeconds}-${maxSeconds} s.`,
+    );
+  }
+  const length = frameToSample(timeline.durationInFrames, rate);
+  const { voice, active } = layVoice(timeline.lines, rate, length);
   const pad = padTrack(rate, length);
   const envelope = duck(active, rate);
   const mix = new Float32Array(length);
@@ -193,8 +232,24 @@ async function main() {
   }
   await mkdir(new URL(".", outputUrl), { recursive: true });
   await writeFile(outputUrl, toWav(mix, rate));
+  const json = {
+    fps: script.fps,
+    durationInFrames: timeline.durationInFrames,
+    scenes: timeline.scenes,
+    lines: timeline.lines.map((line) => ({
+      scene: line.scene,
+      startFrame: line.startFrame,
+      endFrame: line.endFrame,
+      sentences: line.parts.map((part) => ({
+        text: part.text,
+        startFrame: part.startFrame,
+        frames: part.frames,
+      })),
+    })),
+  };
+  await writeFile(timelineUrl, `${JSON.stringify(json, null, 2)}\n`);
   console.log(
-    `Soundtrack: ${(length / rate).toFixed(2)} s at ${rate} Hz, peak ${peakDb.toFixed(1)} dBFS`,
+    `Soundtrack: ${seconds.toFixed(2)} s at ${rate} Hz, peak ${peakDb.toFixed(1)} dBFS`,
   );
 }
 

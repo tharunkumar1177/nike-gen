@@ -1,18 +1,5 @@
-import script from "../audio/script.json";
+import timeline from "./timeline.json";
 import { SCENES, type NarratedScene } from "./theme";
-
-/**
- * Kokoro clip lengths in seconds, as logged by `audio/generate.js` in CI.
- * Until measured, these are 0.37 s per word plus 0.2 s between sentences.
- */
-const MEASURED_SECONDS: Record<NarratedScene, number> = {
-  "concept-hero": 34.1,
-  "procedure-steps": 25.3,
-  "sn-2-4-gallery": 47.7,
-  "sn-5-family": 43.4,
-  "sn-6-family": 33.8,
-  pitfalls: 24.5,
-};
 
 const normalize = (word: string) =>
   word.toLowerCase().replace(/[^a-z0-9]/g, "");
@@ -20,16 +7,25 @@ const normalize = (word: string) =>
 const words = (text: string) =>
   text.split(/\s+/).map(normalize).filter(Boolean);
 
-/**
- * Scene-relative frame at which `phrase` is spoken, assuming an even pace
- * across the line. Throws if the phrase is not in the narration.
- */
-export function cue(scene: NarratedScene, phrase: string, offset = 0) {
-  const line = script.lines.find((entry) => entry.scene === scene);
+function lineOf(scene: NarratedScene) {
+  const line = timeline.lines.find((entry) => entry.scene === scene);
   if (!line) {
     throw new Error(`No narration line for ${scene}.`);
   }
-  const spoken = words(line.text);
+  return line;
+}
+
+/**
+ * Scene-relative frame at which `phrase` is spoken, from the measured
+ * sentence timings in `timeline.json`, assuming an even pace within each
+ * sentence. Throws if the phrase is not in the narration.
+ */
+export function cue(scene: NarratedScene, phrase: string, offset = 0) {
+  const sentences = lineOf(scene).sentences.map((sentence) => ({
+    ...sentence,
+    words: words(sentence.text),
+  }));
+  const spoken = sentences.flatMap((sentence) => sentence.words);
   const target = words(phrase);
   const index = spoken.findIndex((_, i) =>
     target.every((word, j) => spoken[i + j] === word),
@@ -37,19 +33,23 @@ export function cue(scene: NarratedScene, phrase: string, offset = 0) {
   if (index < 0) {
     throw new Error(`"${phrase}" is not in the ${scene} narration.`);
   }
-  const framesPerWord = (MEASURED_SECONDS[scene] * script.fps) / spoken.length;
-  return Math.round(
-    line.startFrame - SCENES[scene].from + index * framesPerWord + offset,
-  );
+  let before = 0;
+  for (const sentence of sentences) {
+    if (index < before + sentence.words.length) {
+      const fraction = (index - before) / sentence.words.length;
+      return Math.round(
+        sentence.startFrame +
+          fraction * sentence.frames -
+          SCENES[scene].from +
+          offset,
+      );
+    }
+    before += sentence.words.length;
+  }
+  throw new Error(`"${phrase}" could not be timed in ${scene}.`);
 }
 
 /** Scene-relative frame at which the scene's narration ends. */
 export function narrationEnd(scene: NarratedScene) {
-  const line = script.lines.find((entry) => entry.scene === scene);
-  if (!line) {
-    throw new Error(`No narration line for ${scene}.`);
-  }
-  return Math.round(
-    line.startFrame - SCENES[scene].from + MEASURED_SECONDS[scene] * script.fps,
-  );
+  return lineOf(scene).endFrame - SCENES[scene].from;
 }

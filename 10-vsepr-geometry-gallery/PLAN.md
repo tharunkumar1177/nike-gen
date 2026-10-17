@@ -90,7 +90,7 @@ Source variance: NH₃ is also cited as 107.3° and SO₂ as 119.5°; the video 
 | 6 `pitfalls` | 6750–7750 | 6780–7650 | 67 | 7584 | 166 |
 | 7 `closing-card` | 7750–8100 | silent | | | |
 
-Gaps are re-checked against measured Kokoro clip lengths after the first CI run.
+The frame numbers above were the design estimate. In the build, `audio/generate.js` synthesises each sentence separately (Kokoro truncates long inputs), then lays the scenes end to end from the measured clips: narration starts 30 frames into each scene and the next narration starts exactly 150 frames (5 s) after the previous one ends; the closing card is 350 frames. The layout is written to `src/timeline.json`, which drives the composition length, scene windows, phrase cues (per-sentence timing), and stills. The build fails if the total falls outside 240–300 s.
 
 1. `concept-hero`. Hero `Molecule3D` whose domains push apart inside a `DomainFrame3D`; labels "Steric number = bonded atoms + lone pairs" and the repulsion order.
    "An electron domain is a region of high electron density around the central atom. These domains spread out to minimise repulsion. A lone pair, single bond, double bond, or triple bond each count as one domain. The steric number is the sum of bonded atoms and lone pairs. This fixes the electron domain geometry. Molecular geometry describes only the positions of the atoms. Lone pairs occupy more space, so the repulsion order is lone pair lone pair, then lone pair bonding pair, then bonding pair bonding pair."
