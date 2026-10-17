@@ -3,15 +3,15 @@ import { SCENES, type NarratedScene } from "./theme";
 
 /**
  * Kokoro clip lengths in seconds, as logged by `audio/generate.js` in CI.
- * Until measured, these are word counts at 2.5 words per second.
+ * Until measured, these are 0.37 s per word plus 0.2 s between sentences.
  */
 const MEASURED_SECONDS: Record<NarratedScene, number> = {
-  "concept-hero": 35.6,
-  "procedure-steps": 24.8,
-  "sn-2-4-gallery": 50,
-  "sn-5-family": 45.6,
-  "sn-6-family": 35.2,
-  pitfalls: 26.8,
+  "concept-hero": 34.1,
+  "procedure-steps": 25.3,
+  "sn-2-4-gallery": 47.7,
+  "sn-5-family": 43.4,
+  "sn-6-family": 33.8,
+  pitfalls: 24.5,
 };
 
 const normalize = (word: string) =>

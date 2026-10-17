@@ -15,6 +15,9 @@ export function progress(
   end: number,
   easing: (t: number) => number = easeOut,
 ) {
+  if (!Number.isFinite(start) || !Number.isFinite(end)) {
+    return start === -Infinity ? 1 : 0;
+  }
   return interpolate(frame, [start, end], [0, 1], { ...clamp, easing });
 }
 

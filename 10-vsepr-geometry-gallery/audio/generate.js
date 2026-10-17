@@ -4,6 +4,7 @@ import { env } from "@huggingface/transformers";
 import { KokoroTTS } from "kokoro-js";
 
 const MIX_CEILING_DBFS = -1;
+const SENTENCE_GAP_SECONDS = 0.2;
 
 const readJson = async (name) =>
   JSON.parse(await readFile(new URL(name, import.meta.url), "utf8"));
@@ -35,13 +36,39 @@ async function speakLines() {
   });
   const clips = [];
   for (const line of script.lines) {
-    const audio = await tts.generate(line.text, {
-      voice: script.voice.id,
-      speed: script.voice.speed,
-    });
-    clips.push({ line, samples: audio.audio, rate: audio.sampling_rate });
+    // Kokoro truncates long inputs, so each sentence is synthesised separately.
+    const parts = [];
+    let rate = 0;
+    for (const sentence of splitSentences(line.text)) {
+      const audio = await tts.generate(sentence, {
+        voice: script.voice.id,
+        speed: script.voice.speed,
+      });
+      parts.push(audio.audio);
+      rate = audio.sampling_rate;
+    }
+    clips.push({ line, samples: joinWithGaps(parts, rate), rate });
   }
   return clips;
+}
+
+function splitSentences(text) {
+  const sentences = text.match(/[^.!?]+[.!?]+/g) ?? [text];
+  return sentences.map((sentence) => sentence.trim()).filter(Boolean);
+}
+
+function joinWithGaps(parts, rate) {
+  const gap = Math.round(SENTENCE_GAP_SECONDS * rate);
+  const length =
+    parts.reduce((sum, part) => sum + part.length, 0) +
+    gap * (parts.length - 1);
+  const joined = new Float32Array(length);
+  let offset = 0;
+  parts.forEach((part, i) => {
+    joined.set(part, offset);
+    offset += part.length + (i < parts.length - 1 ? gap : 0);
+  });
+  return joined;
 }
 
 function layVoice(clips, rate, length) {
