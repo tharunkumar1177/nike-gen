@@ -12,6 +12,7 @@ on:
           - atomic-structure-isotopes-mass-spectra
           - quantum-model-orbitals
           - electron-configuration-aufbau-hund-pauli
+          - 07-moles-stoichiometry-limiting-reagents
 
 permissions:
   contents: read
