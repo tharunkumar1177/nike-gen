@@ -131,7 +131,9 @@ export function TemperatureScene() {
         color={colors.forwardText}
         {...popped(frame, fps, HEAT_AT)}
       >
-        Add heat<Arrow />shifts right
+        Add heat
+        <Arrow />
+        shifts right
       </Text>
       <Text
         x={620}

@@ -76,7 +76,8 @@ export function QuotientScene() {
         color={colors.forwardText}
         {...popped(frame, fps, LESS_AT)}
       >
-        Q {"<"} K<Arrow />shifts right, toward products
+        Q {"<"} K<Arrow />
+        shifts right, toward products
       </Text>
       <Text
         x={RULE_X}
@@ -86,7 +87,8 @@ export function QuotientScene() {
         color={colors.reverseText}
         {...popped(frame, fps, GREATER_AT)}
       >
-        Q {">"} K<Arrow left />shifts left, toward reactants
+        Q {">"} K<Arrow left />
+        shifts left, toward reactants
       </Text>
     </AbsoluteFill>
   );

@@ -145,7 +145,8 @@ export function MagnitudeScene() {
         opacity={greater.opacity * lerp(1, 0.35, toReactants)}
         scale={greater.scale}
       >
-        K<Much />1: products favoured
+        K<Much />
+        1: products favoured
       </Text>
       <Text
         x={460}
@@ -157,7 +158,8 @@ export function MagnitudeScene() {
         opacity={less.opacity}
         scale={less.scale}
       >
-        K<Much less />1: reactants favoured
+        K<Much less />
+        1: reactants favoured
       </Text>
     </AbsoluteFill>
   );

@@ -56,7 +56,8 @@ export function VolumeScene() {
         color={colors.reverseText}
         {...popped(frame, fps, SIDE_AT)}
       >
-        <Arrow left />shifts left, toward fewer moles of gas
+        <Arrow left />
+        shifts left, toward fewer moles of gas
       </Text>
       <Text
         x={SAFE}

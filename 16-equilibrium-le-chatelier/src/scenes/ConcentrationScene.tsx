@@ -59,7 +59,8 @@ export function ConcentrationScene() {
         opacity={quotient.opacity}
         scale={quotient.scale * pulse(frame, SHIFT_AT)}
       >
-        Q {"<"} K<Arrow />shifts right
+        Q {"<"} K<Arrow />
+        shifts right
       </Text>
       <ConcentrationGraph
         {...GRAPH}
