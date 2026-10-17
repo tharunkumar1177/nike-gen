@@ -10,6 +10,9 @@ About 3-5 minutes
 
 ## Narration
 Kokoro TTS generated in CI, free, no API key  
+- Spark curiosity and imagination; don't just define. Open each concept with a question, puzzle, or surprising observation the viewer wants resolved.
+- Bridge every move from one concept to the next: say why the new concept is needed (what the previous one can't explain) and how the two connect.
+- Say why a concept matters before explaining how it works.
 
 ## Background audio
 Quiet synth pad generated in code, no licensing issues  

@@ -19,7 +19,7 @@ const BEATS = {
   ohAngle: cue(SCENE, "octahedral"),
   sp3d2: cue(SCENE, "labelled S P three D two"),
   sf6Name: cue(SCENE, "as in sulfur hexafluoride"),
-  caution: cue(SCENE, "Textbooks often mix in D orbitals"),
+  caution: cue(SCENE, "textbooks often mix in D orbitals"),
   cautionText: cue(SCENE, "actually contribute very little"),
 };
 

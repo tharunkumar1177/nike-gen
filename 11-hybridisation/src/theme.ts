@@ -1,4 +1,4 @@
-import { loadFont } from "@remotion/google-fonts/Roboto";
+import { loadFont } from "@remotion/google-fonts/IBMPlexSans";
 import timeline from "./timeline.json";
 
 const { fontFamily } = loadFont("normal", {
@@ -15,8 +15,27 @@ export const VIDEO = {
   durationInFrames: timeline.durationInFrames,
 } as const;
 
-export const SAFE = 120;
+export const SAFE = 100;
 export const CROSSFADE = 30;
+
+const TITLE_SIZE = 70;
+const LINE_HEIGHT = 1.2;
+
+/** Scene title block from `wireframe.svg`, top-left with no rules. */
+export const TITLE = {
+  size: TITLE_SIZE,
+  /** Left edge: two fifths of the title size in from the safe margin. */
+  left: SAFE + TITLE_SIZE * 0.4,
+  /** Top edge: one fifth of the title size below the safe margin. */
+  top: SAFE + TITLE_SIZE * 0.2,
+  subtitleSize: 40,
+  /** Space between the title's line box and the subtitle's. */
+  subtitleGap: 8,
+} as const;
+
+export const TITLE_BOTTOM = TITLE.top + TITLE.size * LINE_HEIGHT;
+export const SUBTITLE_TOP = TITLE_BOTTOM + TITLE.subtitleGap;
+export const SUBTITLE_BOTTOM = SUBTITLE_TOP + TITLE.subtitleSize * LINE_HEIGHT;
 
 export const colors = {
   background: "#FFFFFF",
@@ -40,8 +59,8 @@ export const colors = {
 } as const;
 
 export const type = {
-  title: 96,
-  subtitle: 64,
+  title: TITLE_SIZE,
+  subtitle: TITLE.subtitleSize,
   body: 48,
   label: 32,
 } as const;

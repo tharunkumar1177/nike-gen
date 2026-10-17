@@ -1,8 +1,17 @@
 import type { CSSProperties, ReactNode } from "react";
-import { colors, FONT, SAFE, type, VIDEO } from "../theme";
+import {
+  colors,
+  FONT,
+  SUBTITLE_BOTTOM,
+  SUBTITLE_TOP,
+  TITLE,
+  TITLE_BOTTOM,
+  type,
+  VIDEO,
+} from "../theme";
 import { Text } from "./Text";
 
-/** Scene title centred on y 180. */
+/** Bold scene title at the top-left, per `wireframe.svg`. */
 export function Title({
   children,
   opacity = 1,
@@ -12,8 +21,8 @@ export function Title({
 }) {
   return (
     <Text
-      x={SAFE}
-      y={180}
+      x={TITLE.left}
+      y={(TITLE.top + TITLE_BOTTOM) / 2}
       size={type.title}
       weight={700}
       anchor="start"
@@ -24,7 +33,7 @@ export function Title({
   );
 }
 
-/** Subtitle centred on y 260. */
+/** Muted subtitle directly under the title, sharing its left edge. */
 export function Subtitle({
   children,
   opacity = 1,
@@ -34,9 +43,9 @@ export function Subtitle({
 }) {
   return (
     <Text
-      x={SAFE}
-      y={260}
-      size={type.body}
+      x={TITLE.left}
+      y={(SUBTITLE_TOP + SUBTITLE_BOTTOM) / 2}
+      size={type.subtitle}
       color={colors.muted}
       anchor="start"
       opacity={opacity}
