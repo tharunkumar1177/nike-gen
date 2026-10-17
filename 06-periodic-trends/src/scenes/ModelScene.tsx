@@ -55,7 +55,9 @@ export function ModelScene() {
 
   return (
     <AbsoluteFill>
-      <Title>Coulomb Attraction &amp; <Zeff /></Title>
+      <Title>
+        Coulomb Attraction &amp; <Zeff />
+      </Title>
 
       <svg
         width={VIDEO.width}
@@ -168,7 +170,11 @@ export function ModelScene() {
         y={600}
         size={40}
         wrong="Nuclear pull is shared out"
-        correction={<><Zeff /> rises across a period</>}
+        correction={
+          <>
+            <Zeff /> rises across a period
+          </>
+        }
         opacity={pitfall}
         strike={strike}
         fix={fix}

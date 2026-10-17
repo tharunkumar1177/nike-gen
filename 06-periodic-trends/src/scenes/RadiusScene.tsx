@@ -52,7 +52,9 @@ export function RadiusScene() {
         label="Increases"
       />
       <Note x={1040} y={380} show={closer}>
-        <div>Higher <Zeff /></div>
+        <div>
+          Higher <Zeff />
+        </div>
         <div>= electrons pulled closer</div>
       </Note>
       <Note x={1040} y={580} show={farther}>

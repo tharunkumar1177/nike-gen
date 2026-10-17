@@ -217,7 +217,9 @@ export function AffinityScene() {
         <div style={{ fontWeight: 700 }}>
           F &lt; Cl: 328.2 &lt; 348.6 kJ/mol
         </div>
-        <div>small size, strong e<Sup>−</Sup>–e<Sup>−</Sup> repulsion</div>
+        <div>
+          small size, strong e<Sup>−</Sup>–e<Sup>−</Sup> repulsion
+        </div>
       </div>
     </AbsoluteFill>
   );

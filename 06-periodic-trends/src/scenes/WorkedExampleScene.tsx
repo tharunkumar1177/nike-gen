@@ -66,7 +66,9 @@ export function WorkedExampleScene() {
     <AbsoluteFill>
       <Title>Worked Example: Rank by Radius</Title>
 
-      <div style={{ ...STEP, top: 256, opacity: list }}>Ions: <IonList /></div>
+      <div style={{ ...STEP, top: 256, opacity: list }}>
+        Ions: <IonList />
+      </div>
       <div style={{ ...STEP, top: 336 }}>
         <span style={{ opacity: electrons }}>10 electrons each. </span>
         <span style={{ opacity: protons }}>

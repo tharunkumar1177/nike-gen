@@ -12,7 +12,11 @@ const ZEFF_TAKEAWAY =
 
 const TAKEAWAYS = [
   {
-    text: <><Zeff /> {ZEFF_TAKEAWAY}</>,
+    text: (
+      <>
+        <Zeff /> {ZEFF_TAKEAWAY}
+      </>
+    ),
     at: cue(SCENE, "Effective nuclear charge drives"),
   },
   {

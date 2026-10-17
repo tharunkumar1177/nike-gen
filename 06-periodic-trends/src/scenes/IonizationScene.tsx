@@ -101,7 +101,11 @@ export function IonizationScene() {
         values={IE}
         format={String}
         reveal={reveal}
-        legend={<>IE<Sub>1</Sub> (kJ/mol)</>}
+        legend={
+          <>
+            IE<Sub>1</Sub> (kJ/mol)
+          </>
+        }
         opacity={map}
       />
       <AcrossArrow
@@ -119,7 +123,11 @@ export function IonizationScene() {
 
       <ChartFrame
         title="Period 2 First Ionization Energy"
-        yLabel={<>IE<Sub>1</Sub> (kJ/mol)</>}
+        yLabel={
+          <>
+            IE<Sub>1</Sub> (kJ/mol)
+          </>
+        }
         scale={SCALE}
         ticks={TICKS}
         categories={PERIOD_2}
