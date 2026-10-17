@@ -1,0 +1,56 @@
+{
+  "fps": 30,
+  "durationInFrames": 5400,
+  "voice": {
+    "id": "af_heart",
+    "speed": 1,
+    "peakDbfs": -3
+  },
+  "pad": {
+    "chordHz": [146.83, 220, 293.66, 369.99],
+    "peakDbfs": -24,
+    "duckDb": -8,
+    "duckAttackMs": 120,
+    "duckReleaseMs": 600,
+    "fadeInFrames": 60,
+    "fadeOutFrames": 120
+  },
+  "lines": [
+    {
+      "scene": "ordering-groups",
+      "text": "The modern periodic table is ordered by atomic number, not mass. It maps electron configurations. Rows are periods, numbered by the principal quantum number of the opening s subshell. Columns are groups, numbered one to eighteen. Elements in a group share similar valence configurations.",
+      "startFrame": 30,
+      "endByFrame": 600
+    },
+    {
+      "scene": "building-blocks",
+      "text": "A period's length equals the capacity of subshells filled across it. Period one fills one s, giving two elements. Periods two and three fill s and p, giving eight. Periods four and five add the d block, giving eighteen. Periods six and seven add the f block, giving thirty-two. It's drawn below to keep it narrow.",
+      "startFrame": 750,
+      "endByFrame": 1500
+    },
+    {
+      "scene": "special-cases",
+      "text": "Let's look at two special cases. Hydrogen is one s one. It sits in group one, but is a nonmetal. Helium is one s two, making it an s block element. However, it sits in group eighteen because of its filled shell and noble gas behaviour.",
+      "startFrame": 1650,
+      "endByFrame": 2280
+    },
+    {
+      "scene": "offsets-exceptions",
+      "text": "Notice the shell offsets. The d block fills the n minus one shell, and f fills n minus two. Only s and p fill shell n. Block assignment follows filling position. Chromium is argon core, three d five, four s one, but remains a d block element. Group twelve elements are d block, but not transition elements because their d subshells are full.",
+      "startFrame": 2430,
+      "endByFrame": 3270
+    },
+    {
+      "scene": "example-phosphorus",
+      "text": "We read configurations directly from the table. Phosphorus is period three, group fifteen, in the p block. Start with the preceding noble gas, neon. Cross the period three s block, giving three s two. Count three spots into the p block, ending at three p three. The configuration is neon core, three s two, three p three.",
+      "startFrame": 3420,
+      "endByFrame": 4170
+    },
+    {
+      "scene": "example-vanadium",
+      "text": "Let's try vanadium: period four, group five, in the d block. The preceding noble gas is argon. Cross the four s block, giving four s two. Count three spots into the three d block, ending at three d three. Following written order, the configuration is argon core, three d three, four s two.",
+      "startFrame": 4320,
+      "endByFrame": 5040
+    }
+  ]
+}

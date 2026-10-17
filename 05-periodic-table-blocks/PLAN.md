@@ -97,7 +97,7 @@ Concept: the modern periodic table is ordered by atomic number Z, not mass, and 
    "We read configurations directly from the table. Phosphorus is period three, group fifteen, in the p block. Start with the preceding noble gas, neon. Cross the period three s block, giving three s two. Count three spots into the p block, ending at three p three. The configuration is neon core, three s two, three p three."
 6. Ar highlights, then a path traces period 4 through the s-block (K, Ca) into the d-block, stopping at V (group 5). Text builds "[Ar] 3d³ 4s²".
    "Let's try vanadium: period four, group five, in the d block. The preceding noble gas is argon. Cross the four s block, giving four s two. Count three spots into the three d block, ending at three d three. Following written order, the configuration is argon core, three d three, four s two."
-7. Card "Key Takeaways": "Rows are periods (n); columns are groups (1–18)." / "Blocks (s, p, d, f) show the subshell being filled." / "Offsets: d fills (n−1), f fills (n−2)." / "Configurations can be read left-to-right from the preceding noble gas."
+7. Card "Key Takeaways": "Rows are periods (n); columns are groups (1–18)." / "Blocks (s, p, d, f) show the subshell being filled." / "Offsets: d fills (n−1), f fills (n−2)." / "Read configurations from the preceding noble gas."
 
 ### Stills
 
@@ -105,7 +105,36 @@ Frames 360, 1170, 2010, 2900, 3840, 4700, 5250.
 
 ### Frame-by-frame
 
-Pending (`designer`, in sequences).
+Delivered by `designer` in sequences. Text y values are baselines; shape y values are top edges. Beats are keyed to narrated phrases (`src/cues.ts`).
+
+Shared hero table:
+
+- Cell 56×56, gap 4 (pitch 60), radius 4. Main grid origin (top-left of H) x 422, y 380; grid spans x 422–1498, y 380–796. Only the 90 real main-table cells are drawn (row 1: groups 1 and 18; rows 2–3: groups 1–2 and 13–18).
+- f rows: origin x 602 (under group 4), y 820, pitch 60; La–Yb (row 6) and Ac–No (row 7). Marker: 4 px `#4C566A` vertical line at x 540 spanning rows 6–7 (y 680–796); dotted guides from the marker to the f rows.
+- Group 3 = Sc, Y, Lu, Lr. Row 6 main: Cs Ba Lu Hf … Rn; row 7 main: Fr Ra Lr Rf … Og.
+- Cell styles: empty (3 px `#4C566A` stroke, white fill); neutral (stroke, `#E5E9F0` fill); block-coloured (block fill, block text colour, no stroke); dimmed (opacity 0.3); highlighted (4 px stroke in the block text colour).
+- Symbols 24 px / 500 centred. Period labels 32 px / 500 right-aligned at x 380 on row centres; group labels 32 px / 500 centred on columns at y 350.
+- Scenes 5–6 transform: scale 0.85 about (422, 380), then translate x −200, 30 frames `easeInOutCubic`. The result spans x ≈ 186–1136 (labels to group 18) and y ≈ 330–853, leaving x 1200–1800 free for step panels.
+
+Scene 1: title at (120, 160) 96/700; subtitle at (120, 250) 64/400 `#4C566A`; both fade in over 15 frames at scene start, and the 90 empty main cells stagger in over 30 frames. Caption "The table is a map of electron configurations." centred at x 960, y 880, 48/400, fades in on "atomic number". Period labels fade in on "periods"; group labels on "groups" (15 frames each).
+
+Scene 2: row-length counters (2, 8, 8, 18, 18, 32, 32) at x 1520 on row centres, 32/500 `#4C566A`. Legend top-right at (1520, 160): four 30×30 chips with labels. Each row fills straight into its block colours: row 1 (s) on "one s"; rows 2–3 (s, p) on "s and p"; rows 4–5 (s, d, p) on "add the d block"; rows 6–7 main plus the f rows on "add the f block". The f rows start collapsed (scaleX 0) at the marker. Each legend chip appears with its block's first row. On "drawn below", the f rows expand and slide to y 820 (30 frames `easeOutCubic`) and the guides fade in.
+
+Scene 3: on "Let's look at two special cases" everything except H and He dims to 0.3 (30 frames `easeInOutCubic`). "1s¹" slides in right of H (baseline 416) on "Hydrogen is one s one"; "1s²" slides in left of He on "Helium is one s two". On "making it an s block element" He pulses (1.15 → 1) and a dashed s-colour link draws from He to the legend's s chip. Second lines ("Nonmetal", "s-block, placed in group 18") on their phrases. Everything restores over the last 30 frames.
+
+Scene 4: title "Offsets & Exceptions" at (120, 210). Offset labels at x 1520 (baselines 410/460/510): "s, p: shell n", "d-block: (n−1)", "f-block: (n−2)"; the d and f blocks take a 4 px block-colour ring on their phrases, cleared on "Block assignment follows filling position", when the pitfalls box appears in the empty groups 3–12 gap of rows 1–3. Cr rings on "Chromium"; the group 12 column rings on "Group twelve".
+
+Scenes 5–6: the table takes the shift transform over scene 5's first 30 frames. Step panel at x 1200: title 48/500 at baseline 300; steps 32/400 at 380/460/540/620 (1 Locate, 2 Core, 3 s subshell, 4 p or d subshell), each on its phrase; "5. Result" and the 48/500 block-coloured result at 690/750. The target and noble-gas cells ring in their block colour; a 4 px block-colour path draws across the s cells (15 frames) and then the p or d cells (20 frames), counting electrons into each cell. Vanadium's result builds in filling order "[Ar] 4s² 3d³" and the two terms swap along a 40 px arc into "[Ar] 3d³ 4s²" on "argon core".
+
+Scene 7: card 1600×620 at (160, 230), 3 px `#4C566A` stroke, springs up 70 px (stiffness 100, damping 14) from frame 15; title 64/500; four 48 px bullets staggered 20 frames from frame 40.
+
+Implementation deviations (layout fixes, no content change):
+
+- Scene 1 adds the storyboard's axis titles "Period (n)" and "Group" (omitted from the frame plan); they fade out as the table shifts in scene 5, where they would leave the screen.
+- Scene 3 second lines sit above their cells (baseline 310) instead of in row 2, where they overlapped Be and B–F; the He link runs up the strip between group 18 and the legend.
+- Scene 4 "s, p: shell n" appears on "Only s and p" rather than at the scene start; the pitfalls box spans the whole gap (x 546–1134, 172 tall) and the group 12 line wraps to two lines to fit.
+- Scenes 5–6 counters are superscripts in each cell's top-right corner, and the path runs in the 4 px gap under the row, because counters above the cells and a path through their centres would cover neighbouring symbols. A "5. Result" label was added to match the numbered steps.
+- Closing card: the fourth takeaway was shortened to fit the card width.
 
 ## Status
 
