@@ -1,0 +1,56 @@
+{
+  "fps": 30,
+  "durationInFrames": 8100,
+  "voice": {
+    "id": "af_heart",
+    "speed": 1,
+    "peakDbfs": -3
+  },
+  "pad": {
+    "chordHz": [110, 164.81, 220, 277.18],
+    "peakDbfs": -27,
+    "duckDb": -8,
+    "duckAttackMs": 120,
+    "duckReleaseMs": 600,
+    "fadeInFrames": 60,
+    "fadeOutFrames": 120
+  },
+  "lines": [
+    {
+      "scene": "concept-hero",
+      "text": "An electron domain is a region of high electron density around the central atom. These domains spread out to minimise repulsion. A lone pair, single bond, double bond, or triple bond each count as one domain. The steric number is the sum of bonded atoms and lone pairs. This fixes the electron domain geometry. Molecular geometry describes only the positions of the atoms. Lone pairs occupy more space, so the repulsion order is lone pair lone pair, then lone pair bonding pair, then bonding pair bonding pair.",
+      "startFrame": 60,
+      "endByFrame": 1200
+    },
+    {
+      "scene": "procedure-steps",
+      "text": "To find the shape, follow six steps. First, draw the Lewis structure. Second, count electron domains on the central atom to find the steric number. Third, pick the electron geometry. Fourth, place lone pairs where they have the most room. Fifth, name the molecular geometry from the atom positions only. Sixth, expect angles smaller than ideal next to lone pairs.",
+      "startFrame": 1320,
+      "endByFrame": 2130
+    },
+    {
+      "scene": "sn-2-4-gallery",
+      "text": "Steric numbers two through four give linear, trigonal planar, and tetrahedral electron geometries. We use A X m E n notation, where A is the central atom, X is a bonded atom, and E is a lone pair. C O two is A X two, linear at one hundred eighty degrees. B F three is A X three, trigonal planar at one hundred twenty degrees. S O two is A X two E, bent at one hundred nineteen degrees. C H four is A X four, tetrahedral at one hundred nine point five degrees. N H three is A X three E, trigonal pyramidal at one hundred seven degrees. H two O is A X two E two, bent at one hundred four point five degrees.",
+      "startFrame": 2250,
+      "endByFrame": 3850
+    },
+    {
+      "scene": "sn-5-family",
+      "text": "Steric number five is trigonal bipyramidal. Lone pairs go in equatorial positions, where each meets only two domains at ninety degrees. P C L five is A X five, trigonal bipyramidal. For a worked example, S F four has four bonds and one lone pair, giving steric number five. The lone pair is equatorial, making an A X four E seesaw shape with angles squeezed to one hundred seventy three point one and one hundred one point six degrees. C L F three is A X three E two, a T shape at eighty seven point five degrees. X E F two is A X two E three, linear at one hundred eighty degrees.",
+      "startFrame": 3980,
+      "endByFrame": 5400
+    },
+    {
+      "scene": "sn-6-family",
+      "text": "Steric number six is octahedral. All six positions are equivalent. S F six is A X six, octahedral with ninety degree angles. B R F five is A X five E, square pyramidal at eighty four point eight degrees. For our next worked example, X E F four has four bonds and two lone pairs. The two lone pairs sit trans, one hundred eighty degrees apart, to avoid a ninety degree repulsion. This leaves an A X four E two square planar geometry with exactly ninety degree bond angles.",
+      "startFrame": 5520,
+      "endByFrame": 6650
+    },
+    {
+      "scene": "pitfalls",
+      "text": "Watch out for common pitfalls. Do not count a double or triple bond as more than one domain. C O two is steric number two, linear. Do not name the electron geometry instead of the molecular geometry, or ignore lone pairs and predict H two O is linear. Finally, do not put steric number five lone pairs in axial positions just because they look more open.",
+      "startFrame": 6780,
+      "endByFrame": 7650
+    }
+  ]
+}
