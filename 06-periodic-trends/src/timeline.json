@@ -1,55 +1,55 @@
 {
   "fps": 30,
-  "durationInFrames": 5210,
+  "durationInFrames": 5891,
   "scenes": [
     {
       "id": "model-zeff",
       "from": 0,
-      "to": 730,
+      "to": 860,
       "lineStart": 120,
-      "lineFrames": 510
+      "lineFrames": 640
     },
     {
       "id": "atomic-radius",
-      "from": 700,
-      "to": 1400,
-      "lineStart": 810,
-      "lineFrames": 490
+      "from": 830,
+      "to": 1616,
+      "lineStart": 940,
+      "lineFrames": 576
     },
     {
       "id": "ionization-energy",
-      "from": 1370,
-      "to": 2300,
-      "lineStart": 1480,
-      "lineFrames": 720
+      "from": 1586,
+      "to": 2579,
+      "lineStart": 1696,
+      "lineFrames": 783
     },
     {
       "id": "electron-affinity",
-      "from": 2270,
-      "to": 3200,
-      "lineStart": 2380,
-      "lineFrames": 720
+      "from": 2549,
+      "to": 3584,
+      "lineStart": 2659,
+      "lineFrames": 825
     },
     {
       "id": "electronegativity",
-      "from": 3170,
-      "to": 3940,
-      "lineStart": 3280,
-      "lineFrames": 560
+      "from": 3554,
+      "to": 4376,
+      "lineStart": 3664,
+      "lineFrames": 612
     },
     {
       "id": "worked-example",
-      "from": 3910,
-      "to": 4700,
-      "lineStart": 4020,
-      "lineFrames": 580
+      "from": 4346,
+      "to": 5249,
+      "lineStart": 4456,
+      "lineFrames": 693
     },
     {
       "id": "closing-card",
-      "from": 4670,
-      "to": 5210,
-      "lineStart": 4780,
-      "lineFrames": 340
+      "from": 5219,
+      "to": 5891,
+      "lineStart": 5329,
+      "lineFrames": 472
     }
   ]
 }

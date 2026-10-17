@@ -85,7 +85,7 @@ Isoelectronic series (10 electrons each), [Shannon 1976](https://doi.org/10.1107
 
 ### Visual style
 
-- 1920×1080, 30 fps, about 5210 frames (174 s). Kokoro `af_heart` narration plus a softened code-generated pad.
+- 1920×1080, 30 fps, planned about 5210 frames (174 s); measured 5891 frames (196 s). Kokoro `af_heart` narration plus a softened code-generated pad.
 - Background `#FFFFFF`; text `#1C1C1E`; axes and outlines `#4C566A`; neutral tile `#E5E9F0`.
 - Property colours: radius `#88C0D0`, ionization energy `#D08770`, electron affinity `#B48EAD`, electronegativity `#A3BE8C`. Pitfall strike-outs `#D32F2F`.
 - Type: Roboto. Title 96 px / 700, subtitle 64 px, body 48 px / 400, labels 32 px / 500.
@@ -142,7 +142,7 @@ Delivered by `designer` in three sequences (scenes 1–2, 3–4, 5–7); exact c
 
 ### Implementation notes
 
-- Timing is measured, not guessed: `audio/generate.js` speaks every line, then lays the timeline out from the measured clip lengths using the planned spacing (narration starts 120 frames into scene 1 and 110 frames into later scenes; 180-frame silence between lines; 30-frame crossfade; 90-frame end hold). It writes `src/timeline.json`, which the composition, the cues and the stills read. The committed `timeline.json` applies the same rule to the planned line lengths, so it matches the table above to within 10 frames. The generator fails if any gap leaves 3–8 s, narration overlaps a crossfade, or the total leaves 150–200 s.
+- Timing is measured, not guessed: `audio/generate.js` speaks every line, then lays the timeline out from the measured clip lengths using the planned spacing (narration starts 120 frames into scene 1 and 110 frames into later scenes; 180-frame silence between lines; 30-frame crossfade; 90-frame end hold). It writes `src/timeline.json`, which the composition, the cues and the stills read. The committed `timeline.json` holds the measured layout from the first green render: Kokoro ran at about 2.5 words/s (lines 21.33, 19.20, 26.10, 27.50, 20.40, 23.10, 15.73 s), giving 5891 frames (196.4 s) with every gap exactly 6.0 s. The generator fails if any gap leaves 3–8 s, narration overlaps a crossfade, or the total leaves 150–200 s.
 - Stills: two per scene, mid-narration and 1 s after the last word, computed from the measured timeline.
 
 Implementation deviations (layout fixes, no content change):
@@ -164,5 +164,5 @@ Implementation deviations (layout fixes, no content change):
 - [x] Brief
 - [x] Design plan
 - [x] Build
-- [ ] CI green, stills reviewed
+- [x] CI green ([run 39017381857](https://github.com/tharunkumar1177/nike-gen/actions/runs/39017381857)); stills are in the artifact but not downloaded (repo guardrail: verify compile only)
 - [ ] Recorded on main
