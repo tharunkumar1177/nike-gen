@@ -125,5 +125,7 @@ Bright textbook: white background, Roboto (latin + greek subsets for Δ and Π),
 - [x] Research
 - [x] Design
 - [x] Build
-- [ ] CI green
-- [ ] Merged
+- [x] CI green: [run 39029296841](https://github.com/tharunkumar1177/nike-gen/actions/runs/39029296841), 6578 frames (219.3 s), all gaps 5–6 s
+- [x] Merged
+
+First run failed only on Prettier formatting (CI patch applied); narration lengths then calibrated from CI measurements. Stills were not reviewed visually (verification limited to the CI build, as for Lesson 7).
