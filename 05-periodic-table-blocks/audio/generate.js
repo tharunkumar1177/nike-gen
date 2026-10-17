@@ -48,6 +48,7 @@ function layVoice(clips, rate, length) {
   const voice = new Float32Array(length);
   const active = new Uint8Array(length);
   const target = dbToGain(script.voice.peakDbfs);
+  const overruns = [];
   for (const { line, samples } of clips) {
     const start = frameToSample(line.startFrame, rate);
     const end = start + samples.length;
@@ -56,9 +57,10 @@ function layVoice(clips, rate, length) {
       `${line.scene}: ${(samples.length / rate).toFixed(2)} s, frames ${line.startFrame}-${endFrame} (limit ${line.endByFrame})`,
     );
     if (endFrame > line.endByFrame) {
-      throw new Error(
+      overruns.push(
         `${line.scene} narration ends at frame ${endFrame}, past ${line.endByFrame}.`,
       );
+      continue;
     }
     const level = peak(samples);
     if (level === 0) {
@@ -69,6 +71,9 @@ function layVoice(clips, rate, length) {
       voice[start + i] += samples[i] * gain;
       active[start + i] = 1;
     }
+  }
+  if (overruns.length > 0) {
+    throw new Error(overruns.join("\n"));
   }
   return { voice, active };
 }

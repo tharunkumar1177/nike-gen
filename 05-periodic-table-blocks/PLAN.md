@@ -70,20 +70,22 @@ Concept: the modern periodic table is ordered by atomic number Z, not mass, and 
 - Background `#FFFFFF`; text `#1C1C1E`; table cells `#E5E9F0` (stroke `#4C566A`).
 - Block colours (fill / text or stroke): s `#88C0D0` / `#2B7992`; p `#B48EAD` / `#7C5375`; d `#A3BE8C` / `#4A7A40`; f `#EBCB8B` / `#9A7A3A`.
 - Type: Roboto. Title 96 px / 700, subtitle 64 px, body 48 px / 400, labels 32 px / 500.
-- Safe margin 120 px. 30-frame crossfade between scenes; 150-frame (5 s) silent gap between narration lines.
+- Safe margin 120 px. 30-frame crossfade between scenes; silent gap of 3 s or more between narration lines.
 - One hero periodic-table component reused across scenes; cells show element symbols only (no Z).
 
 ### Storyboard and narration
 
 | Scene | Frames | Narration window |
 | --- | --- | --- |
-| 1 `ordering-groups` | 0–720 | 30–600 |
-| 2 `building-blocks` | 720–1620 | 750–1500 |
-| 3 `special-cases` | 1620–2400 | 1650–2280 |
-| 4 `offsets-exceptions` | 2400–3390 | 2430–3270 |
-| 5 `example-phosphorus` | 3390–4290 | 3420–4170 |
-| 6 `example-vanadium` | 4290–5100 | 4320–5040 |
-| 7 `closing-card` | 5100–5400 | silent |
+| 1 `ordering-groups` | 0–720 | 30–660 |
+| 2 `building-blocks` | 720–1600 | 750–1540 |
+| 3 `special-cases` | 1600–2350 | 1630–2290 |
+| 4 `offsets-exceptions` | 2350–3320 | 2380–3260 |
+| 5 `example-phosphorus` | 3320–4210 | 3350–4150 |
+| 6 `example-vanadium` | 4210–5040 | 4240–4990 |
+| 7 `closing-card` | 5040–5400 | silent |
+
+Retimed after the first render: Kokoro speaks these lines at about 2.3 words/s (scene 1 measured 19.3 s), so windows were widened to measured length plus about 1.7 s, with 90 frames between windows so every silent gap stays at 3 s or more.
 
 1. Title "Periodic Table Construction" / "Blocks & Configurations". A blank 18-column grid appears; rows labelled "Period (n)" 1–7 on the left, columns labelled "Group" 1–18 across the top.
    "The modern periodic table is ordered by atomic number, not mass. It maps electron configurations. Rows are periods, numbered by the principal quantum number of the opening s subshell. Columns are groups, numbered one to eighteen. Elements in a group share similar valence configurations."
@@ -101,7 +103,7 @@ Concept: the modern periodic table is ordered by atomic number Z, not mass, and 
 
 ### Stills
 
-Frames 360, 1170, 2010, 2900, 3840, 4700, 5250.
+Frames 640, 1560, 2270, 3260, 4170, 5000, 5300 (each scene's completed state, before its crossfade).
 
 ### Frame-by-frame
 

@@ -51,12 +51,12 @@ export const type = {
 /** Keys match the scene ids in `audio/script.json`. */
 export const SCENES = {
   "ordering-groups": { from: 0, to: 720 },
-  "building-blocks": { from: 720, to: 1620 },
-  "special-cases": { from: 1620, to: 2400 },
-  "offsets-exceptions": { from: 2400, to: 3390 },
-  "example-phosphorus": { from: 3390, to: 4290 },
-  "example-vanadium": { from: 4290, to: 5100 },
-  "closing-card": { from: 5100, to: 5400 },
+  "building-blocks": { from: 720, to: 1600 },
+  "special-cases": { from: 1600, to: 2350 },
+  "offsets-exceptions": { from: 2350, to: 3320 },
+  "example-phosphorus": { from: 3320, to: 4210 },
+  "example-vanadium": { from: 4210, to: 5040 },
+  "closing-card": { from: 5040, to: 5400 },
 } as const;
 
 export type NarratedScene = Exclude<keyof typeof SCENES, "closing-card">;
