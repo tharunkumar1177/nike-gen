@@ -51,12 +51,12 @@ export const type = {
 
 /** Keys match the scene ids in `audio/script.json`. */
 export const SCENES = {
-  "concept-energy": { from: 0, to: 760 },
-  "covalent-shared": { from: 760, to: 1500 },
-  "ionic-lattice": { from: 1500, to: 2330 },
-  "metallic-sea": { from: 2330, to: 3010 },
-  "electronegativity-scale": { from: 3010, to: 4100 },
-  "properties-pitfalls": { from: 4100, to: 5100 },
+  "concept-energy": { from: 0, to: 739 },
+  "covalent-shared": { from: 739, to: 1502 },
+  "ionic-lattice": { from: 1502, to: 2384 },
+  "metallic-sea": { from: 2384, to: 3111 },
+  "electronegativity-scale": { from: 3111, to: 4128 },
+  "properties-pitfalls": { from: 4128, to: 5100 },
   "closing-card": { from: 5100, to: 5400 },
 } as const;
 

@@ -20,37 +20,37 @@
       "scene": "concept-energy",
       "text": "A chemical bond is an attraction between atoms or ions that lowers the total energy of the system. Atoms do not form bonds because they want a full octet; they bond because the attraction releases energy, making the resulting structure more stable than the separate atoms.",
       "startFrame": 30,
-      "endByFrame": 700
+      "endByFrame": 620
     },
     {
       "scene": "covalent-shared",
       "text": "In a covalent bond, atoms share pairs of electrons. If the atoms are identical, like two chlorine atoms, they share the electrons equally, forming a nonpolar covalent bond. If the atoms differ, like hydrogen and chlorine, the sharing is unequal, creating a polar covalent bond.",
-      "startFrame": 790,
-      "endByFrame": 1440
+      "startFrame": 769,
+      "endByFrame": 1380
     },
     {
       "scene": "ionic-lattice",
       "text": "Ionic bonds usually form through electron transfer. Removing an electron from sodium costs energy, and adding it to chlorine releases some energy. But the real driving force is the formation of a massive lattice of oppositely charged ions, releasing huge amounts of energy. Sodium chloride is an extended lattice, not a discrete molecule.",
-      "startFrame": 1530,
+      "startFrame": 1532,
       "endByFrame": 2260
     },
     {
       "scene": "metallic-sea",
       "text": "Metallic bonding is a lattice of positive ion cores surrounded by a sea of delocalized valence electrons. These electrons move freely throughout the structure and hold the metal together. This model explains why solid metals can bend and conduct electricity.",
-      "startFrame": 2360,
-      "endByFrame": 2950
+      "startFrame": 2414,
+      "endByFrame": 2990
     },
     {
       "scene": "electronegativity-scale",
       "text": "Electronegativity is an atom's tendency to attract bonded electrons. The difference between atoms provides a rough guide to bond type. For example, two chlorine atoms have a difference of zero, making them nonpolar covalent. Hydrogen and chlorine have a difference of zero point nine, predicting polar covalent. Sodium and chlorine have a difference of two point one, predicting ionic. A van Arkel Ketelaar triangle adds average electronegativity to properly place metallic bonds.",
-      "startFrame": 3040,
-      "endByFrame": 4040
+      "startFrame": 3141,
+      "endByFrame": 4010
     },
     {
       "scene": "properties-pitfalls",
       "text": "Bonding determines bulk properties. An ionic lattice like sodium chloride is brittle and conducts only when molten or dissolved. A metallic lattice like copper is malleable and conducts as a solid. A common pitfall is treating electronegativity cutoffs as strict laws. Hydrogen fluoride has a difference of one point nine, yet it forms a polar covalent molecule, not an ionic one.",
-      "startFrame": 4130,
-      "endByFrame": 5040
+      "startFrame": 4158,
+      "endByFrame": 4950
     }
   ]
 }

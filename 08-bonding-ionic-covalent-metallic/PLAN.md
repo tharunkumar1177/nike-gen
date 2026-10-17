@@ -88,15 +88,15 @@ Concept: a chemical bond is an attraction between atoms or ions that lowers the 
 
 | Scene | Frames | Narration window |
 | --- | --- | --- |
-| 1 `concept-energy` | 0–760 | 30–700 |
-| 2 `covalent-shared` | 760–1500 | 790–1440 |
-| 3 `ionic-lattice` | 1500–2330 | 1530–2260 |
-| 4 `metallic-sea` | 2330–3010 | 2360–2950 |
-| 5 `electronegativity-scale` | 3010–4100 | 3040–4040 |
-| 6 `properties-pitfalls` | 4100–5100 | 4130–5040 |
+| 1 `concept-energy` | 0–739 | 30–620 |
+| 2 `covalent-shared` | 739–1502 | 769–1380 |
+| 3 `ionic-lattice` | 1502–2384 | 1532–2260 |
+| 4 `metallic-sea` | 2384–3111 | 2414–2990 |
+| 5 `electronegativity-scale` | 3111–4128 | 3141–4010 |
+| 6 `properties-pitfalls` | 4128–5100 | 4158–4950 |
 | 7 `closing-card` | 5100–5400 | silent |
 
-Windows are re-synced to measured narration after the first render so every silence between lines stays within 3–8 s.
+Windows are synced to the measured Kokoro durations (18.13, 18.93, 22.90, 17.73, 27.40, 24.80 s), leaving 6.5 s of silence between lines and about 6.6 s before the closing card.
 
 1. Title "Chemical Bonds" / "Energy, Not Octets". Concept statement. Potential-energy curve: two atoms approach and settle into the energy well, label "Lower total energy". Crossed-out pitfall "Atoms want a full octet".
    "A chemical bond is an attraction between atoms or ions that lowers the total energy of the system. Atoms do not form bonds because they want a full octet; they bond because the attraction releases energy, making the resulting structure more stable than the separate atoms."
@@ -114,7 +114,7 @@ Windows are re-synced to measured narration after the first render so every sile
 
 ### Stills
 
-Frames 400, 1200, 2000, 2800, 3700, 4700, 5250.
+Frames 640, 1420, 2300, 3010, 4040, 5000, 5250 (late in each scene, once every element is on screen).
 
 ### Frame-by-frame
 
