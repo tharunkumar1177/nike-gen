@@ -23,37 +23,37 @@
     {
       "scene": "the-mole",
       "text": "Atoms are incredibly small, so we use a counting unit called the mole. One mole contains exactly six point zero two two times ten to the twenty third entities. This enormous number is the Avogadro constant.",
-      "seconds": 14.4
+      "seconds": 14.28
     },
     {
       "scene": "molar-mass-map",
       "text": "Molar mass links mass to moles. H two O has a molar mass of eighteen point zero one five grams per mole. This conversion map turns mass into moles, and moles into particles.",
-      "seconds": 13.6
+      "seconds": 12.5
     },
     {
       "scene": "mole-ratios",
       "text": "Balanced equations give exact mole ratios. Two moles of H two react with one mole of O two to form two moles of H two O. These coefficients are stoichiometric factors.",
-      "seconds": 12.4
+      "seconds": 12.45
     },
     {
       "scene": "limiting-reagent",
       "text": "Let's react two point zero zero grams of H two and ten point zero grams of O two. Converting mass to moles gives zero point nine nine two one moles of H two, and zero point three one two five moles of O two.",
-      "seconds": 17.6
+      "seconds": 15.53
     },
     {
       "scene": "identifying-limiting",
       "text": "From the balanced ratio, our O two needs zero point six two five zero moles of H two. We have more than that, making H two the excess. O two is fully consumed, making it the limiting reactant, despite having the larger starting mass.",
-      "seconds": 17.6
+      "seconds": 15.8
     },
     {
       "scene": "theoretical-yield",
       "text": "The limiting reactant defines the theoretical yield. Our O two forms zero point six two five zero moles of H two O, or eleven point three grams. The unreacted H two, zero point seven four zero grams, remains in excess.",
-      "seconds": 16
+      "seconds": 16.85
     },
     {
       "scene": "percent-yield-pitfalls",
       "text": "If we collect ten point zero grams of H two O, our percent yield is eighty eight point eight percent. A major pitfall: smaller mass does not mean limiting. Always compare moles to the balanced ratio.",
-      "seconds": 14.4
+      "seconds": 13.65
     }
   ]
 }
