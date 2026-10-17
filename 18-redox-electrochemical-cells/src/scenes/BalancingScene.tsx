@@ -234,8 +234,7 @@ export function BalancingScene() {
         anchor="middle"
         opacity={fadeIn(frame, NET_AT + 20)}
       >
-        Charge check: +10 − 1 + 8 = +17 on the left; +15 + 2 = +17 on the
-        right
+        Charge check: +10 − 1 + 8 = +17 on the left; +15 + 2 = +17 on the right
       </Text>
     </AbsoluteFill>
   );

@@ -1,11 +1,5 @@
 import { AbsoluteFill } from "remotion";
-import {
-  dropped,
-  easeInOut,
-  fadeIn,
-  lerp,
-  progress,
-} from "../components/anim";
+import { dropped, easeInOut, fadeIn, lerp, progress } from "../components/anim";
 import { Cell, type Flow } from "../components/Cell";
 import {
   ElectrodeTitles,
