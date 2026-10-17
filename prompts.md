@@ -127,9 +127,6 @@ git push -u origin main
 --------------
 
 
-## Agents 
-
-
 ## AGENT HQ
 
 we already have agents [Research, Designer, Architect, Coder, Planner, Reviewer]. find the opitimal model for these from the available list.
@@ -141,13 +138,9 @@ Research Agent - Research for the existing product's system, features.
 
 Designer - responsible for designing Aesthetics and intuitive UI,  UI workflows. Returns Design plan with granular details. currently it writes code
 
-Coder - writes code consider every possible edge cases
-
 Productmind - Researches [external media like relevant subreddit page, ] what existing product failed address or could have done better that speaks for the product itself. can only be called by {Designer, Research Agent}
 
 Reviewer - reviews code by build error check via gh-cli CI logs, polls and returns what actually causing build fails/ errors
-
-Planner - comes up with a plan, proceeds further if it is approved. writes plan in md file and wait for approval. Planner can invoke these Agents {Architect, Researcher, productmind}
 
 
 ---
@@ -177,8 +170,6 @@ In the Agent Orchestration workflow, the main agent has to write code here after
 
 
 -----------------
-
-
 
 
 
@@ -286,64 +277,7 @@ Useful commands:
 - `git worktree remove <path>` deletes one. Git refuses if the folder has uncommitted changes.
 
 
--------
 
-`.prettierignore` lists the files and folders that Prettier, the code formatter, should skip. It works like `.gitignore`, but it controls formatting instead of git tracking.
-
-CI runs `prettier --check .`, which fails the build if any file isn't formatted the way Prettier wants. Some files must never be reformatted, so they're listed here. These two entries came up in the conflict:
-
-- **`crates/core/tests/golden`**: these are golden test fixtures, the exact KiCad and `tron.json` files the Rust tests compare saved output against byte for byte. If Prettier reformatted `tron.json`, the comparison would fail even though the code is correct.
-- **`promo`**: the promo video project has its own Prettier check in its own CI workflow (`promo.yml`). The root ignore keeps the main app's check from also checking it.
-
-The conflict happened because each branch added its own line in the same spot. The fix was to keep both lines.
-
-The other entries are generated or vendored content where formatting doesn't matter or is controlled elsewhere:
-- Build output: `dist`, `target`, `src-tauri/target`, `src-tauri/gen`.
-- Icons: `src-tauri/icons`.
-- Generated TypeScript bindings: `ui/src/bindings`, produced by `ts-rs` and checked by CI for drift instead.
-- Lockfiles: `package-lock.json`.
-- Markdown and config folders: `*.md`, `.cursor`, `.github`.
-
-
-
------------
-
-
-
-I used a worktree because a hard reset in `c:\nike-tracker` would have caused damage there and still wouldn't have fixed the problem.
-
-**What a hard reset would have done:**
-- **Deleted your staged files:** `git reset --hard` throws away everything staged. Because `README.md` and `prompts.md` were newly added and not yet committed, they would have been deleted from disk.
-- **Changed the other session's files:** that session had switched this folder to `promo-video` and was committing there. A reset or branch switch in the same folder would have changed the files it was working with.
-- **Left the real job undone:** a reset only removes my commit from `promo-video`. The commit still had to be added to `slice-2-project-shell`.
-
-**Why I couldn't just point the branch at the commit:** my commit's parent was the latest promo commit. Pointing `slice-2-project-shell` at it would have pulled all the promo-video commits into Slice 2. I had to cherry-pick the commit onto the Slice 2 branch, and that needs a checkout of that branch to resolve conflicts like the `.prettierignore` one. A separate worktree gave me that checkout without touching this folder.
-
-**The worktree wasn't the only option.** I could have stashed your staged files, switched this folder to `slice-2-project-shell`, cherry-picked, and switched back. That's how I handled the final merge once the promo work was finished. Doing that earlier was only risky while the other session might still be using the folder. Looking back, the worktree caused more confusion than it was worth, and I won't use one again unless you ask.
-
-
-
-
------------
-
-
-
-No push needed reverting, because the misplaced commit (`7e56d21`) was never pushed to `promo-video`. It only existed in your local copy of the branch. My push command named `slice-2-project-shell` explicitly, and the copy of `promo-video` on GitHub stayed at `b28393c`, the other session's last promo commit. I confirmed that with `git fetch` and `git rev-parse origin/promo-video`.
-
-To remove the commit locally, I ran this in `c:\nike-tracker`:
-
-```powershell
-git reset --keep HEAD~1
-```
-
-This moved `promo-video` back one commit, to `b28393c`. I chose `--keep` over `--hard` because:
-- **It's selective:** it only rewrites files that the removed commit changed, which are the Slice 2 files.
-- **It keeps other uncommitted changes:** a hard reset would have discarded them.
-- **It refuses rather than overwrites:** if the reset would have clobbered a local edit, it stops instead.
-
-It did unstage your `.gitignore`, `README.md` and `prompts.md` without changing their contents, so I staged them again straight away.
-
-Nothing was rewritten on GitHub, so there was no force-push. The commit's contents weren't lost either: a corrected version is on `main` through [PR #3](https://github.com/tharunkumar1177/tron/pull/3), and the original stays in git's local history log until it expires.
 
 ---------------
 
@@ -458,6 +392,23 @@ why that concept is essential and how it's interconnected?
 
 
 
-The script should trigger imagination curiosity rather than simply defining the concept.
+The script should trigger imagination curiosity of the audience rather than simply defining the concept.
 
+
+---------------------
+
+
+In the wireframe:
+
+Font size: the title is now 80 px instead of 96 px.
+Position: the title starts 32 px in from the left end of the lines (x=152 instead of x=120). The lines still start at the 120 px safe margin.
+Padding: the padding scales with the font, so it's now 16 px above and below the title. That moves the bottom line up from y=273 to y=248, and content can start from y=264.
+
+
+
+Pixels are the right unit here. "1080p" wasn't needed, so I removed it, and the rule in `style.md` now just says "Title is bold, about 70 px."
+
+Remotion runs your scenes in a headless browser, but it isn't a web page that resizes to fit a screen. The composition is fixed at 1920×1080, the size set under "Resolution and aspect ratio" in `style.md`. Remotion captures each frame as an image that exact size and encodes those images into the video. So 1 px in the code is 1 pixel of the final video, whatever screen it's later watched on. That makes px a precise unit: 70 px is always 70 of the frame's 1080 rows. "At 1080p" only repeated the resolution, which `style.md` already fixes.
+
+Your question is still written at the bottom of `style.md`. I left it alone, so delete it whenever you're ready.
 

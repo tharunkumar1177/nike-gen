@@ -6,6 +6,7 @@ About 3-5 minutes
 
 ## Resolution and aspect ratio
 1920x1080 landscape, 30 fps  
+- Safe margin: 100 px from every frame edge. Keep all text and diagrams inside it.
 
 ## Narration
 Kokoro TTS generated in CI, free, no API key  
@@ -21,16 +22,13 @@ Remotion
 IBM Plex Sans (Google Fonts) for all on-screen text. Load the Latin and Greek subsets so symbols like δ and Δ use the same font.
 
 ## Scene title
-Place each scene's title, and its subtitle if any, at the top-left of the frame between two horizontal lines. Reference layout: [wireframe.svg](wireframe.svg).
-- Title is bold, about 80 px at 1080p.
-- Lines span the safe-area width, and the top line sits on the top safe margin.
-- The title is inset from the lines' left end by about two fifths of its font size.
-- Padding between each line and the nearest text is about one fifth of the title's font size.
-- Scene content starts below the bottom line, with at least that same gap.
+Place each scene's title, and its subtitle if any, at the top-left of the frame. Draw no lines, rules, or borders around it. Reference layout: [wireframe.svg](wireframe.svg); its dashed lines are measurement aids, not video content.
+- Title is bold, about 70 px.
+- The title's top edge is one fifth of its font size below the top safe margin.
+- The title's left edge is two fifths of its font size in from the left safe margin.
+- Scene content starts at least two fifths of the title's font size below the title's bottom edge.
 
 
 
 > NOTE Maintain the gap between topic in a video about 3 to 8 seconds; not more not less.
-
-
 

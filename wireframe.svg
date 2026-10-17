@@ -5,27 +5,32 @@
   <rect width="1920" height="1080" fill="#FFFFFF"/>
 
   <!-- safe area -->
-  <rect x="120" y="120" width="1680" height="840" fill="none" stroke="#CBD5E1" stroke-width="2" stroke-dasharray="12 10"/>
-  <text x="1790" y="985" font-size="22" fill="#94A3B8" text-anchor="end">safe area (120 px margin)</text>
+  <rect x="100" y="100" width="1720" height="880" fill="none" stroke="#CBD5E1" stroke-width="2" stroke-dasharray="12 10"/>
+  <text x="1810" y="970" font-size="22" fill="#94A3B8" text-anchor="end">safe area: 100 px from every frame edge</text>
 
-  <!-- title band lines -->
-  <line x1="120" y1="120" x2="1800" y2="120" stroke="#1C1C1E" stroke-width="3"/>
-  <line x1="120" y1="248" x2="1800" y2="248" stroke="#1C1C1E" stroke-width="3"/>
+  <!-- safe margin: frame edge to safe area -->
+  <g stroke="#DC2626" stroke-width="2" fill="#DC2626" font-size="18">
+    <line x1="0" y1="620" x2="100" y2="620"/>
+    <text x="20" y="610" stroke="none">100 px</text>
+    <line x1="960" y1="0" x2="960" y2="100"/>
+    <text x="968" y="56" stroke="none">100 px safe margin</text>
+  </g>
+
+  <!-- title band guides (reference only, not rendered) -->
+  <line x1="100" y1="212" x2="1820" y2="212" stroke="#64748B" stroke-width="2" stroke-dasharray="10 8"/>
 
   <!-- title text box -->
-  <rect x="152" y="136" width="920" height="96" fill="#ECFDF5" stroke="#10B981" stroke-width="2" stroke-dasharray="6 6"/>
-  <text x="152" y="214" font-family="'IBM Plex Sans'" font-size="80" font-weight="700" fill="#047857">Covalent: Shared Pairs</text>
+  <rect x="128" y="114" width="810" height="84" fill="#ECFDF5" stroke="#10B981" stroke-width="2" stroke-dasharray="6 6"/>
+  <text x="128" y="182" font-family="'IBM Plex Sans'" font-size="70" font-weight="700" fill="#047857">Covalent: Shared Pairs</text>
 
   <!-- left inset -->
   <g stroke="#DC2626" stroke-width="2" fill="#DC2626" font-size="22">
-    <line x1="120" y1="190" x2="152" y2="190"/>
-    <text x="100" y="300" stroke="none">32 px inset (2/5 of 80)</text>
-    <line x1="136" y1="190" x2="136" y2="280" stroke-dasharray="4 4"/>
+    <line x1="100" y1="156" x2="128" y2="156"/>
+    <text x="110" y="265" stroke="none">28 px inset (2/5 of 70)</text>
+    <line x1="114" y1="156" x2="114" y2="243" stroke-dasharray="4 4"/>
   </g>
 
-  <!-- content region -->
-  <rect x="120" y="264" width="1680" height="696" fill="none" stroke="#93C5FD" stroke-width="2" stroke-dasharray="6 6"/>
-  <text x="1790" y="297" font-size="22" fill="#3B82F6" text-anchor="end">scene content starts here</text>
+  <text x="1810" y="259" font-size="22" fill="#3B82F6" text-anchor="end">scene content starts here</text>
 
   <!-- example content: Cl2 -->
   <circle cx="440" cy="500" r="60" fill="#F9FAFB" stroke="#4B5563" stroke-width="4"/>
@@ -53,18 +58,17 @@
 
   <!-- dimension annotations -->
   <g stroke="#DC2626" stroke-width="2" fill="#DC2626" font-size="22">
-    <line x1="1110" y1="120" x2="1110" y2="136"/>
-    <text x="1125" y="134" stroke="none">16 px (1/5 of 80)</text>
-    <line x1="1110" y1="136" x2="1110" y2="232" stroke-dasharray="4 4"/>
-    <text x="1125" y="192" stroke="none">title 80 px</text>
-    <line x1="1110" y1="232" x2="1110" y2="248"/>
-    <text x="1125" y="246" stroke="none">16 px</text>
-    <line x1="1110" y1="248" x2="1110" y2="264"/>
-    <text x="1125" y="268" stroke="none">at least 16 px gap to content</text>
+    <line x1="1110" y1="100" x2="1110" y2="114"/>
+    <text x="1125" y="114" stroke="none">14 px (1/5 of 70)</text>
+    <line x1="1110" y1="114" x2="1110" y2="198" stroke-dasharray="4 4"/>
+    <text x="1125" y="164" stroke="none">title 70 px</text>
+    <line x1="1110" y1="198" x2="1110" y2="212"/>
+    <text x="1125" y="208" stroke="none">14 px</text>
+    <line x1="1110" y1="212" x2="1110" y2="226"/>
+    <text x="1125" y="234" stroke="none">at least 14 px gap to content</text>
   </g>
-  <g fill="#DC2626" font-size="22">
-    <text x="20" y="127">y=120</text>
-    <text x="20" y="255">y=248</text>
-    <text x="20" y="275">y=264</text>
+  <g fill="#DC2626" font-size="22" text-anchor="end">
+    <text x="1810" y="90">top safe margin, y=100</text>
+    <text x="1810" y="202">bottom guide, y=212 (not rendered)</text>
   </g>
 </svg>
