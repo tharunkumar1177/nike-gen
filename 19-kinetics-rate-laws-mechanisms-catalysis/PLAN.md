@@ -141,5 +141,5 @@ Designer frame plans were implemented with the shared title band (`src/component
 - [x] Research
 - [x] Design
 - [x] Build
-- [ ] CI green
-- [ ] Merged
+- [x] CI green — [run 39055796239](https://github.com/tharunkumar1177/nike-gen/actions/runs/39055796239); narration lengths set to the measured clip lengths, about 176 s total
+- [x] Merged
