@@ -12,7 +12,12 @@ on:
           - 02-atomic-structure-isotopes-mass-spectra
           - 03-quantum-model-orbitals
           - 04-electron-configuration-aufbau-hund-pauli
+          - 05-periodic-table-blocks
+          - 06-periodic-trends
+          - 07-moles-stoichiometry-limiting-reagents
+          - 10-vsepr-geometry-gallery
           - 11-hybridisation
+          - 16-equilibrium-le-chatelier
 
 permissions:
   contents: read
