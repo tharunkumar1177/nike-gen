@@ -35,8 +35,7 @@ export const TITLE = {
 
 export const TITLE_BOTTOM = TITLE.top + TITLE.size * LINE_HEIGHT;
 export const SUBTITLE_TOP = TITLE_BOTTOM + TITLE.subtitleGap;
-export const SUBTITLE_BOTTOM =
-  SUBTITLE_TOP + TITLE.subtitleSize * LINE_HEIGHT;
+export const SUBTITLE_BOTTOM = SUBTITLE_TOP + TITLE.subtitleSize * LINE_HEIGHT;
 
 export const colors = {
   background: "#FFFFFF",
