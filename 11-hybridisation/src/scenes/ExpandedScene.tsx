@@ -108,7 +108,13 @@ export function ExpandedScene() {
     <AbsoluteFill>
       <Title opacity={title}>Five and Six Domains</Title>
       <Stage>
-        <Molecule centre={P} symbol="P" ligand="Cl" ligands={PCL5} grow={pcl5} />
+        <Molecule
+          centre={P}
+          symbol="P"
+          ligand="Cl"
+          ligands={PCL5}
+          grow={pcl5}
+        />
         <AngleArc
           at={P}
           from={-90}

@@ -158,29 +158,63 @@ export function PiBondScene() {
         {ETHENE_SP2.map(({ c, angles }) =>
           angles.map((angle) => (
             <g key={`${c.x}-${angle}`} transform={scaleAbout(c.x, c.y, sp2)}>
-              <HybridOrbital {...c} angle={angle} length={HYBRID_LOBE} opacity={Math.min(1, sp2)} />
+              <HybridOrbital
+                {...c}
+                angle={angle}
+                length={HYBRID_LOBE}
+                opacity={Math.min(1, sp2)}
+              />
             </g>
           )),
         )}
         {ETHYNE_SP.map(({ c, angles }) =>
           angles.map((angle) => (
             <g key={`${c.x}-${angle}`} transform={scaleAbout(c.x, c.y, sp)}>
-              <HybridOrbital {...c} angle={angle} length={HYBRID_LOBE} opacity={Math.min(1, sp)} />
+              <HybridOrbital
+                {...c}
+                angle={angle}
+                length={HYBRID_LOBE}
+                opacity={Math.min(1, sp)}
+              />
             </g>
           )),
         )}
-        <SigmaOverlap x1={ETHENE.left.x} x2={ETHENE.right.x} y={Y} opacity={sp2Label} />
-        <SigmaOverlap x1={ETHYNE.left.x} x2={ETHYNE.right.x} y={Y} opacity={spLabel} />
+        <SigmaOverlap
+          x1={ETHENE.left.x}
+          x2={ETHENE.right.x}
+          y={Y}
+          opacity={sp2Label}
+        />
+        <SigmaOverlap
+          x1={ETHYNE.left.x}
+          x2={ETHYNE.right.x}
+          y={Y}
+          opacity={spLabel}
+        />
 
         {[ETHENE.left, ETHENE.right, ETHYNE.left, ETHYNE.right].map((c, i) => (
-          <g key={i} transform={scaleAbout(c.x, c.y, p)} opacity={Math.min(1, p)}>
+          <g
+            key={i}
+            transform={scaleAbout(c.x, c.y, p)}
+            opacity={Math.min(1, p)}
+          >
             <POrbital {...c} angle={90} length={P_LOBE} />
           </g>
         ))}
         {[ETHENE, ETHYNE].map((pair, i) => (
           <g key={i}>
-            <PiBand x1={pair.left.x} x2={pair.right.x} y={Y - P_LOBE / 2 - 8} opacity={pi} />
-            <PiBand x1={pair.left.x} x2={pair.right.x} y={Y + P_LOBE / 2 + 8} opacity={pi} />
+            <PiBand
+              x1={pair.left.x}
+              x2={pair.right.x}
+              y={Y - P_LOBE / 2 - 8}
+              opacity={pi}
+            />
+            <PiBand
+              x1={pair.left.x}
+              x2={pair.right.x}
+              y={Y + P_LOBE / 2 + 8}
+              opacity={pi}
+            />
           </g>
         ))}
 
@@ -228,16 +262,40 @@ export function PiBondScene() {
           ))}
         </g>
 
-        <SvgLabel x={540} y={860} size={40} color={colors.hybridText} opacity={sp2Label}>
+        <SvgLabel
+          x={540}
+          y={860}
+          size={40}
+          color={colors.hybridText}
+          opacity={sp2Label}
+        >
           Ethene · sp² (33% s)
         </SvgLabel>
-        <SvgLabel x={1380} y={860} size={40} color={colors.hybridText} opacity={spLabel}>
+        <SvgLabel
+          x={1380}
+          y={860}
+          size={40}
+          color={colors.hybridText}
+          opacity={spLabel}
+        >
           Ethyne · sp (50% s)
         </SvgLabel>
-        <SvgLabel x={120} y={940} anchor="start" color={colors.sigmaText} opacity={pi}>
+        <SvgLabel
+          x={120}
+          y={940}
+          anchor="start"
+          color={colors.sigmaText}
+          opacity={pi}
+        >
           σ: end-to-end
         </SvgLabel>
-        <SvgLabel x={500} y={940} anchor="start" color={colors.piText} opacity={pi}>
+        <SvgLabel
+          x={500}
+          y={940}
+          anchor="start"
+          color={colors.piText}
+          opacity={pi}
+        >
           π: side-by-side
         </SvgLabel>
       </Stage>

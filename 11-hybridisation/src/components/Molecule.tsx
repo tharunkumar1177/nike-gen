@@ -159,10 +159,7 @@ export function LonePair({
 }: Point & { angle?: number; opacity?: number }) {
   if (opacity <= 0) return null;
   return (
-    <g
-      transform={`translate(${x} ${y}) rotate(${angle})`}
-      opacity={opacity}
-    >
+    <g transform={`translate(${x} ${y}) rotate(${angle})`} opacity={opacity}>
       <rect
         x={-22}
         y={-12}

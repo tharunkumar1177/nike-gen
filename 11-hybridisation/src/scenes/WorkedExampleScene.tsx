@@ -39,7 +39,10 @@ const SINGLE_BONDS: [Point, Point][] = [
 ];
 const DOUBLE_OFFSET = 7;
 
-const mid = (a: Point, b: Point) => ({ x: (a.x + b.x) / 2, y: (a.y + b.y) / 2 });
+const mid = (a: Point, b: Point) => ({
+  x: (a.x + b.x) / 2,
+  y: (a.y + b.y) / 2,
+});
 
 const CENTRES = [
   {
@@ -74,7 +77,12 @@ function Badge({ x, y, n, scale }: Point & { n: number; scale: number }) {
   if (scale <= 0) return null;
   return (
     <g transform={`translate(${x} ${y}) scale(${scale})`}>
-      <circle r={16} fill={colors.hybrid} stroke={colors.hybridText} strokeWidth={2} />
+      <circle
+        r={16}
+        fill={colors.hybrid}
+        stroke={colors.hybridText}
+        strokeWidth={2}
+      />
       <text
         textAnchor="middle"
         dominantBaseline="central"
@@ -104,13 +112,19 @@ export function WorkedExampleScene() {
   const ringTo = CENTRES[Math.max(0, active)]!.at;
   const move =
     active > 0
-      ? progress(frame, CENTRES[active]!.beat, CENTRES[active]!.beat + 15, easeInOut)
+      ? progress(
+          frame,
+          CENTRES[active]!.beat,
+          CENTRES[active]!.beat + 15,
+          easeInOut,
+        )
       : 1;
   const ring = {
     x: lerp(ringFrom.x, ringTo.x, move),
     y: lerp(ringFrom.y, ringTo.y, move),
   };
-  const ringShown = active >= 0 ? fadeIn(frame, CENTRES[0]!.beat) * (1 - sigma) : 0;
+  const ringShown =
+    active >= 0 ? fadeIn(frame, CENTRES[0]!.beat) * (1 - sigma) : 0;
 
   return (
     <AbsoluteFill>
@@ -127,9 +141,21 @@ export function WorkedExampleScene() {
             </g>
           ))}
           <Bond a={C2} b={O2} offset={-DOUBLE_OFFSET} />
-          <Bond a={C2} b={O2} offset={-DOUBLE_OFFSET} color={colors.sigmaText} opacity={sigma} />
+          <Bond
+            a={C2}
+            b={O2}
+            offset={-DOUBLE_OFFSET}
+            color={colors.sigmaText}
+            opacity={sigma}
+          />
           <Bond a={C2} b={O2} offset={DOUBLE_OFFSET} />
-          <Bond a={C2} b={O2} offset={DOUBLE_OFFSET} color={colors.piText} opacity={pi} />
+          <Bond
+            a={C2}
+            b={O2}
+            offset={DOUBLE_OFFSET}
+            color={colors.piText}
+            opacity={pi}
+          />
           <LonePair x={O2.x - 44} y={O2.y - 44} angle={-45} />
           <LonePair x={O2.x + 44} y={O2.y - 44} angle={45} />
           <LonePair x={O1.x} y={O1.y - 62} />
@@ -166,10 +192,26 @@ export function WorkedExampleScene() {
             />
           ));
         })}
-        <SvgLabel x={1140} y={780} anchor="start" size={48} weight={700} color={colors.sigmaText} opacity={sigma}>
+        <SvgLabel
+          x={1140}
+          y={780}
+          anchor="start"
+          size={48}
+          weight={700}
+          color={colors.sigmaText}
+          opacity={sigma}
+        >
           7 σ
         </SvgLabel>
-        <SvgLabel x={1340} y={780} anchor="start" size={48} weight={700} color={colors.piText} opacity={pi}>
+        <SvgLabel
+          x={1340}
+          y={780}
+          anchor="start"
+          size={48}
+          weight={700}
+          color={colors.piText}
+          opacity={pi}
+        >
           1 π
         </SvgLabel>
       </Stage>

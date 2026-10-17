@@ -1,4 +1,9 @@
-import { AbsoluteFill, interpolate, useCurrentFrame, useVideoConfig } from "remotion";
+import {
+  AbsoluteFill,
+  interpolate,
+  useCurrentFrame,
+  useVideoConfig,
+} from "remotion";
 import { easeOut, fadeIn, lerp, pop, progress } from "../components/anim";
 import { EnergyAxis, Harpoon, OrbitalBox, SvgLabel } from "../components/Boxes";
 import { AngleArc, Atom, Bond, Dash, Wedge } from "../components/Molecule";
@@ -28,7 +33,8 @@ const H = {
   dash: { x: 1150, y: 450 },
 };
 const UP_ANGLE = -90;
-const RIGHT_ANGLE = (Math.atan2(H.right.y - C.y, H.right.x - C.x) * 180) / Math.PI;
+const RIGHT_ANGLE =
+  (Math.atan2(H.right.y - C.y, H.right.x - C.x) * 180) / Math.PI;
 
 export const S_BOX = { x: 300, y: 700 };
 export const P_BOXES = [390, 480, 570].map((x) => ({ x, y: 500 }));
@@ -48,19 +54,45 @@ export function GroundState({
     <g>
       <EnergyAxis x={200} top={420} bottom={800} opacity={boxes} />
       <OrbitalBox {...S_BOX} stroke={colors.sText} opacity={boxes} />
-      <SvgLabel x={S_BOX.x} y={S_BOX.y + 70} color={colors.sText} opacity={boxes}>
+      <SvgLabel
+        x={S_BOX.x}
+        y={S_BOX.y + 70}
+        color={colors.sText}
+        opacity={boxes}
+      >
         2s
       </SvgLabel>
       {P_BOXES.map((box, i) => (
         <OrbitalBox key={i} {...box} stroke={colors.pText} opacity={boxes} />
       ))}
-      <SvgLabel x={P_BOXES[1]!.x} y={P_BOXES[1]!.y + 70} color={colors.pText} opacity={boxes}>
+      <SvgLabel
+        x={P_BOXES[1]!.x}
+        y={P_BOXES[1]!.y + 70}
+        color={colors.pText}
+        opacity={boxes}
+      >
         2p
       </SvgLabel>
-      <Harpoon x={S_BOX.x - 14} y={S_BOX.y + drop(sElectrons)} up opacity={sElectrons} />
-      <Harpoon x={S_BOX.x + 14} y={S_BOX.y + drop(sElectrons)} up={false} opacity={sElectrons} />
+      <Harpoon
+        x={S_BOX.x - 14}
+        y={S_BOX.y + drop(sElectrons)}
+        up
+        opacity={sElectrons}
+      />
+      <Harpoon
+        x={S_BOX.x + 14}
+        y={S_BOX.y + drop(sElectrons)}
+        up={false}
+        opacity={sElectrons}
+      />
       {P_BOXES.slice(0, 2).map((box, i) => (
-        <Harpoon key={i} x={box.x} y={box.y + drop(pElectrons)} up opacity={pElectrons} />
+        <Harpoon
+          key={i}
+          x={box.x}
+          y={box.y + drop(pElectrons)}
+          up
+          opacity={pElectrons}
+        />
       ))}
     </g>
   );
@@ -86,11 +118,13 @@ export function ProblemScene() {
   return (
     <AbsoluteFill>
       <Title opacity={intro}>Methane: The Problem</Title>
-      <Subtitle opacity={intro}>
-        C: 2s² 2p² vs four identical bonds
-      </Subtitle>
+      <Subtitle opacity={intro}>C: 2s² 2p² vs four identical bonds</Subtitle>
       <Stage>
-        <GroundState boxes={boxes} sElectrons={sElectrons} pElectrons={pElectrons} />
+        <GroundState
+          boxes={boxes}
+          sElectrons={sElectrons}
+          pElectrons={pElectrons}
+        />
         <SvgLabel x={390} y={850} opacity={pElectrons}>
           C: 2s² 2p²
         </SvgLabel>

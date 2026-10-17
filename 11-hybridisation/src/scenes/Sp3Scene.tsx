@@ -1,7 +1,17 @@
-import { AbsoluteFill, interpolate, useCurrentFrame, useVideoConfig } from "remotion";
+import {
+  AbsoluteFill,
+  interpolate,
+  useCurrentFrame,
+  useVideoConfig,
+} from "remotion";
 import { easeInOut, fadeIn, lerp, pop, progress } from "../components/anim";
 import { EnergyAxis, Harpoon, OrbitalBox, SvgLabel } from "../components/Boxes";
-import { HybridOrbital, Nucleus, POrbital, SOrbital } from "../components/Orbitals";
+import {
+  HybridOrbital,
+  Nucleus,
+  POrbital,
+  SOrbital,
+} from "../components/Orbitals";
 import { Stage, Subtitle, Title } from "../components/Panels";
 import { cue } from "../cues";
 import { colors } from "../theme";
@@ -60,20 +70,45 @@ export function Sp3Scene() {
       <Stage>
         <EnergyAxis x={200} top={420} bottom={800} />
         <OrbitalBox x={S_BOX.x} y={sBoxY} stroke={colors.sText} />
-        <OrbitalBox x={S_BOX.x} y={sBoxY} stroke={colors.hybridText} opacity={merge} />
-        <SvgLabel x={S_BOX.x} y={S_BOX.y + 70} color={colors.sText} opacity={1 - merge}>
+        <OrbitalBox
+          x={S_BOX.x}
+          y={sBoxY}
+          stroke={colors.hybridText}
+          opacity={merge}
+        />
+        <SvgLabel
+          x={S_BOX.x}
+          y={S_BOX.y + 70}
+          color={colors.sText}
+          opacity={1 - merge}
+        >
           2s
         </SvgLabel>
         {P_BOXES.map((box, i) => (
           <g key={i}>
             <OrbitalBox x={box.x} y={pBoxY} stroke={colors.pText} />
-            <OrbitalBox x={box.x} y={pBoxY} stroke={colors.hybridText} opacity={merge} />
+            <OrbitalBox
+              x={box.x}
+              y={pBoxY}
+              stroke={colors.hybridText}
+              opacity={merge}
+            />
           </g>
         ))}
-        <SvgLabel x={P_BOXES[1]!.x} y={P_BOXES[1]!.y + 70} color={colors.pText} opacity={1 - merge}>
+        <SvgLabel
+          x={P_BOXES[1]!.x}
+          y={P_BOXES[1]!.y + 70}
+          color={colors.pText}
+          opacity={1 - merge}
+        >
           2p
         </SvgLabel>
-        <SvgLabel x={435} y={ROW_Y + 70} color={colors.hybridText} opacity={merge}>
+        <SvgLabel
+          x={435}
+          y={ROW_Y + 70}
+          color={colors.hybridText}
+          opacity={merge}
+        >
           four sp³
         </SvgLabel>
         <Harpoon x={sUpX} y={sBoxY} up />
@@ -117,7 +152,12 @@ export function Sp3Scene() {
           })}
           <Nucleus {...HYBRID_CENTRE} />
         </g>
-        <SvgLabel x={1150} y={850} color={colors.hybridText} opacity={character}>
+        <SvgLabel
+          x={1150}
+          y={850}
+          color={colors.hybridText}
+          opacity={character}
+        >
           sp³ (25% s character)
         </SvgLabel>
       </Stage>

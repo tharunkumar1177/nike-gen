@@ -11,7 +11,7 @@
 - [ ] Lesson 8 — Bonding overview: ionic vs covalent vs metallic
 - [ ] Lesson 9 — Lewis structures, formal charge, resonance
 - [ ] Lesson 10 — VSEPR geometry gallery
-- [ ] Lesson 11 — Hybridisation (sp→sp3d2)
+- [ ] Lesson 11 — Hybridisation (sp→sp3d2) (`11-hybridisation/`, Remotion, ~180 s narrated) — in progress
 - [ ] Lesson 12 — MO theory: diatomics, bond order, paramagnetism
 - [ ] Lesson 13 — Intermolecular forces & property trends
 - [ ] Lesson 14 — Gases, solutions, colligative properties
