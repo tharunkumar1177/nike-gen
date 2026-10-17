@@ -1,0 +1,58 @@
+{
+  "fps": 30,
+  "voice": {
+    "id": "af_heart",
+    "speed": 1,
+    "peakDbfs": -3
+  },
+  "pad": {
+    "chordHz": [98, 146.83, 196, 246.94],
+    "peakDbfs": -30,
+    "duckDb": -8,
+    "duckAttackMs": 120,
+    "duckReleaseMs": 600,
+    "fadeInFrames": 60,
+    "fadeOutFrames": 120
+  },
+  "timeline": {
+    "firstLeadFrames": 60,
+    "leadFrames": 50,
+    "gapFrames": 180,
+    "crossfadeFrames": 30,
+    "tailFrames": 120,
+    "closingFrames": 240,
+    "minGapSeconds": 3,
+    "maxGapSeconds": 8,
+    "minTotalSeconds": 150,
+    "maxTotalSeconds": 200
+  },
+  "lines": [
+    {
+      "scene": "problem-methane",
+      "text": "Carbon's ground state has two electrons in two s and two in two p. Yet in methane, carbon forms four identical single bonds separated by exactly one hundred nine point five degrees. How? We use a mathematical bookkeeping model called hybridisation."
+    },
+    {
+      "scene": "sp3-model",
+      "text": "Geometry is known first from experiment. To match methane's tetrahedral shape, we mathematically mix one s and three p atomic orbitals. We often draw an electron being promoted first, but this is just bookkeeping; no electron physically jumps. This forms four equivalent S P three hybrids, each with twenty five percent s character."
+    },
+    {
+      "scene": "sp2-sp-pi-bonds",
+      "text": "For three domains, like ethene, mixing one s and two p orbitals yields three S P two hybrids at one hundred twenty degrees. For two domains, like ethyne, we get two linear S P hybrids. Leftover unhybridised p orbitals form pi bonds by overlapping side by side."
+    },
+    {
+      "scene": "expanded-octet",
+      "text": "Five domains form a trigonal bipyramidal shape, labelled S P three D, like in phosphorus pentachloride. Six domains are octahedral, labelled S P three D two, as in sulfur hexafluoride. Textbooks often mix in D orbitals, but modern computations show they actually contribute very little to the bonding."
+    },
+    {
+      "scene": "worked-example",
+      "text": "Let's analyse acetic acid. The methyl carbon has four domains, so it is S P three. The carbonyl carbon has three domains, because a double bond counts once, making it S P two. The hydroxyl oxygen has two bonds and two lone pairs, so it is also S P three. There are seven sigma bonds and one pi bond."
+    },
+    {
+      "scene": "pitfalls",
+      "text": "Remember these three pitfalls. First, hybridisation does not physically cause molecular geometry; it merely models it. Second, always count lone pairs as electron domains, not just the visible bond lines. Finally, treating water's lone pairs as two identical S P three rabbit ears is a known oversimplification."
+    }
+  ],
+  "closing": {
+    "scene": "closing-card"
+  }
+}
