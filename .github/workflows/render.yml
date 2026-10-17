@@ -13,6 +13,7 @@ on:
           - quantum-model-orbitals
           - electron-configuration-aufbau-hund-pauli
           - 07-moles-stoichiometry-limiting-reagents
+          - 14-gases-solutions-colligative-properties
 
 permissions:
   contents: read

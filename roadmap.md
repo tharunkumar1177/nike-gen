@@ -14,7 +14,7 @@
 - [ ] Lesson 11 — Hybridisation (sp→sp3d2)
 - [ ] Lesson 12 — MO theory: diatomics, bond order, paramagnetism
 - [ ] Lesson 13 — Intermolecular forces & property trends
-- [ ] Lesson 14 — Gases, solutions, colligative properties
+- [ ] Lesson 14 — Gases, solutions, colligative properties (`14-gases-solutions-colligative-properties/`, Remotion, ~3.5 min narrated, in progress)
 - [ ] Lesson 15 — Thermodynamics: enthalpy, entropy, Gibbs
 - [ ] Lesson 16 — Equilibrium & Le Chatelier
 - [ ] Lesson 17 — Acids/bases: pKa, buffers, titration curves

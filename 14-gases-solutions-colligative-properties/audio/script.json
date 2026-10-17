@@ -1,0 +1,69 @@
+{
+  "fps": 30,
+  "leadFrames": 30,
+  "gapFrames": 180,
+  "closingFrames": 360,
+  "minGapSeconds": 3,
+  "maxGapSeconds": 8,
+  "voice": {
+    "id": "af_heart",
+    "speed": 1,
+    "peakDbfs": -3
+  },
+  "pad": {
+    "chordHz": [110, 164.81, 220, 277.18],
+    "peakDbfs": -26,
+    "duckDb": -8,
+    "duckAttackMs": 120,
+    "duckReleaseMs": 600,
+    "fadeInFrames": 60,
+    "fadeOutFrames": 120
+  },
+  "lines": [
+    {
+      "scene": "ideal-gas-law",
+      "text": "The ideal gas law, P V equals n R T, models a gas of point particles. It assumes that the particles have negligible volume and experience no intermolecular forces, moving freely and independently until they collide.",
+      "seconds": 13.7
+    },
+    {
+      "scene": "real-gases",
+      "text": "Real gases deviate from this ideal behaviour at high pressure, where the actual particle volume matters, and at low temperature, where attractive intermolecular forces become significant. Under these extreme conditions, the ideal gas law loses its accuracy.",
+      "seconds": 14.5
+    },
+    {
+      "scene": "molality-vs-molarity",
+      "text": "Moving from gases to solutions, we often use molality, which is moles of solute per kilogram of solvent. Molarity changes with temperature because liquids expand when heated, but molality uses mass, which does not change.",
+      "seconds": 13
+    },
+    {
+      "scene": "colligative-properties",
+      "text": "Dissolving a solute changes the solvent's properties. Colligative properties depend only on the number of solute particles, not their identity. We track this particle count using the vant Hoff factor, denoted by the letter i.",
+      "seconds": 13.7
+    },
+    {
+      "scene": "vapour-pressure",
+      "text": "Adding a non-volatile solute lowers the solvent's vapour pressure. According to Raoult's law, the new vapour pressure equals the mole fraction of the solvent times the pure solvent's vapour pressure, which is twenty three point seven six torr for water at twenty five degrees Celsius.",
+      "seconds": 17.9
+    },
+    {
+      "scene": "boiling-freezing-points",
+      "text": "This lowered vapour pressure elevates the boiling point and depresses the freezing point. The change equals the vant Hoff factor times the molality and a constant: zero point five one two for boiling water, and one point eight six for freezing.",
+      "seconds": 16.4
+    },
+    {
+      "scene": "worked-example-freezing",
+      "text": "Let's find the freezing point of eleven point seven grams of sodium chloride in five hundred grams of water. With an ideal factor of two and a molality of zero point four zero zero four, the freezing point becomes minus one point four nine degrees Celsius.",
+      "seconds": 18.4
+    },
+    {
+      "scene": "osmosis-osmotic-pressure",
+      "text": "In osmosis, solvent flows through a semipermeable membrane toward the side with higher solute concentration. The pressure needed to stop it is osmotic pressure. For zero point one zero zero molar sodium chloride at twenty five degrees Celsius, with R as zero point zero eight two zero five seven, the pressure is four point eight nine atmospheres.",
+      "seconds": 22.5
+    },
+    {
+      "scene": "pitfalls",
+      "text": "Remember, molality uses kilograms of solvent, not solution. Also, real vant Hoff factors are smaller than ideal due to ion pairing, and in osmosis, it is the solvent that moves, not the solute.",
+      "seconds": 12.5
+    }
+  ]
+}
