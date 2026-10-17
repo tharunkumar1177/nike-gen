@@ -1,6 +1,6 @@
 # Roadmap — Chemistry
 
-## Foundations (20 lessons, built first)
+## Foundations (20 lessons)
 - [x] Lesson 1 — Matter, states, phase diagrams (`matter-states-phase-diagrams/`, Remotion, 180 s narrated)
 - [x] Lesson 2 — Atomic structure: nucleus, isotopes, mass spectra (`atomic-structure-isotopes-mass-spectra/`, Remotion, 180 s narrated)
 - [x] Lesson 3 — Quantum model: orbitals s/p/d/f, shapes, nodes (`quantum-model-orbitals/`, Remotion + three.js, ~270 s narrated)
@@ -20,7 +20,7 @@
 - [x] Lesson 17 — Acids/bases: pKa, buffers, titration curves (`17-acids-bases-pka-buffers-titration-curves/`, Remotion, 187 s narrated)
 - [ ] Lesson 18 — Redox & electrochemical cells
 - [x] Lesson 19 — Kinetics: rate laws, mechanisms, catalysis (`19-kinetics-rate-laws-mechanisms-catalysis/`, Remotion, 176 s narrated)
-- [ ] Lesson 20 — Nuclear chemistry: decay modes, half-life
+- [x] Lesson 20 — Nuclear chemistry: decay modes, half-life (`20-nuclear-chemistry-decay-modes-half-life/`, Remotion, 250 s narrated)
 
 ### Organic Chemistry (30 lessons)
 - [ ] Lessons 1–8: bonding, nomenclature, isomerism, conformations, electronic effects, acidity, intermediates, reading mechanisms
