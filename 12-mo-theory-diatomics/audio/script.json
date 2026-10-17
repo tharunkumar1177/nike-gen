@@ -1,0 +1,68 @@
+{
+  "fps": 30,
+  "durationInFrames": 5850,
+  "voice": {
+    "id": "af_heart",
+    "speed": 1,
+    "peakDbfs": -3
+  },
+  "pad": {
+    "chordHz": [130.81, 196, 261.63, 329.63],
+    "peakDbfs": -26,
+    "duckDb": -8,
+    "duckAttackMs": 120,
+    "duckReleaseMs": 600,
+    "fadeInFrames": 60,
+    "fadeOutFrames": 120
+  },
+  "lines": [
+    {
+      "scene": "hook-o2-magnet",
+      "text": "Liquid oxygen is attracted to a magnet, meaning it has unpaired electrons. But the standard Lewis structure shows all electrons paired. We need molecular orbital theory.",
+      "startFrame": 30,
+      "endByFrame": 390
+    },
+    {
+      "scene": "lcao-bond-order",
+      "text": "Two atomic orbitals always combine to form two molecular orbitals. Two one s orbitals combine in phase to form a lower-energy sigma bonding orbital, and out of phase to form a higher-energy sigma star antibonding orbital with a node. Bond order is bonding minus antibonding electrons, divided by two. H two has a bond order of one. He two plus has bond order one half. He two has bond order zero, so no stable bond is predicted.",
+      "startFrame": 480,
+      "endByFrame": 1470
+    },
+    {
+      "scene": "period-2-orbitals",
+      "text": "In period two, s orbitals form sigma two s and sigma star two s. Head-on p overlap forms sigma two p, while side-by-side overlap forms two degenerate pi two p orbitals.",
+      "startFrame": 1560,
+      "endByFrame": 1980
+    },
+    {
+      "scene": "sp-mixing",
+      "text": "For oxygen and fluorine, a large energy gap between two s and two p orbitals means sigma two p lies below pi two p. But for boron, carbon, and nitrogen, the gap is small. The sigma two s and sigma two p orbitals interact, pushing sigma two p above pi two p.",
+      "startFrame": 2070,
+      "endByFrame": 2730
+    },
+    {
+      "scene": "filling-o2-b2",
+      "text": "Aufbau, Pauli, and Hund's rule apply to molecular orbitals. Filling oxygen, the last two electrons go singly into the degenerate pi star two p orbitals, explaining its paramagnetism. For boron, s p mixing places pi two p below sigma two p. Its highest two electrons singly occupy the pi two p orbitals, making boron paramagnetic too, which is evidence for s p mixing.",
+      "startFrame": 2820,
+      "endByFrame": 3660
+    },
+    {
+      "scene": "worked-example-o2-series",
+      "text": "Let's compare the oxygen series by removing or adding pi star electrons. O two plus has bond order two point five and length one hundred twelve picometers. O two has bond order two and length one hundred twenty one. Adding electrons makes superoxide, O two minus, at about one hundred thirty four, and peroxide, O two two minus, at one hundred forty nine. Higher bond order means a stronger, shorter bond.",
+      "startFrame": 3750,
+      "endByFrame": 4650
+    },
+    {
+      "scene": "pitfalls",
+      "text": "Watch out for these pitfalls. S p mixing is an interaction, not sp hybridisation. Sigma is not always below pi. And bond order zero means no stable bond predicted, not that molecules cannot exist.",
+      "startFrame": 4740,
+      "endByFrame": 5190
+    },
+    {
+      "scene": "key-takeaways",
+      "text": "Key takeaways. N atomic orbitals make N molecular orbitals. Bond order predicts stability. The two s two p gap dictates filling order. Molecular orbital theory explains paramagnetism. And standard rules fill molecular orbitals just like atomic orbitals.",
+      "startFrame": 5280,
+      "endByFrame": 5790
+    }
+  ]
+}

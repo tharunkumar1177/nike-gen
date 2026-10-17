@@ -8,10 +8,11 @@ on:
         required: true
         type: choice
         options:
-          - matter-states-phase-diagrams
-          - atomic-structure-isotopes-mass-spectra
-          - quantum-model-orbitals
-          - electron-configuration-aufbau-hund-pauli
+          - 01-matter-states-phase-diagrams
+          - 02-atomic-structure-isotopes-mass-spectra
+          - 03-quantum-model-orbitals
+          - 04-electron-configuration-aufbau-hund-pauli
+          - 12-mo-theory-diatomics
 
 permissions:
   contents: read
