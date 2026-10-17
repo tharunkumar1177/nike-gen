@@ -23,7 +23,11 @@ const STEPS = [
   { text: "M(NaCl) = 22.990 + 35.45 = 58.44 g/mol", y: 440, at: MOLAR_MASS_AT },
   { text: "n = 11.7 g ÷ 58.44 g/mol = 0.2002 mol", y: 520, at: MOLES_AT },
   { text: "i = 2 (ideal)", y: 600, at: FACTOR_AT },
-  { text: "m = 0.2002 mol ÷ 0.500 kg = 0.4004 mol/kg", y: 680, at: MOLALITY_AT },
+  {
+    text: "m = 0.2002 mol ÷ 0.500 kg = 0.4004 mol/kg",
+    y: 680,
+    at: MOLALITY_AT,
+  },
 ] as const;
 
 export function WorkedExampleScene() {

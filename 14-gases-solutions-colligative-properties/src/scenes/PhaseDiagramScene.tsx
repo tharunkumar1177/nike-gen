@@ -5,10 +5,7 @@ import { Eq, Text } from "../components/Text";
 import { cue } from "../cues";
 import { colors, type } from "../theme";
 
-const TITLE_AT = cue(
-  "boiling-freezing-points",
-  "This lowered vapour pressure",
-);
+const TITLE_AT = cue("boiling-freezing-points", "This lowered vapour pressure");
 const BOIL_AT = cue("boiling-freezing-points", "elevates the boiling point");
 const FREEZE_AT = cue(
   "boiling-freezing-points",
@@ -240,9 +237,7 @@ export function PhaseDiagramScene() {
         anchor="middle"
         opacity={plotIn}
       >
-        <span
-          style={{ display: "inline-block", transform: "rotate(-90deg)" }}
-        >
+        <span style={{ display: "inline-block", transform: "rotate(-90deg)" }}>
           Pressure
         </span>
       </Text>

@@ -41,9 +41,7 @@ const CLUSTER = hexCluster(
 );
 const BONDS = CLUSTER.flatMap((a, i) =>
   CLUSTER.slice(i + 1).flatMap((b, offset) =>
-    Math.hypot(a.x - b.x, a.y - b.y) < 27
-      ? [[i, i + 1 + offset] as const]
-      : [],
+    Math.hypot(a.x - b.x, a.y - b.y) < 27 ? [[i, i + 1 + offset] as const] : [],
   ),
 );
 /** Bonds fade out beyond this length, so none stretch across the box mid-huddle. */
