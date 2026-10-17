@@ -23,23 +23,35 @@ type Panel = {
   nodes: { r: number; pulse: number }[];
 };
 
+/** Scene-local cue frames, synced to the measured narration. */
+const CUE = {
+  map1s: 87,
+  map2s: 201,
+  map3s: 247,
+  callout: 453,
+  calloutOut: 583,
+  plot: 567,
+  node2s: 715,
+  nodes3s: 807,
+};
+
 const PANELS: Panel[] = [
-  { orbital: "1s", cx: 450, halfWidth: 5, start: 110, nodes: [] },
+  { orbital: "1s", cx: 450, halfWidth: 5, start: CUE.map1s, nodes: [] },
   {
     orbital: "2s",
     cx: 960,
     halfWidth: 10,
-    start: 280,
-    nodes: [{ r: 2, pulse: 970 }],
+    start: CUE.map2s,
+    nodes: [{ r: 2, pulse: CUE.node2s }],
   },
   {
     orbital: "3s",
     cx: 1470,
     halfWidth: 15,
-    start: 340,
+    start: CUE.map3s,
     nodes: [
-      { r: (9 - 3 * Math.sqrt(3)) / 2, pulse: 1100 },
-      { r: (9 + 3 * Math.sqrt(3)) / 2, pulse: 1100 },
+      { r: (9 - 3 * Math.sqrt(3)) / 2, pulse: CUE.nodes3s },
+      { r: (9 + 3 * Math.sqrt(3)) / 2, pulse: CUE.nodes3s },
     ],
   },
 ];
@@ -59,10 +71,16 @@ function pulseAt(frame: number, start: number) {
 
 export function SOrbitalsScene() {
   const frame = useSceneFrame();
-  const sphere = fadeWindow(frame, 30, 60, 110, 140);
-  const callout = fadeWindow(frame, 580, 610, 710, 740);
-  const plot = progress(frame, 750, 780);
-  const draw = progress(frame, 780, 880);
+  const sphere = fadeWindow(frame, 30, 60, CUE.map1s, CUE.map1s + 30);
+  const callout = fadeWindow(
+    frame,
+    CUE.callout,
+    CUE.callout + 30,
+    CUE.calloutOut,
+    CUE.calloutOut + 30,
+  );
+  const plot = progress(frame, CUE.plot, CUE.plot + 30);
+  const draw = progress(frame, CUE.plot + 30, CUE.plot + 130);
 
   return (
     <>
@@ -133,7 +151,7 @@ export function SOrbitalsScene() {
             from={[960, 560]}
             to={[960, PANEL_Y + 2 * (PANEL_SIZE / 2 / 10) + 4]}
             color={colors.negative}
-            progress={progress(frame, 580, 610)}
+            progress={progress(frame, CUE.callout, CUE.callout + 30)}
           />
           <div
             style={{
@@ -182,28 +200,28 @@ export function SOrbitalsScene() {
               r: 2,
               label: "2 a₀",
               color: CURVES["2s"].color,
-              opacity: progress(frame, 970, 1000),
+              opacity: progress(frame, CUE.node2s, CUE.node2s + 30),
               labelLift: 262,
               side: "right",
-              pulse: pulseAt(frame, 970),
+              pulse: pulseAt(frame, CUE.node2s),
             },
             {
               r: (9 - 3 * Math.sqrt(3)) / 2,
               label: "1.90 a₀",
               color: CURVES["3s"].color,
-              opacity: progress(frame, 1100, 1130),
+              opacity: progress(frame, CUE.nodes3s, CUE.nodes3s + 30),
               labelLift: 262,
               side: "left",
-              pulse: pulseAt(frame, 1100),
+              pulse: pulseAt(frame, CUE.nodes3s),
             },
             {
               r: (9 + 3 * Math.sqrt(3)) / 2,
               label: "7.10 a₀",
               color: CURVES["3s"].color,
-              opacity: progress(frame, 1100, 1130),
+              opacity: progress(frame, CUE.nodes3s, CUE.nodes3s + 30),
               labelLift: 200,
               side: "right",
-              pulse: pulseAt(frame, 1100),
+              pulse: pulseAt(frame, CUE.nodes3s),
             },
           ]}
         />

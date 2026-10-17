@@ -144,6 +144,13 @@ Implementation deviations (geometry and legibility only, no content change):
 - Scenes 4–5: the plan's base rotX 20° duplicates the default 20° view elevation, so it is not applied (it would tilt p_z off vertical). Small axis letters were added at the p axis tips. A "Nodal cones at 54.7°" label sits beside d_z². Orbital labels are 40 px for subscript legibility.
 - Scene 6: the caption reads "Seven 4f orbitals, general set".
 - Scene 7: thumbnails are 2s, 3p_z, 3d_xy, and 4f_xyz.
+- Narration re-sync ([run 38737647908](https://github.com/tharunkumar1177/nike-gen/actions/runs/38737647908)). At speed 1, Kokoro ran 2.3–3.0 words/s, and every line ended 1.5–11 s before its window. The voice is now at speed 0.88, closer to the planned 138 wpm. Cues were re-timed from each line's measured words/s:
+  - Scene 3: maps 87/201/247, callout 453–613, plot 567, node markers 715 and 807.
+  - Scene 4: labels 166/181/196, legend 499, emphasis 680, plane 816.
+  - Scene 5: labels 122/156/190/224/316, torus 476, planes 613, cones 682.
+  - Scene 6: f_xyz planes 358.
+  - Scene 7: rules 119/195/259, header 361, rows 386/513/628/742.
+  - Scenes 1–2 already matched within about 10 frames.
 
 ## Status
 
