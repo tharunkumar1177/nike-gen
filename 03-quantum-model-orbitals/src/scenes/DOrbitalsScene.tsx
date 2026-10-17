@@ -25,47 +25,47 @@ const ORBITALS: {
     orbital: "3dxy",
     cx: 380,
     cy: 380,
-    label: 110,
+    label: 122,
     planes: [{ plane: "xz" }, { plane: "yz" }],
   },
   {
     orbital: "3dxz",
     cx: 960,
     cy: 380,
-    label: 140,
+    label: 156,
     planes: [{ plane: "xy" }, { plane: "yz" }],
   },
   {
     orbital: "3dyz",
     cx: 1540,
     cy: 380,
-    label: 170,
+    label: 190,
     planes: [{ plane: "xy" }, { plane: "xz" }],
   },
   {
     orbital: "3dx2y2",
     cx: 670,
     cy: 740,
-    label: 200,
+    label: 224,
     // The nodal planes x = ±y are the xz plane turned 45° either way.
     planes: [
       { plane: "xz", turnDeg: 45 },
       { plane: "xz", turnDeg: -45 },
     ],
   },
-  { orbital: "3dz2", cx: 1250, cy: 740, label: 280, planes: [] },
+  { orbital: "3dz2", cx: 1250, cy: 740, label: 316, planes: [] },
 ];
 
 export function DOrbitalsScene() {
   const frame = useSceneFrame();
   const shapes = progress(frame, 30, 60);
   const rotZ = 0.2 * Math.max(0, frame);
-  const torus = interpolate(frame, [340, 355, 375], [1, 1.1, 1], {
+  const torus = interpolate(frame, [476, 491, 511], [1, 1.1, 1], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
   });
-  const planes = progress(frame, 570, 600);
-  const cones = progress(frame, 690, 720);
+  const planes = progress(frame, 613, 643);
+  const cones = progress(frame, 682, 712);
 
   return (
     <>
