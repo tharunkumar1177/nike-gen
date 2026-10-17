@@ -449,3 +449,15 @@ No need to download the .mp4 or stills, just verify the runtime in the CI
 Does the implementation over, or need to work on it
 
 
+What does it means - "Thermodynamics will determine whether the process will occur" - It's not at all explanatory 
+
+
+
+while moving on from one concept to another in a video, I think it's good to address
+why that concept is essential and how it's interconnected?
+
+
+
+The script should trigger imagination curiosity rather than simply defining the concept.
+
+
