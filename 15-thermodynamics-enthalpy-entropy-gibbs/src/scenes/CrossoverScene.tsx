@@ -51,12 +51,7 @@ export function CrossoverScene() {
       <Text x={LEFT_X} y={560} size={type.body} {...dropped(frame, ZERO_AT)}>
         Set ΔG = 0
       </Text>
-      <Text
-        x={480}
-        y={560}
-        size={type.body}
-        {...popped(frame, fps, RESULT_AT)}
-      >
+      <Text x={480} y={560} size={type.body} {...popped(frame, fps, RESULT_AT)}>
         <Arrow />T = ΔH° / ΔS° = −91.8 / −0.1981 ={" "}
         <b style={{ color: colors.gibbsText }}>463 K</b>
       </Text>

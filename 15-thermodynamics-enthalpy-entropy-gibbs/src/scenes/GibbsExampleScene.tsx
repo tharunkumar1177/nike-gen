@@ -65,8 +65,7 @@ export function GibbsExampleScene() {
         size={type.body}
         {...dropped(frame, RESULT_AT)}
       >
-        = −91.8 + 59.06 ={" "}
-        <b style={{ color: colors.gibbsText }}>−32.7 kJ</b>
+        = −91.8 + 59.06 = <b style={{ color: colors.gibbsText }}>−32.7 kJ</b>
       </Text>
       <Text
         x={LEFT_X + 140}

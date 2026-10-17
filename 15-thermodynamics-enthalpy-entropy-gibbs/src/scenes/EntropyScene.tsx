@@ -92,9 +92,7 @@ export function EntropyScene() {
               style={{ position: "absolute", left: 0, top: 0 }}
               opacity={shown.opacity}
             >
-              <g
-                transform={`translate(${x} ${BOX_Y}) scale(${shown.scale})`}
-              >
+              <g transform={`translate(${x} ${BOX_Y}) scale(${shown.scale})`}>
                 <rect
                   x={-BOX / 2}
                   y={-BOX / 2}
