@@ -14,6 +14,7 @@ on:
           - 04-electron-configuration-aufbau-hund-pauli
           - 05-periodic-table-blocks
           - 07-moles-stoichiometry-limiting-reagents
+          - 10-vsepr-geometry-gallery
           - 16-equilibrium-le-chatelier
 
 permissions:
