@@ -1,0 +1,55 @@
+{
+  "fps": 30,
+  "durationInFrames": 5210,
+  "scenes": [
+    {
+      "id": "model-zeff",
+      "from": 0,
+      "to": 730,
+      "lineStart": 120,
+      "lineFrames": 510
+    },
+    {
+      "id": "atomic-radius",
+      "from": 700,
+      "to": 1400,
+      "lineStart": 810,
+      "lineFrames": 490
+    },
+    {
+      "id": "ionization-energy",
+      "from": 1370,
+      "to": 2300,
+      "lineStart": 1480,
+      "lineFrames": 720
+    },
+    {
+      "id": "electron-affinity",
+      "from": 2270,
+      "to": 3200,
+      "lineStart": 2380,
+      "lineFrames": 720
+    },
+    {
+      "id": "electronegativity",
+      "from": 3170,
+      "to": 3940,
+      "lineStart": 3280,
+      "lineFrames": 560
+    },
+    {
+      "id": "worked-example",
+      "from": 3910,
+      "to": 4700,
+      "lineStart": 4020,
+      "lineFrames": 580
+    },
+    {
+      "id": "closing-card",
+      "from": 4670,
+      "to": 5210,
+      "lineStart": 4780,
+      "lineFrames": 340
+    }
+  ]
+}

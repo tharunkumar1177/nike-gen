@@ -12,6 +12,7 @@ on:
           - 02-atomic-structure-isotopes-mass-spectra
           - 03-quantum-model-orbitals
           - 04-electron-configuration-aufbau-hund-pauli
+          - 06-periodic-trends
 
 permissions:
   contents: read
