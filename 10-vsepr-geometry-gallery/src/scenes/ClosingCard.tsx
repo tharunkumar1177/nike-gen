@@ -1,5 +1,6 @@
 import { AbsoluteFill, useVideoConfig } from "remotion";
 import { pop, progress } from "../components/anim";
+import { Chem } from "../components/Chem";
 import { Card, Line } from "../components/Panels";
 import { useSceneFrame } from "../components/SceneFrame";
 import { Text } from "../components/Text";
@@ -93,7 +94,7 @@ export function ClosingCard() {
             STRIP_START + i * 4 + 25,
           )}
         >
-          {g.formula}
+          <Chem>{g.formula}</Chem>
         </Text>
       ))}
     </AbsoluteFill>

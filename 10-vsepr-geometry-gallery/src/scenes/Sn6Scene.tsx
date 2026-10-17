@@ -1,5 +1,6 @@
 import { AbsoluteFill, useVideoConfig } from "remotion";
 import { fadeWindow, pop, progress } from "../components/anim";
+import { Chem } from "../components/Chem";
 import { Lewis2D } from "../components/Lewis2D";
 import { Card, Line } from "../components/Panels";
 import { useSceneFrame } from "../components/SceneFrame";
@@ -14,7 +15,7 @@ import {
   type GalleryItem,
 } from "../molecules/gallery";
 import { Molecules } from "../molecules/Molecules";
-import { eulerPose, facePose } from "../molecules/view";
+import { eulerPose } from "../molecules/view";
 import { colors, type } from "../theme";
 
 const S = "sn-6-family" as const;
@@ -119,7 +120,7 @@ export function Sn6Scene() {
         { at: trans, pose: eulerPose(0, 30) },
         {
           at: planar,
-          pose: facePose([1, 0, 0], [0, 0, 1], [0.7071, -0.7071, 0]),
+          pose: eulerPose(60, 0),
         },
       ],
       arcs: [
@@ -193,7 +194,7 @@ export function Sn6Scene() {
         gap={12}
       >
         <Line size={type.subtitle} weight={700}>
-          Worked example: XeF₄
+          <Chem>Worked example: XeF₄</Chem>
         </Line>
         <Line size={type.body} opacity={progress(frame, bonds, bonds + 15)}>
           4 bonds

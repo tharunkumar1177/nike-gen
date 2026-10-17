@@ -1,5 +1,6 @@
 import { AbsoluteFill, useVideoConfig } from "remotion";
 import { fadeWindow, pop, progress } from "../components/anim";
+import { Chem } from "../components/Chem";
 import { Lewis2D } from "../components/Lewis2D";
 import { Card, Line } from "../components/Panels";
 import { useSceneFrame } from "../components/SceneFrame";
@@ -241,7 +242,7 @@ export function Sn5Scene() {
         gap={12}
       >
         <Line size={type.subtitle} weight={700}>
-          Worked example: SF₄
+          <Chem>Worked example: SF₄</Chem>
         </Line>
         <Line size={type.body}>4 bonds</Line>
         <Line size={type.body} color={colors.lonePairText}>

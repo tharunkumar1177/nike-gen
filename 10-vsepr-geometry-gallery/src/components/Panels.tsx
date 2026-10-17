@@ -166,8 +166,9 @@ export function Struck({
         style={{
           position: "absolute",
           left: -6,
-          top: "52%",
-          height: 6,
+          top: "50%",
+          height: 5,
+          transform: "translateY(-50%)",
           width: `calc(${strike * 100}% + ${strike * 12}px)`,
           background: color,
           borderRadius: 3,

@@ -1,5 +1,5 @@
-import type { ReactNode } from "react";
 import { easeInOut, fadeWindow, lerp, pop, progress } from "../components/anim";
+import { Chem } from "../components/Chem";
 import { Card, Line } from "../components/Panels";
 import { Text } from "../components/Text";
 import { colors, SAFE, type, VIDEO } from "../theme";
@@ -142,7 +142,7 @@ export function ThumbLabel({
         weight={700}
         opacity={opacity}
       >
-        {formula}
+        <Chem>{formula}</Chem>
       </Text>
       <Text
         x={x}
@@ -175,7 +175,7 @@ export function InfoCard({
   fps: number;
   enter: number;
   exit?: number;
-  formula: ReactNode;
+  formula: string;
   cls: string;
   shape: string;
   angleAt: number;
@@ -195,10 +195,10 @@ export function InfoCard({
       gap={12}
     >
       <Line size={type.title} weight={700}>
-        {formula}
+        <Chem>{formula}</Chem>
       </Line>
       <Line size={type.subtitle} weight={500} color={colors.central}>
-        {cls}
+        <Chem>{cls}</Chem>
       </Line>
       <Line size={type.body}>{shape}</Line>
       {ideal ? (

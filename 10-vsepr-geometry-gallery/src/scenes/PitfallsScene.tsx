@@ -1,5 +1,6 @@
 import { AbsoluteFill, useVideoConfig } from "remotion";
 import { pop, progress } from "../components/anim";
+import { Chem } from "../components/Chem";
 import { Lewis2D, lewisAnchors } from "../components/Lewis2D";
 import { Pill, Struck } from "../components/Panels";
 import { useSceneFrame } from "../components/SceneFrame";
@@ -103,7 +104,9 @@ function Row({
       <div style={{ fontSize: 44, fontWeight: 700, color: colors.text }}>
         {title}
       </div>
-      <div style={{ fontSize: type.label, color: colors.muted }}>{detail}</div>
+      <div style={{ fontSize: type.label, color: colors.muted }}>
+        <Chem>{detail}</Chem>
+      </div>
     </div>
   );
 }
@@ -204,7 +207,7 @@ export function PitfallsScene() {
         <Pill
           key={i}
           x={p.x}
-          y={p.y - 70}
+          y={p.y + (i === 0 ? -70 : 70)}
           color={colors.angle}
           size={28}
           opacity={progress(frame, tags + i * 10, tags + i * 10 + 15)}

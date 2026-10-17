@@ -7,7 +7,7 @@ import { cue } from "../cues";
 import { domainsFor, morphDomains } from "../molecules/geometry";
 import { Molecules } from "../molecules/Molecules";
 import type { ArcSpec } from "../molecules/spec";
-import { blendPose, eulerPose } from "../molecules/view";
+import { blendPose, eulerPose, facePose } from "../molecules/view";
 import { spinPose } from "../molecules/gallery";
 import { colors, FONT, type } from "../theme";
 
@@ -49,10 +49,20 @@ export function ProcedureScene() {
     domainsFor("AX4E", squeeze),
     morph,
   );
+  const measured = domainsFor("AX4E", 1);
+  const downAxis = facePose(
+    measured[3]?.dir ?? [1, 0, 0],
+    measured[4]?.dir ?? [-1, 0, 0],
+    [-1, 0, 0],
+  );
   const pose = blendPose(
-    spinPose(frame, 40),
-    eulerPose(25, 70),
-    progress(frame, expect - 20, expect + 10, easeInOut),
+    blendPose(
+      spinPose(frame, 40),
+      eulerPose(0, 90),
+      progress(frame, expect - 20, expect + 10, easeInOut),
+    ),
+    downAxis,
+    progress(frame, expect + 70, expect + 100, easeInOut),
   );
   const arcs: ArcSpec[] = [
     {
@@ -61,13 +71,14 @@ export function ProcedureScene() {
       via: [0, 0, -1],
       label: "173.1°",
       progress: progress(frame, expect + 15, expect + 45),
+      opacity: 1 - progress(frame, expect + 60, expect + 75),
       radius: 0.5,
     },
     {
       a: 3,
       b: 4,
       label: "101.6°",
-      progress: progress(frame, expect + 45, expect + 75),
+      progress: progress(frame, expect + 100, expect + 130),
     },
   ];
 
@@ -101,7 +112,9 @@ export function ProcedureScene() {
             pose,
             opacity: molIn,
             frameOpacity: 1 - progress(frame, name, name + 20),
-            arcs: arcs.filter((arc) => (arc.progress ?? 0) > 0),
+            arcs: arcs.filter(
+              (arc) => (arc.progress ?? 0) > 0 && (arc.opacity ?? 1) > 0,
+            ),
           },
         ]}
       />

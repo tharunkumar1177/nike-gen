@@ -13,7 +13,7 @@ import {
 import { projectPoint } from "./view";
 
 /** Atom symbols below this on-screen radius are unreadable and omitted. */
-const MIN_LABEL_RADIUS_PX = 14;
+const MIN_LABEL_RADIUS_PX = 20;
 
 type Ball = { x: number; y: number; depth: number; r: number };
 
