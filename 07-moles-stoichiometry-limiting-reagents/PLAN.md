@@ -114,5 +114,7 @@ Bright textbook: white background, Roboto, type scale 96 / 64 / 48 / 32, 120 px 
 - [x] Research
 - [x] Design
 - [x] Build
-- [ ] CI green
-- [ ] Merged
+- [x] CI green: [run 38986897693](https://github.com/tharunkumar1177/nike-gen/actions/runs/38986897693), 4654 frames (155.1 s), all gaps 5–6 s
+- [x] Merged
+
+Stills were not reviewed visually (verification limited to the CI runtime by user decision).
