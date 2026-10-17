@@ -117,20 +117,20 @@ Superoxide length: sources give 133 or 135 pm; the user chose to show "≈ 134 p
 7. Watch out for these pitfalls. S p mixing is an interaction, not sp hybridisation. Sigma is not always below pi. And bond order zero means no stable bond predicted, not that molecules cannot exist.
 8. Key takeaways. N atomic orbitals make N molecular orbitals. Bond order predicts stability. The two s two p gap dictates filling order. Molecular orbital theory explains paramagnetism. And standard rules fill molecular orbitals just like atomic orbitals.
 
-### Timing (as built, 195 s, 5850 frames)
+### Timing (as built, 193 s, 5790 frames)
 
-Narration windows were widened so Kokoro (~148 wpm) fits; each narration ends at least 2 s before its scene ends, so gaps between topics are 3–8 s.
+Scenes are sized from the Kokoro clip lengths measured in CI: 1 s lead-in, narration plus about 1 s margin, then a 3 s hold, so gaps between narrated topics are 4–5 s.
 
-| Scene | Frames | Narration start / end-by |
-| --- | --- | --- |
-| hook-o2-magnet | 0–450 | 30 / 390 |
-| lcao-bond-order | 450–1530 | 480 / 1470 |
-| period-2-orbitals | 1530–2040 | 1560 / 1980 |
-| sp-mixing | 2040–2790 | 2070 / 2730 |
-| filling-o2-b2 | 2790–3720 | 2820 / 3660 |
-| worked-example-o2-series | 3720–4710 | 3750 / 4650 |
-| pitfalls | 4710–5250 | 4740 / 5190 |
-| key-takeaways | 5250–5850 | 5280 / 5790 |
+| Scene | Frames | Narration start / end-by | Measured clip |
+| --- | --- | --- | --- |
+| hook-o2-magnet | 0–480 | 30 / 420 | 11.97 s |
+| lcao-bond-order | 480–1410 | 510 / 1350 | 26.07 s |
+| period-2-orbitals | 1410–1950 | 1440 / 1890 | 13.43 s |
+| sp-mixing | 1950–2670 | 1980 / 2610 | 19.80 s |
+| filling-o2-b2 | 2670–3570 | 2700 / 3510 | 25.77 s |
+| worked-example-o2-series | 3570–4470 | 3600 / 4410 | 25.23 s |
+| pitfalls | 4470–5070 | 4500 / 5010 | 15.13 s |
+| key-takeaways | 5070–5790 | 5100 / 5700 | pending |
 
 ### Frame plans (summary)
 

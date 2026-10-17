@@ -11,7 +11,7 @@ export const VIDEO = {
   width: 1920,
   height: 1080,
   fps: 30,
-  durationInFrames: 5850,
+  durationInFrames: 5790,
 } as const;
 
 export const SAFE = 120;
@@ -42,14 +42,14 @@ export const type = {
 
 /** Keys match the scene ids in `audio/script.json`. */
 export const SCENES = {
-  "hook-o2-magnet": { from: 0, to: 450 },
-  "lcao-bond-order": { from: 450, to: 1530 },
-  "period-2-orbitals": { from: 1530, to: 2040 },
-  "sp-mixing": { from: 2040, to: 2790 },
-  "filling-o2-b2": { from: 2790, to: 3720 },
-  "worked-example-o2-series": { from: 3720, to: 4710 },
-  pitfalls: { from: 4710, to: 5250 },
-  "key-takeaways": { from: 5250, to: 5850 },
+  "hook-o2-magnet": { from: 0, to: 480 },
+  "lcao-bond-order": { from: 480, to: 1410 },
+  "period-2-orbitals": { from: 1410, to: 1950 },
+  "sp-mixing": { from: 1950, to: 2670 },
+  "filling-o2-b2": { from: 2670, to: 3570 },
+  "worked-example-o2-series": { from: 3570, to: 4470 },
+  pitfalls: { from: 4470, to: 5070 },
+  "key-takeaways": { from: 5070, to: 5790 },
 } as const;
 
 export type SceneId = keyof typeof SCENES;

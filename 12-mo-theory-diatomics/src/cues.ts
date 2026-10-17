@@ -3,14 +3,14 @@ import { SCENES, type SceneId } from "./theme";
 
 /** Kokoro clip lengths in seconds, as logged by `audio/generate.js` in CI. */
 const MEASURED_SECONDS: Record<SceneId, number> = {
-  "hook-o2-magnet": 10.5,
-  "lcao-bond-order": 31.2,
-  "period-2-orbitals": 13,
-  "sp-mixing": 20.7,
-  "filling-o2-b2": 26.8,
-  "worked-example-o2-series": 28.8,
-  pitfalls: 14.2,
-  "key-takeaways": 15.4,
+  "hook-o2-magnet": 11.97,
+  "lcao-bond-order": 26.07,
+  "period-2-orbitals": 13.43,
+  "sp-mixing": 19.8,
+  "filling-o2-b2": 25.77,
+  "worked-example-o2-series": 25.23,
+  pitfalls: 15.13,
+  "key-takeaways": 16.5,
 };
 
 const normalize = (word: string) =>
