@@ -16,7 +16,12 @@ const TAKEAWAYS = [
   "SN 5 lone pairs go equatorial; SN 6 lone pairs go trans.",
 ];
 
-const GALLERY: { cls: VseprClass; central: string; ligands: string; formula: string }[] = [
+const GALLERY: {
+  cls: VseprClass;
+  central: string;
+  ligands: string;
+  formula: string;
+}[] = [
   { cls: "AX2", central: "C", ligands: "O", formula: "CO₂" },
   { cls: "AX3", central: "B", ligands: "F", formula: "BF₃" },
   { cls: "AX2E", central: "S", ligands: "O", formula: "SO₂" },
@@ -82,7 +87,11 @@ export function ClosingCard() {
           y={STRIP_Y + 85}
           size={type.label}
           weight={700}
-          opacity={progress(frame, STRIP_START + i * 4 + 10, STRIP_START + i * 4 + 25)}
+          opacity={progress(
+            frame,
+            STRIP_START + i * 4 + 10,
+            STRIP_START + i * 4 + 25,
+          )}
         >
           {g.formula}
         </Text>

@@ -105,9 +105,7 @@ function bondOffsets(dir: Vec3, order: 1 | 2 | 3): Vec3[] {
   const side = new Vector3(...dir).cross(ref).normalize();
   const gap = order === 2 ? 0.055 : 0.07;
   const s: Vec3 = [side.x * gap, side.y * gap, side.z * gap];
-  return order === 2
-    ? [s, scaled(s, -1)]
-    : [s, [0, 0, 0], scaled(s, -1)];
+  return order === 2 ? [s, scaled(s, -1)] : [s, [0, 0, 0], scaled(s, -1)];
 }
 
 function Arc({ spec, arc }: { spec: MoleculeSpec; arc: ArcSpec }) {
@@ -124,7 +122,13 @@ function Arc({ spec, arc }: { spec: MoleculeSpec; arc: ArcSpec }) {
       number,
       Vec3 | null,
     ];
-    const { points } = arcPoints(from, to, r, Math.max(p, 0.001), via ?? undefined);
+    const { points } = arcPoints(
+      from,
+      to,
+      r,
+      Math.max(p, 0.001),
+      via ?? undefined,
+    );
     const curve = new CatmullRomCurve3(points.map((q) => new Vector3(...q)));
     return new TubeGeometry(curve, 48, 0.014, 10, false);
   }, [shape]);
@@ -186,7 +190,9 @@ export function Molecule3D({ spec }: { spec: MoleculeSpec }) {
                       end[1] + offset[1],
                       end[2] + offset[2],
                     ]}
-                    radius={domain.order === 1 ? BOND_RADIUS : BOND_RADIUS * 0.7}
+                    radius={
+                      domain.order === 1 ? BOND_RADIUS : BOND_RADIUS * 0.7
+                    }
                     color={tint(colors.bond, glow, highlightColor)}
                     opacity={atomOpacity}
                   />

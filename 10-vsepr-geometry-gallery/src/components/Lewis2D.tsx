@@ -69,7 +69,10 @@ export const LEWIS = {
 export type LewisName = keyof typeof LEWIS;
 
 const RAD = Math.PI / 180;
-const dir = (deg: number) => ({ x: Math.sin(deg * RAD), y: -Math.cos(deg * RAD) });
+const dir = (deg: number) => ({
+  x: Math.sin(deg * RAD),
+  y: -Math.cos(deg * RAD),
+});
 
 type Layout = {
   cx: number;
@@ -163,7 +166,11 @@ export function Lewis2D({
         const d = dir(l.angle);
         const n = { x: -d.y, y: d.x };
         const offsets =
-          l.order === 1 ? [0] : l.order === 2 ? [-0.11, 0.11] : [-0.16, 0, 0.16];
+          l.order === 1
+            ? [0]
+            : l.order === 2
+              ? [-0.11, 0.11]
+              : [-0.16, 0, 0.16];
         const end = { x: c.x + d.x * bond, y: c.y + d.y * bond };
         return (
           <g key={i}>
@@ -182,7 +189,10 @@ export function Lewis2D({
             {Array.from({ length: l.lonePairs }, (_, k) => {
               const spread = l.lonePairs === 3 ? 90 : 60;
               const angle =
-                l.angle + (l.lonePairs === 1 ? 0 : -spread + (2 * spread * k) / (l.lonePairs - 1));
+                l.angle +
+                (l.lonePairs === 1
+                  ? 0
+                  : -spread + (2 * spread * k) / (l.lonePairs - 1));
               const p = dir(angle);
               return (
                 <DotPair

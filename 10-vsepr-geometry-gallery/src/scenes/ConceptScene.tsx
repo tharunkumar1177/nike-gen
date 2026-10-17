@@ -117,10 +117,19 @@ export function ConceptScene() {
   }));
 
   const leftIn = fadeWindow(frame, electron, electron + 20, space - 15, space);
-  const rightIn = fadeWindow(frame, molecular, molecular + 20, space - 15, space);
+  const rightIn = fadeWindow(
+    frame,
+    molecular,
+    molecular + 20,
+    space - 15,
+    space,
+  );
   const waterIn = progress(frame, space, space + 20);
   const pulse = (t0: number) =>
-    1 + 0.3 * progress(frame, t0, t0 + 20) * (1 - progress(frame, t0 + 40, t0 + 70));
+    1 +
+    0.3 *
+      progress(frame, t0, t0 + 20) *
+      (1 - progress(frame, t0 + 40, t0 + 70));
 
   const specs: MoleculeSpec[] = [
     {
@@ -177,7 +186,13 @@ export function ConceptScene() {
 
   const titleIn = fadeWindow(frame, start - 30, start, counting - 15, counting);
   const fragOut = 1 - progress(frame, steric - 15, steric);
-  const sterOn = fadeWindow(frame, steric, steric + 20, electron - 15, electron);
+  const sterOn = fadeWindow(
+    frame,
+    steric,
+    steric + 20,
+    electron - 15,
+    electron,
+  );
   const orderLine = (t: number) => progress(frame, t, t + 20);
 
   return (
@@ -210,7 +225,13 @@ export function ConceptScene() {
         );
       })}
 
-      <Card cx={960} cy={540} width={1400} opacity={sterOn} scale={0.9 + 0.1 * pop(frame, fps, steric)}>
+      <Card
+        cx={960}
+        cy={540}
+        width={1400}
+        opacity={sterOn}
+        scale={0.9 + 0.1 * pop(frame, fps, steric)}
+      >
         <Line size={type.subtitle} weight={700} color={colors.highlight}>
           Steric number = bonded atoms + lone pairs
         </Line>
@@ -219,26 +240,67 @@ export function ConceptScene() {
       <Text x={500} y={210} size={type.body} weight={500} opacity={leftIn}>
         Electron-domain geometry
       </Text>
-      <Text x={500} y={280} size={type.body} weight={700} color={colors.angle} opacity={leftIn}>
+      <Text
+        x={500}
+        y={280}
+        size={type.body}
+        weight={700}
+        color={colors.angle}
+        opacity={leftIn}
+      >
         tetrahedral
       </Text>
       <Text x={1420} y={210} size={type.body} weight={500} opacity={rightIn}>
         Molecular geometry
       </Text>
-      <Text x={1420} y={280} size={type.body} weight={700} color={colors.angle} opacity={rightIn}>
+      <Text
+        x={1420}
+        y={280}
+        size={type.body}
+        weight={700}
+        color={colors.angle}
+        opacity={rightIn}
+      >
         trigonal pyramidal
       </Text>
 
-      <Text x={1300} y={300} size={type.subtitle} weight={700} opacity={waterIn}>
+      <Text
+        x={1300}
+        y={300}
+        size={type.subtitle}
+        weight={700}
+        opacity={waterIn}
+      >
         Repulsion order
       </Text>
-      <Text x={1300} y={450} size={type.body} weight={500} color={colors.pitfall} opacity={orderLine(order1)}>
+      <Text
+        x={1300}
+        y={450}
+        size={type.body}
+        weight={500}
+        color={colors.pitfall}
+        opacity={orderLine(order1)}
+      >
         1. Lone pair – lone pair
       </Text>
-      <Text x={1300} y={550} size={type.body} weight={500} color={colors.lonePairText} opacity={orderLine(order2)}>
+      <Text
+        x={1300}
+        y={550}
+        size={type.body}
+        weight={500}
+        color={colors.lonePairText}
+        opacity={orderLine(order2)}
+      >
         2. Lone pair – bonding pair
       </Text>
-      <Text x={1300} y={650} size={type.body} weight={500} color={colors.muted} opacity={orderLine(order3)}>
+      <Text
+        x={1300}
+        y={650}
+        size={type.body}
+        weight={500}
+        color={colors.muted}
+        opacity={orderLine(order3)}
+      >
         3. Bonding pair – bonding pair
       </Text>
     </AbsoluteFill>

@@ -17,7 +17,17 @@ const ROWS = [345, 560, 775] as const;
 const TEXT_X = 230;
 const CO2 = { cx: 1480, cy: ROWS[0] + 15, bond: 120, fontSize: 48 } as const;
 
-function Cross({ x, y, size, opacity }: { x: number; y: number; size: number; opacity: number }) {
+function Cross({
+  x,
+  y,
+  size,
+  opacity,
+}: {
+  x: number;
+  y: number;
+  size: number;
+  opacity: number;
+}) {
   const h = size / 2;
   return (
     <svg
@@ -35,7 +45,17 @@ function Cross({ x, y, size, opacity }: { x: number; y: number; size: number; op
   );
 }
 
-function Check({ x, y, size, opacity }: { x: number; y: number; size: number; opacity: number }) {
+function Check({
+  x,
+  y,
+  size,
+  opacity,
+}: {
+  x: number;
+  y: number;
+  size: number;
+  opacity: number;
+}) {
   const h = size / 2;
   return (
     <svg
@@ -105,7 +125,9 @@ export function PitfallsScene() {
   const r3 = progress(frame, row3, row3 + 20);
   const anchors = lewisAnchors("CO2", CO2);
 
-  const wrong = domainsFor("AX5").map((d, i) => (i === 0 ? { ...d, atom: 0 } : d));
+  const wrong = domainsFor("AX5").map((d, i) =>
+    i === 0 ? { ...d, atom: 0 } : d,
+  );
 
   return (
     <AbsoluteFill>
@@ -122,7 +144,15 @@ export function PitfallsScene() {
           transform: `scale(${0.95 + 0.05 * pop(frame, fps, box - 10)})`,
         }}
       />
-      <Text x={TEXT_X} y={200} anchor="start" size={type.subtitle} weight={700} color={colors.pitfall} opacity={boxIn}>
+      <Text
+        x={TEXT_X}
+        y={200}
+        anchor="start"
+        size={type.subtitle}
+        weight={700}
+        color={colors.pitfall}
+        opacity={boxIn}
+      >
         Common pitfalls
       </Text>
       <Molecules
@@ -206,12 +236,18 @@ export function PitfallsScene() {
       >
         <div style={{ fontWeight: 700, color: colors.angle }}>bent</div>
         <div style={{ color: colors.muted }}>
-          <Struck strike={progress(frame, row2 + 25, row2 + 40)} color={colors.pitfall}>
+          <Struck
+            strike={progress(frame, row2 + 25, row2 + 40)}
+            color={colors.pitfall}
+          >
             tetrahedral
           </Struck>
         </div>
         <div style={{ color: colors.muted }}>
-          <Struck strike={progress(frame, linearWord + 10, linearWord + 25)} color={colors.pitfall}>
+          <Struck
+            strike={progress(frame, linearWord + 10, linearWord + 25)}
+            color={colors.pitfall}
+          >
             linear
           </Struck>
         </div>
@@ -223,9 +259,18 @@ export function PitfallsScene() {
         title="SN 5 lone pairs go equatorial"
         detail="an axial lone pair meets three domains at 90°"
       />
-      <Cross x={1340} y={ROWS[2]} size={190} opacity={0.85 * progress(frame, looks, looks + 15)} />
-      <Check x={1660} y={ROWS[2] - 70} size={64} opacity={progress(frame, looks + 15, looks + 30)} />
-
+      <Cross
+        x={1340}
+        y={ROWS[2]}
+        size={190}
+        opacity={0.85 * progress(frame, looks, looks + 15)}
+      />
+      <Check
+        x={1660}
+        y={ROWS[2] - 70}
+        size={64}
+        opacity={progress(frame, looks + 15, looks + 30)}
+      />
     </AbsoluteFill>
   );
 }

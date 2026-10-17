@@ -135,10 +135,23 @@ export function ThumbLabel({
   const x = thumbX(item.thumbIndex, item.thumbCount);
   return (
     <>
-      <Text x={x} y={THUMB.formulaY} size={type.label} weight={700} opacity={opacity}>
+      <Text
+        x={x}
+        y={THUMB.formulaY}
+        size={type.label}
+        weight={700}
+        opacity={opacity}
+      >
         {formula}
       </Text>
-      <Text x={x} y={THUMB.nameY} size={28} weight={400} color={colors.muted} opacity={opacity}>
+      <Text
+        x={x}
+        y={THUMB.nameY}
+        size={28}
+        weight={400}
+        color={colors.muted}
+        opacity={opacity}
+      >
         {shape}
       </Text>
     </>

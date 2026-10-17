@@ -176,7 +176,14 @@ export function Sn6Scene() {
           all six positions equivalent
         </Line>
       </Card>
-      <Lewis2D name="XeF4" cx={HERO.cx} cy={HERO.cy} bond={150} fontSize={64} opacity={lewisOn} />
+      <Lewis2D
+        name="XeF4"
+        cx={HERO.cx}
+        cy={HERO.cy}
+        bond={150}
+        fontSize={64}
+        opacity={lewisOn}
+      />
       <Card
         cx={INFO.cx}
         cy={INFO.cy}
@@ -191,10 +198,19 @@ export function Sn6Scene() {
         <Line size={type.body} opacity={progress(frame, bonds, bonds + 15)}>
           4 bonds
         </Line>
-        <Line size={type.body} color={colors.lonePairText} opacity={progress(frame, bonds + 10, bonds + 25)}>
+        <Line
+          size={type.body}
+          color={colors.lonePairText}
+          opacity={progress(frame, bonds + 10, bonds + 25)}
+        >
           + 2 lone pairs
         </Line>
-        <Line size={type.body} weight={700} color={colors.highlight} opacity={snOn}>
+        <Line
+          size={type.body}
+          weight={700}
+          color={colors.highlight}
+          opacity={snOn}
+        >
           = SN 6
         </Line>
       </Card>

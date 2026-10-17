@@ -173,7 +173,14 @@ export function Sn5Scene() {
       angle: "180°",
       poses: [{ at: linear - 20, pose: eulerPose(12, 30) }],
       arcs: [
-        { at: linear + 10, a: 0, b: 1, via: [1, 0, 0], label: "180°", radius: 0.5 },
+        {
+          at: linear + 10,
+          a: 0,
+          b: 1,
+          via: [1, 0, 0],
+          label: "180°",
+          radius: 0.5,
+        },
       ],
     },
   ];
@@ -200,7 +207,12 @@ export function Sn5Scene() {
         <Line size={type.subtitle} weight={700}>
           Where do lone pairs go?
         </Line>
-        <Line size={type.body} weight={500} color={colors.pitfall} opacity={axialOn > 0 ? 1 : 0.35}>
+        <Line
+          size={type.body}
+          weight={500}
+          color={colors.pitfall}
+          opacity={axialOn > 0 ? 1 : 0.35}
+        >
           Axial: 3 domains at 90°
         </Line>
         <Line
@@ -212,7 +224,14 @@ export function Sn5Scene() {
           Equatorial: 2 domains at 90°
         </Line>
       </Card>
-      <Lewis2D name="SF4" cx={HERO.cx} cy={HERO.cy} bond={150} fontSize={64} opacity={lewisOn} />
+      <Lewis2D
+        name="SF4"
+        cx={HERO.cx}
+        cy={HERO.cy}
+        bond={150}
+        fontSize={64}
+        opacity={lewisOn}
+      />
       <Card
         cx={INFO.cx}
         cy={INFO.cy}
@@ -228,7 +247,12 @@ export function Sn5Scene() {
         <Line size={type.body} color={colors.lonePairText}>
           + 1 lone pair
         </Line>
-        <Line size={type.body} weight={700} color={colors.highlight} opacity={snOn}>
+        <Line
+          size={type.body}
+          weight={700}
+          color={colors.highlight}
+          opacity={snOn}
+        >
           = SN 5
         </Line>
       </Card>

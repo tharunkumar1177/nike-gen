@@ -218,10 +218,12 @@ export function Sn24Scene() {
           <b style={{ color: colors.central }}>A</b> = central atom
         </Line>
         <Line size={type.body} opacity={lineIn(keyX)}>
-          <b style={{ color: colors.halogenText }}>X</b> = bonded atom (m of them)
+          <b style={{ color: colors.halogenText }}>X</b> = bonded atom (m of
+          them)
         </Line>
         <Line size={type.body} opacity={lineIn(keyE)}>
-          <b style={{ color: colors.lonePairText }}>E</b> = lone pair (n of them)
+          <b style={{ color: colors.lonePairText }}>E</b> = lone pair (n of
+          them)
         </Line>
       </Card>
       {items.map((item) => (

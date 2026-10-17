@@ -76,7 +76,11 @@ export function ProcedureScene() {
       return { text: "seesaw", color: colors.angle, t: name };
     }
     if (frame >= place) {
-      return { text: "lone pair goes equatorial", color: colors.lonePairText, t: place };
+      return {
+        text: "lone pair goes equatorial",
+        color: colors.lonePairText,
+        t: place,
+      };
     }
     return { text: "trigonal bipyramidal", color: colors.text, t: pick };
   })();
@@ -101,20 +105,49 @@ export function ProcedureScene() {
           },
         ]}
       />
-      <Text x={960} y={150} size={type.subtitle} weight={700} opacity={progress(frame, title - 20, title)}>
+      <Text
+        x={960}
+        y={150}
+        size={type.subtitle}
+        weight={700}
+        opacity={progress(frame, title - 20, title)}
+      >
         Predicting a shape in six steps
       </Text>
-      <Lewis2D name="SF4" cx={450} cy={500} bond={150} fontSize={64} opacity={lewisIn} />
-      <Text x={450} y={800} size={40} weight={500} color={colors.highlight} opacity={countIn}>
+      <Lewis2D
+        name="SF4"
+        cx={450}
+        cy={500}
+        bond={150}
+        fontSize={64}
+        opacity={lewisIn}
+      />
+      <Text
+        x={450}
+        y={800}
+        size={40}
+        weight={500}
+        color={colors.highlight}
+        opacity={countIn}
+      >
         4 bonds + 1 lone pair = SN 5
       </Text>
-      <Text x={450} y={820} size={type.body} weight={700} color={caption.color} opacity={molIn * captionIn}>
+      <Text
+        x={450}
+        y={820}
+        size={type.body}
+        weight={700}
+        color={caption.color}
+        opacity={molIn * captionIn}
+      >
         {caption.text}
       </Text>
       {STEPS.map((step, i) => {
         const t = at[i] ?? 0;
         const on = progress(frame, t, t + 20);
-        const active = frame >= t && (i === STEPS.length - 1 || frame < (at[i + 1] ?? Infinity));
+        const active =
+          frame >= t &&
+          (i === STEPS.length - 1 || frame < (at[i + 1] ?? Infinity));
         return (
           <div
             key={step.text}

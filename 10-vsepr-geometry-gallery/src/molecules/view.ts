@@ -60,14 +60,21 @@ export function facePose(
   );
   const d = new Vector3(...toward).normalize();
   const z = new Vector3(0, 0, 1);
-  const target = new Matrix4().makeBasis(d, new Vector3().crossVectors(z, d), z);
+  const target = new Matrix4().makeBasis(
+    d,
+    new Vector3().crossVectors(z, d),
+    z,
+  );
   const rotation = target.multiply(source.transpose());
   return toPose(new Quaternion().setFromRotationMatrix(rotation));
 }
 
 export function blendPose(from: Pose, to: Pose, t: number): Pose {
   return toPose(
-    new Quaternion(...from).slerp(new Quaternion(...to), Math.min(1, Math.max(0, t))),
+    new Quaternion(...from).slerp(
+      new Quaternion(...to),
+      Math.min(1, Math.max(0, t)),
+    ),
   );
 }
 

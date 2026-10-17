@@ -190,7 +190,13 @@ const SLOTS: Record<
     lonePairs: [2, 3],
   },
   AX5: {
-    ideal: [[0, 1, 0], [0, -1, 0], equatorial(0), equatorial(120), equatorial(240)],
+    ideal: [
+      [0, 1, 0],
+      [0, -1, 0],
+      equatorial(0),
+      equatorial(120),
+      equatorial(240),
+    ],
     measured: [
       [0, 1, 0],
       [0, -1, 0],
@@ -201,7 +207,13 @@ const SLOTS: Record<
     lonePairs: [],
   },
   AX4E: {
-    ideal: [[0, 1, 0], [0, -1, 0], equatorial(0), equatorial(120), equatorial(240)],
+    ideal: [
+      [0, 1, 0],
+      [0, -1, 0],
+      equatorial(0),
+      equatorial(120),
+      equatorial(240),
+    ],
     // Axial F–S–F 173.1°: each axial bond tilts 3.45° away from the lone pair.
     // Equatorial F–S–F 101.6°: each sits 50.8° from the −z direction.
     measured: [
@@ -214,7 +226,13 @@ const SLOTS: Record<
     lonePairs: [2],
   },
   AX3E2: {
-    ideal: [[0, 1, 0], [0, -1, 0], equatorial(0), equatorial(120), equatorial(240)],
+    ideal: [
+      [0, 1, 0],
+      [0, -1, 0],
+      equatorial(0),
+      equatorial(120),
+      equatorial(240),
+    ],
     // F(axial)–Cl–F(equatorial) 87.5°: axial bonds lean toward the +z fluorine.
     measured: [
       [0, Math.sin(87.5 * RAD), Math.cos(87.5 * RAD)],
@@ -226,7 +244,13 @@ const SLOTS: Record<
     lonePairs: [3, 4],
   },
   AX2E3: {
-    ideal: [[0, 1, 0], [0, -1, 0], equatorial(0), equatorial(120), equatorial(240)],
+    ideal: [
+      [0, 1, 0],
+      [0, -1, 0],
+      equatorial(0),
+      equatorial(120),
+      equatorial(240),
+    ],
     measured: [
       [0, 1, 0],
       [0, -1, 0],
@@ -237,12 +261,33 @@ const SLOTS: Record<
     lonePairs: [2, 3, 4],
   },
   AX6: {
-    ideal: [[1, 0, 0], [-1, 0, 0], [0, 1, 0], [0, -1, 0], [0, 0, 1], [0, 0, -1]],
-    measured: [[1, 0, 0], [-1, 0, 0], [0, 1, 0], [0, -1, 0], [0, 0, 1], [0, 0, -1]],
+    ideal: [
+      [1, 0, 0],
+      [-1, 0, 0],
+      [0, 1, 0],
+      [0, -1, 0],
+      [0, 0, 1],
+      [0, 0, -1],
+    ],
+    measured: [
+      [1, 0, 0],
+      [-1, 0, 0],
+      [0, 1, 0],
+      [0, -1, 0],
+      [0, 0, 1],
+      [0, 0, -1],
+    ],
     lonePairs: [],
   },
   AX5E: {
-    ideal: [[1, 0, 0], [-1, 0, 0], [0, 1, 0], [0, -1, 0], [0, 0, 1], [0, 0, -1]],
+    ideal: [
+      [1, 0, 0],
+      [-1, 0, 0],
+      [0, 1, 0],
+      [0, -1, 0],
+      [0, 0, 1],
+      [0, 0, -1],
+    ],
     // F(apical)–Br–F(basal) 84.8°: basal bonds rise toward the apical fluorine.
     measured: [
       [Math.sin(84.8 * RAD), Math.cos(84.8 * RAD), 0],
@@ -255,8 +300,22 @@ const SLOTS: Record<
     lonePairs: [3],
   },
   AX4E2: {
-    ideal: [[1, 0, 0], [-1, 0, 0], [0, 1, 0], [0, -1, 0], [0, 0, 1], [0, 0, -1]],
-    measured: [[1, 0, 0], [-1, 0, 0], [0, 1, 0], [0, -1, 0], [0, 0, 1], [0, 0, -1]],
+    ideal: [
+      [1, 0, 0],
+      [-1, 0, 0],
+      [0, 1, 0],
+      [0, -1, 0],
+      [0, 0, 1],
+      [0, 0, -1],
+    ],
+    measured: [
+      [1, 0, 0],
+      [-1, 0, 0],
+      [0, 1, 0],
+      [0, -1, 0],
+      [0, 0, 1],
+      [0, 0, -1],
+    ],
     lonePairs: [2, 3],
   },
 };
@@ -291,7 +350,11 @@ export function domainsFor(
 }
 
 /** Per-slot blend between two domain sets of equal length. */
-export function morphDomains(from: Domain[], to: Domain[], t: number): Domain[] {
+export function morphDomains(
+  from: Domain[],
+  to: Domain[],
+  t: number,
+): Domain[] {
   if (from.length !== to.length) {
     throw new Error("Cannot morph domain sets of different sizes.");
   }
