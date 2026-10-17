@@ -46,9 +46,7 @@ async function speakLines() {
       });
       rate = audio.sampling_rate;
       if (parts.length > 0) {
-        parts.push(
-          new Float32Array(Math.round(SENTENCE_PAUSE_SECONDS * rate)),
-        );
+        parts.push(new Float32Array(Math.round(SENTENCE_PAUSE_SECONDS * rate)));
       }
       parts.push(audio.audio);
     }
