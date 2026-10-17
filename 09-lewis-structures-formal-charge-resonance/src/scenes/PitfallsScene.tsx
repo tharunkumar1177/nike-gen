@@ -18,7 +18,13 @@ const CARDS: {
   tag: string;
   phrase: string;
 }[] = [
-  { x: 330, formula: "H", count: "2 e⁻", tag: "Duet", phrase: "Hydrogen is full" },
+  {
+    x: 330,
+    formula: "H",
+    count: "2 e⁻",
+    tag: "Duet",
+    phrase: "Hydrogen is full",
+  },
   {
     x: 750,
     formula: <>BF{sub("3")}</>,

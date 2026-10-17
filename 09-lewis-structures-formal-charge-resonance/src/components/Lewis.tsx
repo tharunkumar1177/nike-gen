@@ -126,7 +126,11 @@ export const bondOrder = (order: number): LineStyle[] =>
 export const SIDE = { right: 0, bottom: 90, left: 180, top: 270 } as const;
 
 /** Centre of a lone pair placed on `angle` around an atom. */
-export function pairCentre(atom: Point, angle: number, distance = PAIR_DISTANCE) {
+export function pairCentre(
+  atom: Point,
+  angle: number,
+  distance = PAIR_DISTANCE,
+) {
   const rad = (angle * Math.PI) / 180;
   return {
     x: atom.x + Math.cos(rad) * distance,
@@ -154,8 +158,18 @@ export function LonePair({
   const py = Math.cos(rad) * (PAIR_SPACING / 2);
   return (
     <g opacity={opacity}>
-      <circle cx={at.x + px} cy={at.y + py} r={DOT_RADIUS * scale} fill={color} />
-      <circle cx={at.x - px} cy={at.y - py} r={DOT_RADIUS * scale} fill={color} />
+      <circle
+        cx={at.x + px}
+        cy={at.y + py}
+        r={DOT_RADIUS * scale}
+        fill={color}
+      />
+      <circle
+        cx={at.x - px}
+        cy={at.y - py}
+        r={DOT_RADIUS * scale}
+        fill={color}
+      />
     </g>
   );
 }
@@ -218,7 +232,14 @@ export function ChargeBadge({
       opacity={opacity}
       transform={`translate(${cx} ${cy}) scale(${scale}) translate(${-cx} ${-cy})`}
     >
-      <circle cx={cx} cy={cy} r={28} fill="#FFFFFF" stroke={color} strokeWidth={4} />
+      <circle
+        cx={cx}
+        cy={cy}
+        r={28}
+        fill="#FFFFFF"
+        stroke={color}
+        strokeWidth={4}
+      />
       <text
         x={cx}
         y={cy}

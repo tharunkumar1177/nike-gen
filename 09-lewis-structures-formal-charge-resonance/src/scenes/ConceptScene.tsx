@@ -1,13 +1,7 @@
 import { useVideoConfig } from "remotion";
 import { fadeIn, pop, progress } from "../components/anim";
 import { Chip, Title } from "../components/Labels";
-import {
-  AtomSymbol,
-  Bond,
-  LonePairs,
-  SIDE,
-  Stage,
-} from "../components/Lewis";
+import { AtomSymbol, Bond, LonePairs, SIDE, Stage } from "../components/Lewis";
 import { useSceneFrame } from "../components/SceneFrame";
 import { cue } from "../cues";
 import { colors, FONT, SAFE, type } from "../theme";

@@ -19,7 +19,11 @@ const SCENE = "formal-charge-co2";
 
 const Y = 650;
 const A = { o1: { x: 320, y: Y }, c: { x: 500, y: Y }, o2: { x: 680, y: Y } };
-const B = { o1: { x: 1240, y: Y }, c: { x: 1420, y: Y }, o2: { x: 1600, y: Y } };
+const B = {
+  o1: { x: 1240, y: Y },
+  c: { x: 1420, y: Y },
+  o2: { x: 1600, y: Y },
+};
 
 export function FormalChargeScene() {
   const frame = useSceneFrame();
@@ -107,10 +111,7 @@ export function FormalChargeScene() {
         <Bond from={B.o1} to={B.c} lines={bondOrder(3)} />
         <Bond from={B.c} to={B.o2} lines={bondOrder(1)} />
         <LonePairs atom={B.o1} angles={[SIDE.left]} />
-        <LonePairs
-          atom={B.o2}
-          angles={[SIDE.top, SIDE.right, SIDE.bottom]}
-        />
+        <LonePairs atom={B.o2} angles={[SIDE.top, SIDE.right, SIDE.bottom]} />
       </Stage>
       <Stage>
         <ChargeBadge atom={B.o1} value={1} {...badge(charges)} />

@@ -107,13 +107,30 @@ function Ozone({
   );
 }
 
-function ResonanceArrow({ from, to, y }: { from: number; to: number; y: number }) {
+function ResonanceArrow({
+  from,
+  to,
+  y,
+}: {
+  from: number;
+  to: number;
+  y: number;
+}) {
   const head = 22;
   return (
-    <g stroke={colors.resonance} strokeWidth={6} strokeLinecap="round" fill="none">
+    <g
+      stroke={colors.resonance}
+      strokeWidth={6}
+      strokeLinecap="round"
+      fill="none"
+    >
       <line x1={from + 4} y1={y} x2={to - 4} y2={y} />
-      <polyline points={`${from + head},${y - head} ${from},${y} ${from + head},${y + head}`} />
-      <polyline points={`${to - head},${y - head} ${to},${y} ${to - head},${y + head}`} />
+      <polyline
+        points={`${from + head},${y - head} ${from},${y} ${from + head},${y + head}`}
+      />
+      <polyline
+        points={`${to - head},${y - head} ${to},${y} ${to - head},${y + head}`}
+      />
     </g>
   );
 }
