@@ -126,6 +126,7 @@ Implementation deviations (layout fixes, no content change):
 - Scenes 5–7: bullets are numbered and spaced to fill their boxes; closing bullets at 44 px so the longest fits.
 - After the first render (measured narration 18.10, 22.40, 19.43, 21.63, 21.03, 21.73 s; 6 s between lines, 4 s before the card; 168.3 s total): spin harpoons replaced by full ↑/↓ arrows (half-barbs read as "1"); the promoted electron travels above the 2p boxes instead of through them; sp³ lobes scaled 1.3×; scene 3 drops ethyne's tilted second p set (clutter) and instead labels bond counts from the brief ("5 σ, 1 π", "3 σ, 2 π (one π shown)"), with the σ/π legend moved top-right; scene 4's 120° arc now spans the two left equatorial Cl atoms and SF₆'s 90° arc sits between the front-right F and the lower axial F so neither crosses a bond or label.
 - Style update after `style.md` and `wireframe.svg` changed: Roboto replaced by IBM Plex Sans; titles moved to the wireframe's 70 px top-left block; safe margin 100 px; scene 3's σ/π legend moved from the title band to y 300/350.
+- Curiosity-led rewrite: each line opens with a hook and ends by setting up the next concept. Kokoro silently truncates input past its context window (about 26 s of speech), so `audio/generate.js` now speaks each sentence separately with a 0.25 s pause. Measured narration 36.97, 35.07, 38.47, 36.20, 34.30, 34.27 s; 259.3 s total.
 
 ## Status
 
@@ -135,5 +136,5 @@ Implementation deviations (layout fixes, no content change):
 - [x] Build
 - [x] CI green, stills reviewed ([run 39020913408](https://github.com/tharunkumar1177/nike-gen/actions/runs/39020913408))
 - [x] Recorded on main
-- [ ] Restyled to the current style guide (font, title block, safe margin)
-- [ ] Curiosity-led narration with concept bridges (about 4 minutes)
+- [x] Restyled to the current style guide (font, title block, safe margin)
+- [x] Curiosity-led narration with concept bridges, 259 s ([run 39061594479](https://github.com/tharunkumar1177/nike-gen/actions/runs/39061594479))
