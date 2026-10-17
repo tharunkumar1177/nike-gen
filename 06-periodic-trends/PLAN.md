@@ -164,5 +164,5 @@ Implementation deviations (layout fixes, no content change):
 - [x] Brief
 - [x] Design plan
 - [x] Build
-- [x] CI green ([run 39017381857](https://github.com/tharunkumar1177/nike-gen/actions/runs/39017381857)); stills are in the artifact but not downloaded (repo guardrail: verify compile only)
-- [ ] Recorded on main (PR [#9](https://github.com/tharunkumar1177/nike-gen/pull/9) open, awaiting merge)
+- [x] CI green ([run 39017381857](https://github.com/tharunkumar1177/nike-gen/actions/runs/39017381857)); all 14 stills reviewed against the design plan with user approval, no mismatches
+- [x] Recorded on main (PR [#9](https://github.com/tharunkumar1177/nike-gen/pull/9))
