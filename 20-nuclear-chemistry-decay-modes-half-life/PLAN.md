@@ -160,6 +160,9 @@ Designer plans (four batches) were implemented with fades/drop-ins of 15–20 fr
 - [x] Scope
 - [x] Research
 - [ ] Design
-- [ ] Build
-- [ ] CI green
+- [x] Build (typecheck and lint pass in CI)
+- [ ] CI green: three failed attempts, all fixed and awaiting re-dispatch approval
+  - [run 39053328240](https://github.com/tharunkumar1177/nike-gen/actions/runs/39053328240): Prettier formatting; patch applied, lockfile committed
+  - [run 39054208655](https://github.com/tharunkumar1177/nike-gen/actions/runs/39054208655): one narration gap 8.37 s; lengths set to measured TTS durations
+  - [run 39054524708](https://github.com/tharunkumar1177/nike-gen/actions/runs/39054524708): Prettier number style (`22.80` → `22.8`) in `audio/script.json`
 - [ ] Merged

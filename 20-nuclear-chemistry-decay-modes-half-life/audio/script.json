@@ -53,7 +53,7 @@
     {
       "scene": "half-life-math",
       "text": "Each half life halves what remains: a half, then a quarter, then an eighth. It is never all gone after two half lives. Radioactive decay is a first order process. The rate constant, k, equals zero point six nine three over the half life. The remaining amount is the initial amount times e to the negative k t. How can this math let us look into the past?",
-      "seconds": 22.80
+      "seconds": 22.8
     },
     {
       "scene": "radiocarbon-dating",
