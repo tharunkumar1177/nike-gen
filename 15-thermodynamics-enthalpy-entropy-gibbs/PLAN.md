@@ -146,5 +146,7 @@ Frame-level layouts and cue phrases were supplied per scene by the designer and 
 - [x] Research
 - [x] Design
 - [x] Build
-- [ ] CI green
-- [ ] Merged
+- [x] CI green: [run 39021948734](https://github.com/tharunkumar1177/nike-gen/actions/runs/39021948734), 7872 frames (262.4 s), gaps 6 s (5 s before the closing card)
+- [x] Merged
+
+Stills reviewed against the design plan: all 11 key frames match, no overlaps or clipping. Attempt 1 failed only on Prettier formatting; fixed with the CI patch.
