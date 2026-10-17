@@ -1,0 +1,64 @@
+{
+  "fps": 30,
+  "leadFrames": 30,
+  "gapFrames": 180,
+  "closingFrames": 360,
+  "minGapSeconds": 3,
+  "maxGapSeconds": 8,
+  "voice": {
+    "id": "af_heart",
+    "speed": 1,
+    "peakDbfs": -3
+  },
+  "pad": {
+    "chordHz": [110, 164.81, 220, 277.18],
+    "peakDbfs": -26,
+    "duckDb": -8,
+    "duckAttackMs": 120,
+    "duckReleaseMs": 600,
+    "fadeInFrames": 60,
+    "fadeOutFrames": 120
+  },
+  "lines": [
+    {
+      "scene": "dynamic-equilibrium",
+      "text": "A reversible reaction reaches dynamic equilibrium when forward and reverse rates become equal. The reaction does not stop, but concentrations stay constant. Importantly, these constant concentrations are not necessarily equal to each other.",
+      "seconds": 14.3
+    },
+    {
+      "scene": "kc-expression",
+      "text": "The equilibrium constant, K c, is the ratio of product concentrations to reactant concentrations at equilibrium, each raised to its coefficient. Pure solids and liquids are always omitted. For gases, we can also use partial pressures, written as K p.",
+      "seconds": 16.5
+    },
+    {
+      "scene": "magnitude-of-k",
+      "text": "The magnitude of K tells us what the equilibrium mixture looks like. If K is much greater than one, products are favoured. If K is much less than one, reactants are favoured.",
+      "seconds": 12.5
+    },
+    {
+      "scene": "ice-table",
+      "text": "Let's start with zero point zero five zero molar N two O four. At equilibrium, we measure zero point zero one six molar N O two. So N two O four fell by half that, leaving zero point zero four two molar. Plugging these in gives K c equals six point one times ten to the minus three.",
+      "seconds": 19.5
+    },
+    {
+      "scene": "reaction-quotient",
+      "text": "The reaction quotient, Q, uses the exact same expression, but with current concentrations. If Q is less than K, the reaction shifts right to make products. If Q is greater than K, it shifts left, toward reactants.",
+      "seconds": 14
+    },
+    {
+      "scene": "le-chatelier-concentration",
+      "text": "Le Chatelier's principle states that a stressed equilibrium shifts to relieve the stress. Adding N two O four raises the denominator, making Q less than K, so the system shifts right. It reaches a new equilibrium without restoring the original concentrations.",
+      "seconds": 16
+    },
+    {
+      "scene": "le-chatelier-volume",
+      "text": "Decreasing the volume shifts the equilibrium toward the side with fewer moles of gas, here N two O four. But adding an inert gas at constant volume causes no shift, because the partial pressures of the reacting gases stay the same.",
+      "seconds": 16
+    },
+    {
+      "scene": "temperature-catalyst",
+      "text": "Temperature is the only factor that changes K. This reaction is endothermic, so treat heat as a reactant. Adding heat shifts it right, toward brown N O two. A catalyst only speeds up both directions equally, so it reaches equilibrium faster without shifting the balance.",
+      "seconds": 17.5
+    }
+  ]
+}
