@@ -22,6 +22,7 @@ on:
           - 17-acids-bases-pka-buffers-titration-curves
           - 09-lewis-structures-formal-charge-resonance
           - 14-gases-solutions-colligative-properties
+          - 19-kinetics-rate-laws-mechanisms-catalysis
 
 permissions:
   contents: read
