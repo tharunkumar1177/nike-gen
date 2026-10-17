@@ -172,6 +172,6 @@ No subtitles (the wireframe band fits only the 80 px title). Title baseline y 21
 - [x] Scope
 - [x] Research
 - [x] Design
-- [ ] Build
-- [ ] CI green
+- [x] Build
+- [x] CI green: [run 39055781087](https://github.com/tharunkumar1177/nike-gen/actions/runs/39055781087), 6964 frames (3:52), gaps 4–5 s
 - [ ] Merged
