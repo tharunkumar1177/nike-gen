@@ -14,7 +14,7 @@
 - [x] Lesson 11 — Hybridisation (sp→sp3d2) (`11-hybridisation/`, Remotion, 168 s narrated)
 - [x] Lesson 12 — MO theory: diatomics, bond order, paramagnetism (`12-mo-theory-diatomics/`, Remotion, 193 s narrated)
 - [x] Lesson 13 — Intermolecular forces & property trends (`13-intermolecular-forces-property-trends/`, Remotion, 197 s narrated)
-- [ ] Lesson 14 — Gases, solutions, colligative properties
+- [x] Lesson 14 — Gases, solutions, colligative properties (`14-gases-solutions-colligative-properties/`, Remotion, 219 s narrated)
 - [x] Lesson 15 — Thermodynamics: enthalpy, entropy, Gibbs (`15-thermodynamics-enthalpy-entropy-gibbs/`, Remotion, 262 s narrated)
 - [x] Lesson 16 — Equilibrium & Le Chatelier (`16-equilibrium-le-chatelier/`, Remotion, 191 s narrated)
 - [x] Lesson 17 — Acids/bases: pKa, buffers, titration curves (`17-acids-bases-pka-buffers-titration-curves/`, Remotion, 187 s narrated)

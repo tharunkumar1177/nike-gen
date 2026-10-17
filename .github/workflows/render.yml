@@ -20,6 +20,7 @@ on:
           - 16-equilibrium-le-chatelier
           - 17-acids-bases-pka-buffers-titration-curves
           - 09-lewis-structures-formal-charge-resonance
+          - 14-gases-solutions-colligative-properties
 
 permissions:
   contents: read
