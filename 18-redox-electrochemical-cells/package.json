@@ -1,0 +1,39 @@
+{
+  "name": "redox-electrochemical-cells",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "generate:audio": "node audio/generate.js",
+    "studio": "remotion studio src/index.ts",
+    "render": "remotion render src/index.ts Redox out/18-redox-electrochemical-cells.mp4 --codec=h264",
+    "stills": "node scripts/stills.js",
+    "build": "npm run generate:audio && npm run render && npm run stills",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "dependencies": {
+    "@remotion/google-fonts": "4.0.536",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "remotion": "4.0.536"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@huggingface/transformers": "3.8.1",
+    "@remotion/cli": "4.0.536",
+    "@types/react": "19.3.0",
+    "eslint": "10.13.0",
+    "eslint-plugin-react-hooks": "7.1.1",
+    "globals": "17.13.0",
+    "kokoro-js": "1.2.1",
+    "prettier": "3.9.10",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.71.2"
+  }
+}
