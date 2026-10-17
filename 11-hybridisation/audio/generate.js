@@ -4,6 +4,7 @@ import { env } from "@huggingface/transformers";
 import { KokoroTTS } from "kokoro-js";
 
 const MIX_CEILING_DBFS = -1;
+const SENTENCE_PAUSE_SECONDS = 0.25;
 
 const readJson = async (name) =>
   JSON.parse(await readFile(new URL(name, import.meta.url), "utf8"));
@@ -36,13 +37,41 @@ async function speakLines() {
   });
   const clips = [];
   for (const line of script.lines) {
-    const audio = await tts.generate(line.text, {
-      voice: script.voice.id,
-      speed: script.voice.speed,
-    });
-    clips.push({ line, samples: audio.audio, rate: audio.sampling_rate });
+    const parts = [];
+    let rate = 0;
+    for (const sentence of sentences(line.text)) {
+      const audio = await tts.generate(sentence, {
+        voice: script.voice.id,
+        speed: script.voice.speed,
+      });
+      rate = audio.sampling_rate;
+      if (parts.length > 0) {
+        parts.push(
+          new Float32Array(Math.round(SENTENCE_PAUSE_SECONDS * rate)),
+        );
+      }
+      parts.push(audio.audio);
+    }
+    clips.push({ line, samples: concat(parts), rate });
   }
   return clips;
+}
+
+/** Kokoro truncates input past its context window, so lines are spoken one sentence at a time. */
+function sentences(text) {
+  return (text.match(/[^.?!]+(?:[.?!]+|$)/g) ?? [text])
+    .map((sentence) => sentence.trim())
+    .filter(Boolean);
+}
+
+function concat(parts) {
+  const out = new Float32Array(parts.reduce((sum, p) => sum + p.length, 0));
+  let offset = 0;
+  for (const part of parts) {
+    out.set(part, offset);
+    offset += part.length;
+  }
+  return out;
 }
 
 /**
