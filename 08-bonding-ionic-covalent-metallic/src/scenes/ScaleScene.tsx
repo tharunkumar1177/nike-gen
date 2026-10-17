@@ -95,9 +95,9 @@ const TRI_DOTS = [
     x: 1450,
     y: 640,
     color: colors.ionic,
-    lx: 1480,
-    ly: 650,
-    anchor: "start",
+    lx: 1450,
+    ly: 680,
+    anchor: "middle",
   },
 ] as const;
 
@@ -238,7 +238,7 @@ export function ScaleScene() {
       ))}
       <Text
         x={BAR.right}
-        y={530}
+        y={490}
         size={28}
         weight={500}
         anchor="end"

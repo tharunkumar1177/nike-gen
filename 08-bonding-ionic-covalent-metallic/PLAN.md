@@ -139,6 +139,7 @@ Implementation deviations (layout fixes, no content change):
 - Scene 5 bar moved to y 380 with band labels at y 310 (plan's y 220–280 overlapped the title); markers are discs on the bar with bond labels beneath; triangle shrunk to base y 900, apex y 600 so it clears the bar labels.
 - Scene 6 lattices use a 56 px pitch; "NaCl" and "Cu" headings added beside each lattice so viewers know which is which; Cu box shows electrons between cores.
 - Closing card last bullet leads with "ΔEN" (the plan's "Electronegativity" overstated it).
+- After the first still review: "Rough guide (OpenStax)" moved up to the bar's label row (y 490) so it no longer reads as part of the triangle; Na–Cl triangle label centred under its dot; closing card trimmed to 540 px tall.
 
 ## Status
 

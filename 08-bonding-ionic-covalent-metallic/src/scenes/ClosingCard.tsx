@@ -44,7 +44,7 @@ export function ClosingCard() {
           left: 160,
           top: 240,
           width: 1600,
-          height: 600,
+          height: 540,
           boxSizing: "border-box",
           backgroundColor: "#F9FAFB",
           border: "4px solid #E5E7EB",
