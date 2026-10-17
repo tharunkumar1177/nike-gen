@@ -13,7 +13,9 @@ on:
           - 03-quantum-model-orbitals
           - 04-electron-configuration-aufbau-hund-pauli
           - 05-periodic-table-blocks
+          - 06-periodic-trends
           - 07-moles-stoichiometry-limiting-reagents
+          - 10-vsepr-geometry-gallery
           - 13-intermolecular-forces-property-trends
           - 16-equilibrium-le-chatelier
 
