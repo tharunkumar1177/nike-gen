@@ -1,0 +1,64 @@
+{
+  "fps": 30,
+  "leadFrames": 30,
+  "gapFrames": 180,
+  "closingFrames": 360,
+  "minGapSeconds": 3,
+  "maxGapSeconds": 8,
+  "voice": {
+    "id": "af_heart",
+    "speed": 1,
+    "peakDbfs": -3
+  },
+  "pad": {
+    "chordHz": [98, 146.83, 196, 246.94],
+    "peakDbfs": -30,
+    "duckDb": -8,
+    "duckAttackMs": 120,
+    "duckReleaseMs": 600,
+    "fadeInFrames": 60,
+    "fadeOutFrames": 120
+  },
+  "lines": [
+    {
+      "scene": "nuclear-stability",
+      "text": "A nucleus packs positively charged protons tightly together. Why don't they repel each other and fly apart? The strong nuclear force holds them, but only if the neutron to proton ratio is just right. Stable nuclei lie in a narrow band of stability. But what happens if a nucleus has the wrong ratio, or has more than eighty three protons?",
+      "seconds": 22.45
+    },
+    {
+      "scene": "alpha-decay",
+      "text": "Smoke detectors hide a speck of americium two forty one. What it shoots out ionizes the air, and smoke blocking it trips the alarm. Heavy nuclei with more than eighty three protons are unstable. To shed weight, they emit an alpha particle, which is a helium nucleus. This drops the mass number by four and the atomic number by two. But how do lighter nuclei fix a bad ratio?",
+      "seconds": 24.27
+    },
+    {
+      "scene": "beta-decay-modes",
+      "text": "P E T scans use fluorine eighteen. It emits a positron, which meets an electron and becomes two gamma rays the scanner can see. Nuclei below the band are proton rich, so they emit positrons or capture an inner electron. Nuclei above the band are neutron rich and emit a beta minus particle. That electron is created in the decay, not taken from the shell. But is changing particles the whole story?",
+      "seconds": 25.52
+    },
+    {
+      "scene": "gamma-and-penetration",
+      "text": "After a decay, the nucleus is often left excited. How does it release that extra energy? It emits a gamma ray, a high energy photon. Gamma emission does not change the mass number or atomic number. While paper stops alpha particles and thin aluminum stops beta, gamma rays need thick lead or concrete. So how do we keep track of all these changes?",
+      "seconds": 23.25
+    },
+    {
+      "scene": "balancing-equations",
+      "text": "Uranium two thirty eight takes fourteen steps to become stable lead. How do we follow this chain? We use nuclear equations, which must conserve both the mass number, A, and the atomic number, Z. Remember, beta minus raises Z by one. Track the running totals of A and Z to check your balance. But if a nucleus is unstable, exactly when will it decay?",
+      "seconds": 22.98
+    },
+    {
+      "scene": "half-life-concept",
+      "text": "If you watch a single unstable nucleus, you can never predict when it will pop. A single nucleus decays at random, but a large crowd decays at a predictable rate. The time for half the nuclei to decay is its half life. For uranium two thirty eight, that is four point five times ten to the nine years. Heat, pressure, and amount do not change this. So how do we put numbers on it?",
+      "seconds": 23.15
+    },
+    {
+      "scene": "half-life-math",
+      "text": "Each half life halves what remains: a half, then a quarter, then an eighth. It is never all gone after two half lives. Radioactive decay is a first order process. The rate constant, k, equals zero point six nine three over the half life. The remaining amount is the initial amount times e to the negative k t. How can this math let us look into the past?",
+      "seconds": 22.8
+    },
+    {
+      "scene": "radiocarbon-dating",
+      "text": "Cosmic rays constantly make carbon fourteen in the air. Living things take it in, but when they die, the intake stops and a clock starts ticking. Let's date a wooden artifact with thirty five point zero percent of its original carbon fourteen. The half life is five thousand seven hundred thirty years. We find k, then use the first order equation to solve for time. The artifact is about eight thousand six hundred eighty years old.",
+      "seconds": 25.75
+    }
+  ]
+}
