@@ -17,7 +17,7 @@
 - [ ] Lesson 14 — Gases, solutions, colligative properties
 - [x] Lesson 15 — Thermodynamics: enthalpy, entropy, Gibbs (`15-thermodynamics-enthalpy-entropy-gibbs/`, Remotion, 262 s narrated)
 - [x] Lesson 16 — Equilibrium & Le Chatelier (`16-equilibrium-le-chatelier/`, Remotion, 191 s narrated)
-- [ ] Lesson 17 — Acids/bases: pKa, buffers, titration curves
+- [x] Lesson 17 — Acids/bases: pKa, buffers, titration curves (`17-acids-bases-pka-buffers-titration-curves/`, Remotion, 187 s narrated)
 - [ ] Lesson 18 — Redox & electrochemical cells
 - [ ] Lesson 19 — Kinetics: rate laws, mechanisms, catalysis
 - [ ] Lesson 20 — Nuclear chemistry: decay modes, half-life

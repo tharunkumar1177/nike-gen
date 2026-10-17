@@ -1,0 +1,59 @@
+{
+  "fps": 30,
+  "leadFrames": 30,
+  "gapFrames": 180,
+  "closingFrames": 360,
+  "minGapSeconds": 3,
+  "maxGapSeconds": 8,
+  "voice": {
+    "id": "af_heart",
+    "speed": 1,
+    "peakDbfs": -3
+  },
+  "pad": {
+    "chordHz": [98, 146.83, 196, 246.94],
+    "peakDbfs": -30,
+    "duckDb": -8,
+    "duckAttackMs": 120,
+    "duckReleaseMs": 600,
+    "fadeInFrames": 60,
+    "fadeOutFrames": 120
+  },
+  "lines": [
+    {
+      "scene": "bronsted-lowry-ph",
+      "text": "A Bronsted Lowry acid donates an H plus, and a base accepts it. In water, it forms H three O plus and its conjugate base. We measure this with p H, the negative log of H three O plus. In pure water, the product of H three O plus and O H minus is one point zero times ten to the negative fourteen.",
+      "seconds": 21.32
+    },
+    {
+      "scene": "ka-pka-strength",
+      "text": "Weak acids only partially ionize. We measure this with K a, or its negative log, p K a. A smaller p K a means a stronger acid. Remember, strength is how much it ionizes, while concentration is how much is dissolved.",
+      "seconds": 16.52
+    },
+    {
+      "scene": "weak-acid-ice",
+      "text": "Let's find the p H of zero point one zero zero molar acetic acid. Its K a is one point eight times ten to the negative five. Using an I C E table and assuming x is small, the H three O plus concentration is one point three four times ten to the negative three molar. The p H is two point eight seven.",
+      "seconds": 22.23
+    },
+    {
+      "scene": "buffer-mechanism",
+      "text": "A buffer contains a weak acid and its conjugate base. It resists p H changes because the acid neutralizes added O H minus, and the base neutralizes added H plus. It does not hold p H perfectly constant. The Henderson Hasselbalch equation finds its p H.",
+      "seconds": 19.32
+    },
+    {
+      "scene": "buffer-vs-water",
+      "text": "Consider a buffer with equal moles of acetic acid and its conjugate base. Its p H is four point seven four. Adding zero point zero one zero moles of strong acid drops the p H to four point six five. Adding that same acid to pure water drops the p H from seven to two.",
+      "seconds": 20.15
+    },
+    {
+      "scene": "titration-curve",
+      "text": "Titrating this acid with a strong base creates a curve. At half equivalence, p H equals p K a, four point seven four. At equivalence, the conjugate base reacts with water to make O H minus. So, the equivalence point is p H eight point seven two, not seven like a strong acid.",
+      "seconds": 19.48
+    },
+    {
+      "scene": "indicators",
+      "text": "To see this equivalence point, we need an indicator that changes color during the steep jump. Phenolphthalein changes between eight point three and ten point zero, which is perfect. Methyl red would change too early.",
+      "seconds": 13.85
+    }
+  ]
+}
