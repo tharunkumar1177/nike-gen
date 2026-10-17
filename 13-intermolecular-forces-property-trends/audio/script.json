@@ -1,0 +1,59 @@
+{
+  "fps": 30,
+  "leadFrames": 30,
+  "gapFrames": 180,
+  "closingFrames": 360,
+  "minGapSeconds": 3,
+  "maxGapSeconds": 8,
+  "voice": {
+    "id": "af_heart",
+    "speed": 1,
+    "peakDbfs": -3
+  },
+  "pad": {
+    "chordHz": [110, 164.81, 220, 277.18],
+    "peakDbfs": -26,
+    "duckDb": -8,
+    "duckAttackMs": 120,
+    "duckReleaseMs": 600,
+    "fadeInFrames": 60,
+    "fadeOutFrames": 120
+  },
+  "lines": [
+    {
+      "scene": "intra-vs-inter",
+      "text": "Intramolecular forces are the strong covalent bonds holding atoms together inside a molecule. Intermolecular forces are the weaker attractions between separate molecules. When a substance boils, the molecules move apart, overcoming only the intermolecular forces. Covalent bonds stay intact.",
+      "seconds": 16.5
+    },
+    {
+      "scene": "london-dispersion",
+      "text": "London dispersion forces act between all molecules, when shifting electron clouds create temporary dipoles. Larger molecules are more polarizable, so dispersion gets stronger and boiling points rise. Shape matters too. Chain-shaped n pentane has more contact area than compact neopentane, so it boils higher.",
+      "seconds": 17.5
+    },
+    {
+      "scene": "dipole-dipole",
+      "text": "Dipole dipole attractions act between the permanent dipoles of polar molecules. The delta plus end of one molecule pulls on the delta minus end of the next. Polar H C L boils at one hundred eighty eight kelvin, far higher than nonpolar F two of similar mass, at eighty five kelvin.",
+      "seconds": 19
+    },
+    {
+      "scene": "hydrogen-bonding",
+      "text": "Hydrogen bonding is a particularly strong dipole dipole attraction. It needs a hydrogen atom bonded to nitrogen, oxygen, or fluorine, attracted to a lone pair on a nearby molecule. The trend in heavier hydrides predicts water would boil near minus eighty degrees Celsius. Hydrogen bonding raises it to one hundred.",
+      "seconds": 20
+    },
+    {
+      "scene": "property-trends",
+      "text": "Stronger intermolecular forces hold molecules together more tightly. That means a higher boiling point, higher viscosity, and higher surface tension. Fewer molecules can escape into the gas, so the vapour pressure is lower.",
+      "seconds": 13.5
+    },
+    {
+      "scene": "worked-example",
+      "text": "Let's rank the boiling points of propane, dimethyl ether, and ethanol. Their sizes and masses are similar, so dispersion forces are comparable. Nonpolar propane has only dispersion. Polar dimethyl ether adds dipole dipole attractions. Ethanol's O H group adds hydrogen bonding. So the boiling points rise in that order: minus forty two, minus twenty five, and seventy eight degrees Celsius.",
+      "seconds": 24
+    },
+    {
+      "scene": "pitfalls",
+      "text": "Watch out for three pitfalls. Boiling separates molecules; it never breaks covalent bonds. Hydrogen bonds are intermolecular, only about five to ten percent as strong as covalent bonds. And polar does not always beat nonpolar: dispersion grows with size, so compare polarity only when sizes are similar.",
+      "seconds": 19
+    }
+  ]
+}

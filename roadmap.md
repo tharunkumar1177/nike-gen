@@ -13,7 +13,7 @@
 - [ ] Lesson 10 — VSEPR geometry gallery
 - [ ] Lesson 11 — Hybridisation (sp→sp3d2)
 - [ ] Lesson 12 — MO theory: diatomics, bond order, paramagnetism
-- [ ] Lesson 13 — Intermolecular forces & property trends
+- [ ] Lesson 13 — Intermolecular forces & property trends (`13-intermolecular-forces-property-trends/`, Remotion, ~180 s narrated) — in progress
 - [ ] Lesson 14 — Gases, solutions, colligative properties
 - [ ] Lesson 15 — Thermodynamics: enthalpy, entropy, Gibbs
 - [ ] Lesson 16 — Equilibrium & Le Chatelier
