@@ -12,6 +12,8 @@
 - [x] Lesson 9 — Lewis structures, formal charge, resonance (`09-lewis-structures-formal-charge-resonance/`, Remotion, 166 s narrated)
 - [ ] Lesson 10 — VSEPR geometry gallery
 - [ ] Lesson 11 — Hybridisation (sp→sp3d2)
+- [x] Lesson 12 — MO theory: diatomics, bond order, paramagnetism (`12-mo-theory-diatomics/`, Remotion, 193 s narrated)
+- [ ] Lesson 13 — Intermolecular forces & property trends
 - [ ] Lesson 12 — MO theory: diatomics, bond order, paramagnetism
 - [x] Lesson 13 — Intermolecular forces & property trends (`13-intermolecular-forces-property-trends/`, Remotion, 197 s narrated)
 - [ ] Lesson 14 — Gases, solutions, colligative properties

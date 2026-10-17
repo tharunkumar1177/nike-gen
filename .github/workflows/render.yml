@@ -13,6 +13,8 @@ on:
           - 03-quantum-model-orbitals
           - 04-electron-configuration-aufbau-hund-pauli
           - 07-moles-stoichiometry-limiting-reagents
+          - 12-mo-theory-diatomics
+          - 16-equilibrium-le-chatelier
           - 09-lewis-structures-formal-charge-resonance
 
 permissions:
