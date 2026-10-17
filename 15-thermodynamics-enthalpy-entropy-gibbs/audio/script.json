@@ -1,0 +1,74 @@
+{
+  "fps": 30,
+  "leadFrames": 30,
+  "gapFrames": 180,
+  "closingFrames": 360,
+  "minGapSeconds": 3,
+  "maxGapSeconds": 8,
+  "voice": {
+    "id": "af_heart",
+    "speed": 1,
+    "peakDbfs": -3
+  },
+  "pad": {
+    "chordHz": [110, 164.81, 220, 277.18],
+    "peakDbfs": -26,
+    "duckDb": -8,
+    "duckAttackMs": 120,
+    "duckReleaseMs": 600,
+    "fadeInFrames": 60,
+    "fadeOutFrames": 120
+  },
+  "lines": [
+    {
+      "scene": "system-surroundings-enthalpy",
+      "text": "Thermodynamics determines whether a process will occur. The system is the part we study, while everything else is the surroundings. Enthalpy, or delta H, measures heat exchanged at constant pressure. Exothermic processes release heat to the surroundings, and endothermic processes absorb heat.",
+      "seconds": 16.15
+    },
+    {
+      "scene": "hess-law",
+      "text": "Enthalpy is a state function, meaning it only depends on the current state, not the specific path taken. Hess's law states that if a process is the sum of multiple steps, its total enthalpy change is simply the sum of those individual steps.",
+      "seconds": 16.54
+    },
+    {
+      "scene": "entropy",
+      "text": "Entropy, or delta S, measures the dispersal of matter and energy among available microstates. Entropy increases as a substance transforms from a solid to a liquid, and then to a gas, or whenever a reaction increases the total number of moles of gas.",
+      "seconds": 16.54
+    },
+    {
+      "scene": "second-law",
+      "text": "The second law of thermodynamics states that every spontaneous change increases the total entropy of the universe. Even if a system's entropy decreases, like liquid water freezing into solid ice, the surroundings must compensate with a larger entropy increase for it to occur.",
+      "seconds": 16.54
+    },
+    {
+      "scene": "gibbs-free-energy",
+      "text": "Gibbs free energy, or delta G, combines enthalpy and entropy into one single criterion for spontaneity at constant temperature and pressure. It equals delta H minus temperature times delta S. A negative delta G means spontaneous, while zero indicates a system at equilibrium.",
+      "seconds": 16.92
+    },
+    {
+      "scene": "four-sign-cases",
+      "text": "Looking at the signs gives four cases. A negative delta H and positive delta S is always spontaneous. A positive delta H and negative delta S is never spontaneous. When both signs match, the crossover temperature decides if the process will be spontaneous.",
+      "seconds": 16.54
+    },
+    {
+      "scene": "worked-example-enthalpy-entropy",
+      "text": "Let us calculate ammonia synthesis from N two and H two at two hundred ninety eight point one five kelvin. Using standard formation values, the enthalpy change is minus ninety one point eight kilojoules. The entropy change is minus one hundred ninety eight point one joules per kelvin, decreasing as gas moles drop.",
+      "seconds": 20
+    },
+    {
+      "scene": "worked-example-gibbs",
+      "text": "Before calculating Gibbs free energy, we must convert the entropy into kilojoules per kelvin. Delta G equals minus ninety one point eight, minus two hundred ninety eight point one five times minus zero point one nine eight one. This gives minus thirty two point seven kilojoules, so the reaction is spontaneous.",
+      "seconds": 19.62
+    },
+    {
+      "scene": "crossover-temperature",
+      "text": "Because both changes are negative, this reaction is only spontaneous at lower temperatures. Setting delta G to zero reveals the crossover temperature. Dividing enthalpy by entropy gives four hundred sixty three kelvin. Above this specific temperature, the ammonia synthesis reaction becomes non spontaneous.",
+      "seconds": 16.54
+    },
+    {
+      "scene": "pitfalls",
+      "text": "Avoid common pitfalls. Spontaneous means a reaction can happen, not that it happens quickly. Also, exothermic does not guarantee spontaneity, as seen with ammonia at high temperatures. Finally, always match your energy units and ensure temperature is in kelvin.",
+      "seconds": 15
+    }
+  ]
+}

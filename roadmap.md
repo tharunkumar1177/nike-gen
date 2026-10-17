@@ -10,14 +10,12 @@
 - [x] Lesson 7 — Moles, stoichiometry, limiting reagents (`07-moles-stoichiometry-limiting-reagents/`, Remotion, 155 s narrated)
 - [x] Lesson 8 — Bonding overview: ionic vs covalent vs metallic
 - [x] Lesson 9 — Lewis structures, formal charge, resonance (`09-lewis-structures-formal-charge-resonance/`, Remotion, 166 s narrated)
-- [x] Lesson 10 — VSEPR geometry gallery
-- [ ] Lesson 11 — Hybridisation (sp→sp3d2)
+- [x] Lesson 10 — VSEPR geometry gallery (`10-vsepr-geometry-gallery/`, Remotion + three.js, ~4.3 min narrated)
+- [x] Lesson 11 — Hybridisation (sp→sp3d2) (`11-hybridisation/`, Remotion, 168 s narrated)
 - [x] Lesson 12 — MO theory: diatomics, bond order, paramagnetism (`12-mo-theory-diatomics/`, Remotion, 193 s narrated)
-- [ ] Lesson 13 — Intermolecular forces & property trends
-- [ ] Lesson 12 — MO theory: diatomics, bond order, paramagnetism
 - [x] Lesson 13 — Intermolecular forces & property trends (`13-intermolecular-forces-property-trends/`, Remotion, 197 s narrated)
 - [ ] Lesson 14 — Gases, solutions, colligative properties
-- [ ] Lesson 15 — Thermodynamics: enthalpy, entropy, Gibbs
+- [x] Lesson 15 — Thermodynamics: enthalpy, entropy, Gibbs (`15-thermodynamics-enthalpy-entropy-gibbs/`, Remotion, 262 s narrated)
 - [x] Lesson 16 — Equilibrium & Le Chatelier (`16-equilibrium-le-chatelier/`, Remotion, 191 s narrated)
 - [ ] Lesson 17 — Acids/bases: pKa, buffers, titration curves
 - [ ] Lesson 18 — Redox & electrochemical cells
