@@ -39,11 +39,19 @@ const ITEMS = [
     at: cue(SCENE, "bond order predicts"),
   },
   {
-    text: <>The 2s–2p gap decides whether {PI} or {SIGMA} fills first.</>,
+    text: (
+      <>
+        The 2s–2p gap decides whether {PI} or {SIGMA} fills first.
+      </>
+    ),
     at: cue(SCENE, "the two s two p gap"),
   },
   {
-    text: <>MO theory explains the paramagnetism of {O2} and {B2}.</>,
+    text: (
+      <>
+        MO theory explains the paramagnetism of {O2} and {B2}.
+      </>
+    ),
     at: cue(SCENE, "molecular orbital theory explains"),
   },
   {
@@ -55,9 +63,7 @@ const ITEMS = [
 export function TakeawaysScene() {
   const frame = useSceneFrame();
   return (
-    <AbsoluteFill
-      style={{ opacity: 1 - progress(frame, LENGTH - 30, LENGTH) }}
-    >
+    <AbsoluteFill style={{ opacity: 1 - progress(frame, LENGTH - 30, LENGTH) }}>
       <Card
         box={{ left: 120, top: 150, width: 1680, height: 780 }}
         border={colors.box}

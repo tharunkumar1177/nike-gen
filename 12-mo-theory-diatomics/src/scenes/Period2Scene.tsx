@@ -47,13 +47,7 @@ function Px({ cx, cy }: { cx: number; cy: number }) {
   return (
     <>
       <ellipse cx={cx} cy={cy - 60} rx={35} ry={60} fill={colors.bonding} />
-      <ellipse
-        cx={cx}
-        cy={cy + 60}
-        rx={35}
-        ry={60}
-        fill={colors.antibonding}
-      />
+      <ellipse cx={cx} cy={cy + 60} rx={35} ry={60} fill={colors.antibonding} />
     </>
   );
 }
