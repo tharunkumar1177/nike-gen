@@ -1,0 +1,59 @@
+{
+  "fps": 30,
+  "leadFrames": 30,
+  "gapFrames": 150,
+  "closingFrames": 300,
+  "minGapSeconds": 3,
+  "maxGapSeconds": 8,
+  "voice": {
+    "id": "af_heart",
+    "speed": 1,
+    "peakDbfs": -3
+  },
+  "pad": {
+    "chordHz": [98, 146.83, 196, 246.94],
+    "peakDbfs": -30,
+    "duckDb": -8,
+    "duckAttackMs": 120,
+    "duckReleaseMs": 600,
+    "fadeInFrames": 60,
+    "fadeOutFrames": 120
+  },
+  "lines": [
+    {
+      "scene": "redox-intro",
+      "text": "Drop a clean copper wire into clear silver nitrate. The solution spontaneously turns blue as copper is oxidized to C u two plus, and silver ions are reduced to solid silver. Copper is the reducing agent, and silver ion the oxidizing agent. Because electrons jump directly at the wire's surface, none flow through a circuit. To harness this, we track electrons using oxidation states. In permanganate, oxygen is minus two. For a net minus one charge, manganese must be plus seven.",
+      "seconds": 27.75
+    },
+    {
+      "scene": "balancing",
+      "text": "If electrons are to travel through a circuit, both halves must trade exactly the same number. We balance them using the half-reaction method. For iron two plus and permanganate in acid, we balance oxygen with water, and hydrogen with H plus. We add electrons to balance the charges. But how do we make the electron counts match? We multiply the iron reaction by five, equalizing them before adding them together into a net equation.",
+      "seconds": 26.27
+    },
+    {
+      "scene": "galvanic-cell",
+      "text": "We build a galvanic cell to physically separate the halves. Here, zinc in zinc ions connects to copper in copper ions. Spontaneous oxidation occurs at the negative anode, and reduction at the positive cathode. Electrons flow through an external wire to do work. A salt bridge allows ions to flow, keeping both halves neutral so current continues. Standard cell notation summarizes this: zinc, vertical line, zinc ion, double line for the salt bridge, copper ion, line, copper.",
+      "seconds": 28.32
+    },
+    {
+      "scene": "reduction-potentials",
+      "text": "We now have a working cell, but why does zinc hand electrons to copper and not the reverse? We measure this pull as standard reduction potential. A single half-cell cannot be measured alone; it is compared to a standard hydrogen electrode, defined as exactly zero volts. Copper pulls electrons with a potential of plus zero point three four volts, while zinc pushes at minus zero point seven six volts. Subtracting the anode from the cathode, the total cell potential is one point one zero volts.",
+      "seconds": 26.98
+    },
+    {
+      "scene": "free-energy",
+      "text": "A small A A and a large D alkaline cell both provide one point five volts. E naught is intensive; the bigger cell simply holds more reactant. Standard free energy relates this voltage to chemical energy per mole of reaction. It equals minus n F E naught cell. With two moles of electrons, our Daniell cell yields a free energy of minus two hundred and twelve kilojoules per mole. This huge negative energy means a massive equilibrium constant, favoring the products.",
+      "seconds": 27.68
+    },
+    {
+      "scene": "nernst-equation",
+      "text": "Standard values like E naught and delta G naught assume one molar standard states. But a cell that runs changes its own concentrations, so why does a battery slowly lose voltage? The Nernst equation tracks this falling voltage as the reaction proceeds. Our E naught is one point one zero volts. Suppose zinc ions are at zero point one zero molar and copper ions at zero point zero one zero molar. Our reaction quotient Q is ten. The cell voltage drops to one point zero seven volts.",
+      "seconds": 26.73
+    },
+    {
+      "scene": "electrolysis",
+      "text": "As a cell discharges, the Nernst equation tracks its falling voltage until it reaches exactly zero volts at equilibrium. What if we push the dead cell backwards? In electrolysis, an external power source drives electrons the wrong way, forcing a non-spontaneous reaction. Oxidation still happens at the anode, but now the anode is the positive electrode.",
+      "seconds": 23.3
+    }
+  ]
+}
