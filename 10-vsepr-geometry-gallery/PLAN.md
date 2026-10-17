@@ -152,7 +152,7 @@ Implementation deviations (geometry and legibility only, no content change):
 ### Build notes
 
 - CI run 3 failed because the scene windows were fixed in advance and the measured narration overran them; the timeline is now generated from the measured audio (see Storyboard). Earlier runs: formatting (patch applied) and an open-ended animation window passing `Infinity` to `interpolate`.
-- Measured narration (run 39022894426): 37.9, 27.4, 46.6, 43.5, 35.9, 26.0 s; total 259.9 s.
+- Measured narration (run 39025194059): 37.9, 27.4, 46.6, 43.5, 35.9, 26.0 s; total 259.9 s.
 
 ## Status
 
@@ -160,5 +160,5 @@ Implementation deviations (geometry and legibility only, no content change):
 - [x] Brief
 - [x] Design plan
 - [x] Build
-- [x] CI green, stills reviewed ([run 39022894426](https://github.com/tharunkumar1177/nike-gen/actions/runs/39022894426))
+- [x] CI green, stills reviewed ([run 39025194059](https://github.com/tharunkumar1177/nike-gen/actions/runs/39025194059))
 - [x] Merged
