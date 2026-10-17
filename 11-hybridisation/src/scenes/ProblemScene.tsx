@@ -5,7 +5,12 @@ import {
   useVideoConfig,
 } from "remotion";
 import { easeOut, fadeIn, lerp, pop, progress } from "../components/anim";
-import { EnergyAxis, Harpoon, OrbitalBox, SvgLabel } from "../components/Boxes";
+import {
+  EnergyAxis,
+  OrbitalBox,
+  SpinArrow,
+  SvgLabel,
+} from "../components/Boxes";
 import { AngleArc, Atom, Bond, Dash, Wedge } from "../components/Molecule";
 import { Stage, Subtitle, Title } from "../components/Panels";
 import { Sub } from "../components/Script";
@@ -73,20 +78,20 @@ export function GroundState({
       >
         2p
       </SvgLabel>
-      <Harpoon
+      <SpinArrow
         x={S_BOX.x - 14}
         y={S_BOX.y + drop(sElectrons)}
         up
         opacity={sElectrons}
       />
-      <Harpoon
+      <SpinArrow
         x={S_BOX.x + 14}
         y={S_BOX.y + drop(sElectrons)}
         up={false}
         opacity={sElectrons}
       />
       {P_BOXES.slice(0, 2).map((box, i) => (
-        <Harpoon
+        <SpinArrow
           key={i}
           x={box.x}
           y={box.y + drop(pElectrons)}

@@ -32,11 +32,8 @@ export function OrbitalBox({
   );
 }
 
-/**
- * Spin harpoon centred at (x, y): up has its barb on the left, down on the
- * right, so the two read as a pair.
- */
-export function Harpoon({
+/** Spin arrow (↑ or ↓) centred at (x, y). */
+export function SpinArrow({
   x,
   y,
   up,
@@ -51,27 +48,21 @@ export function Harpoon({
   const half = HARPOON / 2;
   const tip = up ? y - half : y + half;
   const tail = up ? y + half : y - half;
-  const barbX = up ? x - 18 : x + 18;
-  const barbY = up ? tip + 24 : tip - 24;
+  const headBase = up ? tip + 22 : tip - 22;
   return (
     <g opacity={opacity}>
       <line
         x1={x}
         y1={tail}
         x2={x}
-        y2={tip}
+        y2={headBase}
         stroke={colors.muted}
         strokeWidth={6}
         strokeLinecap="round"
       />
-      <line
-        x1={x}
-        y1={tip}
-        x2={barbX}
-        y2={barbY}
-        stroke={colors.muted}
-        strokeWidth={6}
-        strokeLinecap="round"
+      <polygon
+        points={`${x},${tip} ${x - 12},${headBase} ${x + 12},${headBase}`}
+        fill={colors.muted}
       />
     </g>
   );

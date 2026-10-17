@@ -259,18 +259,18 @@ export function PiBondScene() {
           3 σ, 2 π (one π shown)
         </SvgLabel>
         <SvgLabel
-          x={120}
-          y={940}
-          anchor="start"
+          x={1800}
+          y={180}
+          anchor="end"
           color={colors.sigmaText}
           opacity={pi}
         >
           σ: end-to-end
         </SvgLabel>
         <SvgLabel
-          x={500}
-          y={940}
-          anchor="start"
+          x={1800}
+          y={230}
+          anchor="end"
           color={colors.piText}
           opacity={pi}
         >

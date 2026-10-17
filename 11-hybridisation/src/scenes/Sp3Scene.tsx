@@ -5,7 +5,12 @@ import {
   useVideoConfig,
 } from "remotion";
 import { easeInOut, fadeIn, lerp, pop, progress } from "../components/anim";
-import { EnergyAxis, Harpoon, OrbitalBox, SvgLabel } from "../components/Boxes";
+import {
+  EnergyAxis,
+  OrbitalBox,
+  SpinArrow,
+  SvgLabel,
+} from "../components/Boxes";
 import {
   HybridOrbital,
   Nucleus,
@@ -143,11 +148,11 @@ export function Sp3Scene() {
         >
           four sp³
         </SvgLabel>
-        <Harpoon x={sUpX} y={sBoxY} up />
+        <SpinArrow x={sUpX} y={sBoxY} up />
         {P_BOXES.slice(0, 2).map((box, i) => (
-          <Harpoon key={i} x={box.x} y={pBoxY} up />
+          <SpinArrow key={i} x={box.x} y={pBoxY} up />
         ))}
-        <Harpoon x={moverX} y={moverY} up={promote >= 0.5} />
+        <SpinArrow x={moverX} y={moverY} up={promote >= 0.5} />
         <SvgLabel x={390} y={850} color={colors.cautionText} opacity={tag}>
           Promotion is formal bookkeeping, not physical.
         </SvgLabel>
