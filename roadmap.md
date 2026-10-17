@@ -9,8 +9,8 @@
 - [x] Lesson 6 — Periodic trends: radius, IE, EA, electronegativity (`06-periodic-trends/`, Remotion, ~196 s narrated)
 - [x] Lesson 7 — Moles, stoichiometry, limiting reagents (`07-moles-stoichiometry-limiting-reagents/`, Remotion, 155 s narrated)
 - [ ] Lesson 8 — Bonding overview: ionic vs covalent vs metallic
-- [ ] Lesson 9 — Lewis structures, formal charge, resonance
-- [x] Lesson 10 — VSEPR geometry gallery (`10-vsepr-geometry-gallery/`, Remotion + three.js, ~4.3 min narrated)
+- [x] Lesson 9 — Lewis structures, formal charge, resonance (`09-lewis-structures-formal-charge-resonance/`, Remotion, 166 s narrated)
+- [ ] Lesson 10 — VSEPR geometry gallery
 - [ ] Lesson 11 — Hybridisation (sp→sp3d2)
 - [ ] Lesson 12 — MO theory: diatomics, bond order, paramagnetism
 - [x] Lesson 13 — Intermolecular forces & property trends (`13-intermolecular-forces-property-trends/`, Remotion, 197 s narrated)
