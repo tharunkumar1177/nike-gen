@@ -1,11 +1,5 @@
 import { AbsoluteFill } from "remotion";
-import {
-  easeInOut,
-  easeOut,
-  fadeIn,
-  lerp,
-  progress,
-} from "../components/anim";
+import { easeInOut, easeOut, fadeIn, lerp, progress } from "../components/anim";
 import { FULL_LEGEND, Legend } from "../components/Legend";
 import { baseline, PeriodicTable } from "../components/PeriodicTable";
 import { useSceneFrame } from "../components/SceneFrame";

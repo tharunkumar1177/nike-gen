@@ -1,12 +1,6 @@
 import type { ReactNode } from "react";
 import { AbsoluteFill } from "remotion";
-import {
-  easeInOut,
-  easeOut,
-  fadeIn,
-  lerp,
-  progress,
-} from "../components/anim";
+import { easeInOut, easeOut, fadeIn, lerp, progress } from "../components/anim";
 import {
   baseline,
   CELL,
