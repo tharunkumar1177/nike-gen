@@ -8,7 +8,7 @@
 - [x] Lesson 5 — Periodic table construction & blocks (`05-periodic-table-blocks/`, Remotion, ~168 s narrated)
 - [x] Lesson 6 — Periodic trends: radius, IE, EA, electronegativity (`06-periodic-trends/`, Remotion, ~196 s narrated)
 - [x] Lesson 7 — Moles, stoichiometry, limiting reagents (`07-moles-stoichiometry-limiting-reagents/`, Remotion, 155 s narrated)
-- [x] Lesson 8 — Bonding overview: ionic vs covalent vs metallic
+- [x] Lesson 8 — Bonding overview: ionic vs covalent vs metallic (`08-bonding-ionic-covalent-metallic/`, Remotion, 180 s narrated)
 - [x] Lesson 9 — Lewis structures, formal charge, resonance (`09-lewis-structures-formal-charge-resonance/`, Remotion, 166 s narrated)
 - [x] Lesson 10 — VSEPR geometry gallery (`10-vsepr-geometry-gallery/`, Remotion + three.js, ~4.3 min narrated)
 - [x] Lesson 11 — Hybridisation (sp→sp3d2) (`11-hybridisation/`, Remotion, 168 s narrated)
