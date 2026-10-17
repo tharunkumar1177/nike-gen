@@ -144,6 +144,8 @@ Designer frame plans were implemented with headings 64 px at y 150, content insi
 - [x] Scope
 - [x] Research
 - [x] Design
-- [ ] Build
-- [ ] CI green
+- [x] Build
+- [x] CI green: [run 39030431780](https://github.com/tharunkumar1177/nike-gen/actions/runs/39030431780), 187.0 s, all gaps 5–6 s
 - [ ] Merged
+
+Stills were not reviewed visually (verification limited to the CI build, as for Lessons 7 and 16).
