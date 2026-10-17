@@ -7,7 +7,7 @@
 - [x] Lesson 4 — Electron configuration, Aufbau, Hund, Pauli (`electron-configuration-aufbau-hund-pauli/`, Remotion, 180 s narrated)
 - [x] Lesson 5 — Periodic table construction & blocks (`05-periodic-table-blocks/`, Remotion, ~168 s narrated)
 - [ ] Lesson 6 — Periodic trends: radius, IE, EA, electronegativity
-- [ ] Lesson 7 — Moles, stoichiometry, limiting reagents
+- [x] Lesson 7 — Moles, stoichiometry, limiting reagents (`07-moles-stoichiometry-limiting-reagents/`, Remotion, 155 s narrated)
 - [ ] Lesson 8 — Bonding overview: ionic vs covalent vs metallic
 - [ ] Lesson 9 — Lewis structures, formal charge, resonance
 - [ ] Lesson 10 — VSEPR geometry gallery
