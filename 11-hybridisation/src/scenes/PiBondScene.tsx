@@ -260,7 +260,7 @@ export function PiBondScene() {
         </SvgLabel>
         <SvgLabel
           x={1800}
-          y={180}
+          y={300}
           anchor="end"
           color={colors.sigmaText}
           opacity={pi}
@@ -269,7 +269,7 @@ export function PiBondScene() {
         </SvgLabel>
         <SvgLabel
           x={1800}
-          y={230}
+          y={350}
           anchor="end"
           color={colors.piText}
           opacity={pi}
