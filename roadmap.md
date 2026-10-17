@@ -5,18 +5,18 @@
 - [x] Lesson 2 — Atomic structure: nucleus, isotopes, mass spectra (`atomic-structure-isotopes-mass-spectra/`, Remotion, 180 s narrated)
 - [x] Lesson 3 — Quantum model: orbitals s/p/d/f, shapes, nodes (`quantum-model-orbitals/`, Remotion + three.js, ~270 s narrated)
 - [x] Lesson 4 — Electron configuration, Aufbau, Hund, Pauli (`electron-configuration-aufbau-hund-pauli/`, Remotion, 180 s narrated)
-- [ ] Lesson 5 — Periodic table construction & blocks
-- [ ] Lesson 6 — Periodic trends: radius, IE, EA, electronegativity
+- [x] Lesson 5 — Periodic table construction & blocks (`05-periodic-table-blocks/`, Remotion, ~168 s narrated)
+- [x] Lesson 6 — Periodic trends: radius, IE, EA, electronegativity (`06-periodic-trends/`, Remotion, ~196 s narrated)
 - [x] Lesson 7 — Moles, stoichiometry, limiting reagents (`07-moles-stoichiometry-limiting-reagents/`, Remotion, 155 s narrated)
 - [ ] Lesson 8 — Bonding overview: ionic vs covalent vs metallic
 - [x] Lesson 9 — Lewis structures, formal charge, resonance (`09-lewis-structures-formal-charge-resonance/`, Remotion, 166 s narrated)
 - [ ] Lesson 10 — VSEPR geometry gallery
 - [ ] Lesson 11 — Hybridisation (sp→sp3d2)
 - [ ] Lesson 12 — MO theory: diatomics, bond order, paramagnetism
-- [ ] Lesson 13 — Intermolecular forces & property trends
+- [x] Lesson 13 — Intermolecular forces & property trends (`13-intermolecular-forces-property-trends/`, Remotion, 197 s narrated)
 - [ ] Lesson 14 — Gases, solutions, colligative properties
 - [ ] Lesson 15 — Thermodynamics: enthalpy, entropy, Gibbs
-- [ ] Lesson 16 — Equilibrium & Le Chatelier
+- [x] Lesson 16 — Equilibrium & Le Chatelier (`16-equilibrium-le-chatelier/`, Remotion, 191 s narrated)
 - [ ] Lesson 17 — Acids/bases: pKa, buffers, titration curves
 - [ ] Lesson 18 — Redox & electrochemical cells
 - [ ] Lesson 19 — Kinetics: rate laws, mechanisms, catalysis

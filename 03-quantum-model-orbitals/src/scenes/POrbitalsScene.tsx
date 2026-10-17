@@ -21,21 +21,21 @@ const ORBITALS: {
   axis: "x" | "y" | "z";
   label: number;
 }[] = [
-  { orbital: "2px", cx: 420, axis: "x", label: 120 },
-  { orbital: "2py", cx: 960, axis: "y", label: 150 },
-  { orbital: "2pz", cx: 1500, axis: "z", label: 180 },
+  { orbital: "2px", cx: 420, axis: "x", label: 166 },
+  { orbital: "2py", cx: 960, axis: "y", label: 181 },
+  { orbital: "2pz", cx: 1500, axis: "z", label: 196 },
 ];
 
 export function POrbitalsScene() {
   const frame = useSceneFrame();
   const shapes = progress(frame, 30, 60);
   const rotZ = 0.2 * Math.max(0, frame);
-  const legend = progress(frame, 400, 430);
-  const emphasis = interpolate(frame, [480, 495, 515], [1, 1.05, 1], {
+  const legend = progress(frame, 499, 529);
+  const emphasis = interpolate(frame, [680, 695, 715], [1, 1.05, 1], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
   });
-  const plane = progress(frame, 660, 690);
+  const plane = progress(frame, 816, 846);
 
   return (
     <>
