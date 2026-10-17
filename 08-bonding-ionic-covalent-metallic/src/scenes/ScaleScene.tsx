@@ -13,17 +13,56 @@ const barX = (dEN: number) =>
   BAR.left + (dEN / BAR.max) * (BAR.right - BAR.left);
 
 const BANDS = [
-  { from: 0, to: 0.4, fill: "#D1FAE5", label: "Nonpolar", color: colors.covalentText },
-  { from: 0.4, to: 1.8, fill: "#A7F3D0", label: "Polar covalent", color: colors.covalentText },
-  { from: 1.8, to: 3.3, fill: "#EDE9FE", label: "Ionic", color: colors.ionicText },
+  {
+    from: 0,
+    to: 0.4,
+    fill: "#D1FAE5",
+    label: "Nonpolar",
+    color: colors.covalentText,
+  },
+  {
+    from: 0.4,
+    to: 1.8,
+    fill: "#A7F3D0",
+    label: "Polar covalent",
+    color: colors.covalentText,
+  },
+  {
+    from: 1.8,
+    to: 3.3,
+    fill: "#EDE9FE",
+    label: "Ionic",
+    color: colors.ionicText,
+  },
 ];
 
 const TICKS = ["0.0", "0.4", "1.8", "3.3"];
 
 const EXAMPLES = [
-  { bond: "Cl–Cl", math: "|3.0 − 3.0| = 0.0", dEN: 0, y: 620, show: "two chlorine atoms", drop: "making them nonpolar" },
-  { bond: "H–Cl", math: "|3.0 − 2.1| = 0.9", dEN: 0.9, y: 720, show: "Hydrogen and chlorine have", drop: "predicting polar covalent" },
-  { bond: "Na–Cl", math: "|3.0 − 0.9| = 2.1", dEN: 2.1, y: 820, show: "Sodium and chlorine have", drop: "predicting ionic" },
+  {
+    bond: "Cl–Cl",
+    math: "|3.0 − 3.0| = 0.0",
+    dEN: 0,
+    y: 620,
+    show: "two chlorine atoms",
+    drop: "making them nonpolar",
+  },
+  {
+    bond: "H–Cl",
+    math: "|3.0 − 2.1| = 0.9",
+    dEN: 0.9,
+    y: 720,
+    show: "Hydrogen and chlorine have",
+    drop: "predicting polar covalent",
+  },
+  {
+    bond: "Na–Cl",
+    math: "|3.0 − 0.9| = 2.1",
+    dEN: 2.1,
+    y: 820,
+    show: "Sodium and chlorine have",
+    drop: "predicting ionic",
+  },
 ] as const;
 
 const TRI = {
@@ -33,9 +72,33 @@ const TRI = {
 };
 
 const TRI_DOTS = [
-  { label: "Na–Na", x: 1272, y: 884, color: colors.metallic, lx: 1300, ly: 856, anchor: "start" },
-  { label: "Cl–Cl", x: 1628, y: 884, color: colors.covalent, lx: 1600, ly: 856, anchor: "end" },
-  { label: "Na–Cl", x: 1450, y: 640, color: colors.ionic, lx: 1480, ly: 650, anchor: "start" },
+  {
+    label: "Na–Na",
+    x: 1272,
+    y: 884,
+    color: colors.metallic,
+    lx: 1300,
+    ly: 856,
+    anchor: "start",
+  },
+  {
+    label: "Cl–Cl",
+    x: 1628,
+    y: 884,
+    color: colors.covalent,
+    lx: 1600,
+    ly: 856,
+    anchor: "end",
+  },
+  {
+    label: "Na–Cl",
+    x: 1450,
+    y: 640,
+    color: colors.ionic,
+    lx: 1480,
+    ly: 650,
+    anchor: "start",
+  },
 ] as const;
 
 export function ScaleScene() {
@@ -43,7 +106,11 @@ export function ScaleScene() {
   const { fps } = useVideoConfig();
 
   const barIn = fadeIn(frame, cue(SCENE, "Electronegativity is an"));
-  const bands = progress(frame, cue(SCENE, "rough guide"), cue(SCENE, "rough guide") + 40);
+  const bands = progress(
+    frame,
+    cue(SCENE, "rough guide"),
+    cue(SCENE, "rough guide") + 40,
+  );
   const triangle = cue(SCENE, "van Arkel Ketelaar triangle");
   const triDraw = progress(frame, triangle, triangle + 45);
   const dotsAt = cue(SCENE, "properly place metallic");
@@ -209,19 +276,55 @@ export function ScaleScene() {
         );
       })}
 
-      <Text x={TRI.metallic.x} y={940} size={32} weight={700} color={colors.metallicText} opacity={triDraw}>
+      <Text
+        x={TRI.metallic.x}
+        y={940}
+        size={32}
+        weight={700}
+        color={colors.metallicText}
+        opacity={triDraw}
+      >
         Metallic
       </Text>
-      <Text x={TRI.covalent.x} y={940} size={32} weight={700} color={colors.covalentText} opacity={triDraw}>
+      <Text
+        x={TRI.covalent.x}
+        y={940}
+        size={32}
+        weight={700}
+        color={colors.covalentText}
+        opacity={triDraw}
+      >
         Covalent
       </Text>
-      <Text x={TRI.ionic.x} y={570} size={32} weight={700} color={colors.ionicText} opacity={triDraw}>
+      <Text
+        x={TRI.ionic.x}
+        y={570}
+        size={32}
+        weight={700}
+        color={colors.ionicText}
+        opacity={triDraw}
+      >
         Ionic
       </Text>
-      <Text x={1450} y={940} size={28} weight={500} color={colors.muted} opacity={triDraw}>
+      <Text
+        x={1450}
+        y={940}
+        size={28}
+        weight={500}
+        color={colors.muted}
+        opacity={triDraw}
+      >
         Average EN →
       </Text>
-      <Text x={1200} y={760} size={28} weight={500} rotate={-90} color={colors.muted} opacity={triDraw}>
+      <Text
+        x={1200}
+        y={760}
+        size={28}
+        weight={500}
+        rotate={-90}
+        color={colors.muted}
+        opacity={triDraw}
+      >
         ΔEN →
       </Text>
       {TRI_DOTS.map((dot) => (

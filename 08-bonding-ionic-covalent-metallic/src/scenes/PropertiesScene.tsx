@@ -25,10 +25,8 @@ const CRACK = [
   [480, 530],
 ];
 
-const gridX = (cx: number, col: number) =>
-  cx + (col - (COLS - 1) / 2) * PITCH;
-const gridY = (cy: number, row: number) =>
-  cy + (row - (ROWS - 1) / 2) * PITCH;
+const gridX = (cx: number, col: number) => cx + (col - (COLS - 1) / 2) * PITCH;
+const gridY = (cy: number, row: number) => cy + (row - (ROWS - 1) / 2) * PITCH;
 
 export function PropertiesScene() {
   const frame = useSceneFrame();
@@ -210,7 +208,9 @@ export function PropertiesScene() {
             gap: 8,
           }}
         >
-          <div style={{ fontSize: 32, fontWeight: 700, color: colors.pitfallText }}>
+          <div
+            style={{ fontSize: 32, fontWeight: 700, color: colors.pitfallText }}
+          >
             Pitfall: ΔEN cutoffs are a guide, not a law
           </div>
           <div
@@ -221,8 +221,7 @@ export function PropertiesScene() {
               opacity: exampleIn,
             }}
           >
-            H–F: ΔEN{" "}
-            <Emphasis scale={emphasisScale}>1.9</Emphasis>, yet a{" "}
+            H–F: ΔEN <Emphasis scale={emphasisScale}>1.9</Emphasis>, yet a{" "}
             <Emphasis scale={emphasisScale}>polar covalent</Emphasis> molecule
           </div>
         </div>

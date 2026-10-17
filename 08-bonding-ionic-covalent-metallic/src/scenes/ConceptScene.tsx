@@ -23,12 +23,15 @@ function curveY(x: number) {
   return ZERO_Y + DEPTH * (1 - (1 - e) ** 2);
 }
 
-const LEFT_X = WELL_X + Math.log(1 + Math.sqrt(1 + (ZERO_Y - Y_TOP) / DEPTH)) / -STIFFNESS;
+const LEFT_X =
+  WELL_X + Math.log(1 + Math.sqrt(1 + (ZERO_Y - Y_TOP) / DEPTH)) / -STIFFNESS;
 
 function curvePath() {
   const points: string[] = [];
   for (let x = LEFT_X; x <= X_END; x += 4) {
-    points.push(`${points.length === 0 ? "M" : "L"}${x.toFixed(1)},${curveY(x).toFixed(1)}`);
+    points.push(
+      `${points.length === 0 ? "M" : "L"}${x.toFixed(1)},${curveY(x).toFixed(1)}`,
+    );
   }
   return points.join(" ");
 }
