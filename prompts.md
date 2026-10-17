@@ -435,3 +435,17 @@ so they count as "inside" and the protections you want stay on.
 
 1. Read `ROADMAP.md` if it exists and resume the next unchecked topic.
 2. If `render.yml` isn't on the default branch, build and merge it first.
+
+
+
+
+
+
+## prompts
+
+No need to download the .mp4 or stills, just verify the runtime in the CI
+
+
+Does the implementation over, or need to work on it
+
+

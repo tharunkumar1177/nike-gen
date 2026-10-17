@@ -12,7 +12,16 @@ on:
           - 02-atomic-structure-isotopes-mass-spectra
           - 03-quantum-model-orbitals
           - 04-electron-configuration-aufbau-hund-pauli
+          - 07-moles-stoichiometry-limiting-reagents
           - 08-bonding-ionic-covalent-metallic
+          - 15-thermodynamics-enthalpy-entropy-gibbs
+          - 10-vsepr-geometry-gallery
+          - 11-hybridisation
+          - 12-mo-theory-diatomics
+          - 16-equilibrium-le-chatelier
+          - 17-acids-bases-pka-buffers-titration-curves
+          - 09-lewis-structures-formal-charge-resonance
+          - 14-gases-solutions-colligative-properties
 
 permissions:
   contents: read
