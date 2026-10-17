@@ -141,8 +141,8 @@ Implementation deviations (layout fixes, no content change):
 ## Status
 
 - [x] Scope confirmed
-- [ ] Brief
-- [ ] Design plan
-- [ ] Build
-- [ ] CI green, stills reviewed
-- [ ] Recorded on main
+- [x] Brief
+- [x] Design plan
+- [x] Build
+- [x] CI green, stills reviewed ([run 39017748926](https://github.com/tharunkumar1177/nike-gen/actions/runs/39017748926))
+- [x] Recorded on main
