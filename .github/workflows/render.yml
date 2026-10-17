@@ -23,6 +23,8 @@ on:
           - 18-redox-electrochemical-cells
           - 09-lewis-structures-formal-charge-resonance
           - 14-gases-solutions-colligative-properties
+          - 19-kinetics-rate-laws-mechanisms-catalysis
+          - 20-nuclear-chemistry-decay-modes-half-life
 
 permissions:
   contents: read

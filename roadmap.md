@@ -19,8 +19,8 @@
 - [x] Lesson 16 — Equilibrium & Le Chatelier (`16-equilibrium-le-chatelier/`, Remotion, 191 s narrated)
 - [x] Lesson 17 — Acids/bases: pKa, buffers, titration curves (`17-acids-bases-pka-buffers-titration-curves/`, Remotion, 187 s narrated)
 - [x] Lesson 18 — Redox & electrochemical cells (`18-redox-electrochemical-cells/`, Remotion, 232 s narrated)
-- [ ] Lesson 19 — Kinetics: rate laws, mechanisms, catalysis
-- [ ] Lesson 20 — Nuclear chemistry: decay modes, half-life
+- [x] Lesson 19 — Kinetics: rate laws, mechanisms, catalysis (`19-kinetics-rate-laws-mechanisms-catalysis/`, Remotion, 176 s narrated)
+- [x] Lesson 20 — Nuclear chemistry: decay modes, half-life (`20-nuclear-chemistry-decay-modes-half-life/`, Remotion, 250 s narrated)
 
 ### Organic Chemistry (30 lessons)
 - [ ] Lessons 1–8: bonding, nomenclature, isomerism, conformations, electronic effects, acidity, intermediates, reading mechanisms
