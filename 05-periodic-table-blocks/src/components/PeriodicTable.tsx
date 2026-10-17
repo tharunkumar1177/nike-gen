@@ -271,8 +271,8 @@ function Cell({
         <div
           style={{
             position: "absolute",
-            top: 2,
-            right: 5,
+            top: 5,
+            right: 7,
             fontFamily: FONT,
             fontSize: 18,
             fontWeight: 700,

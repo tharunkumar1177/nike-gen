@@ -5,7 +5,7 @@ Chemistry Foundations, Lesson 5.
 ## Scope
 
 - Audience: first-year university general chemistry
-- Length: about 3 minutes
+- Length: about 3 minutes (renders at about 2:48 after timing to measured narration)
 - Format: 1920×1080 landscape, 30 fps, H.264 MP4
 - Narration: Kokoro TTS generated in CI, with a quiet synth pad generated in code
 - Style: bright textbook (white background, bold colour-coded diagrams, crisp sans type)
@@ -66,7 +66,7 @@ Concept: the modern periodic table is ordered by atomic number Z, not mass, and 
 
 ### Visual style
 
-- 1920×1080, 30 fps, 5400 frames (180 s). Kokoro `af_heart` narration plus code-generated pad.
+- 1920×1080, 30 fps, 5030 frames (about 168 s). Kokoro `af_heart` narration plus code-generated pad.
 - Background `#FFFFFF`; text `#1C1C1E`; table cells `#E5E9F0` (stroke `#4C566A`).
 - Block colours (fill / text or stroke): s `#88C0D0` / `#2B7992`; p `#B48EAD` / `#7C5375`; d `#A3BE8C` / `#4A7A40`; f `#EBCB8B` / `#9A7A3A`.
 - Type: Roboto. Title 96 px / 700, subtitle 64 px, body 48 px / 400, labels 32 px / 500.
@@ -77,15 +77,15 @@ Concept: the modern periodic table is ordered by atomic number Z, not mass, and 
 
 | Scene | Frames | Narration window |
 | --- | --- | --- |
-| 1 `ordering-groups` | 0–720 | 30–660 |
-| 2 `building-blocks` | 720–1600 | 750–1540 |
-| 3 `special-cases` | 1600–2350 | 1630–2290 |
-| 4 `offsets-exceptions` | 2350–3320 | 2380–3260 |
-| 5 `example-phosphorus` | 3320–4210 | 3350–4150 |
-| 6 `example-vanadium` | 4210–5040 | 4240–4990 |
-| 7 `closing-card` | 5040–5400 | silent |
+| 1 `ordering-groups` | 0–760 | 30–640 |
+| 2 `building-blocks` | 760–1560 | 790–1440 |
+| 3 `special-cases` | 1560–2230 | 1590–2110 |
+| 4 `offsets-exceptions` | 2230–3120 | 2260–2995 |
+| 5 `example-phosphorus` | 3120–3950 | 3150–3825 |
+| 6 `example-vanadium` | 3950–4670 | 3980–4600 |
+| 7 `closing-card` | 4670–5030 | silent |
 
-Retimed after the first render: Kokoro speaks these lines at about 2.3 words/s (scene 1 measured 19.3 s), so windows were widened to measured length plus about 1.7 s, with 90 frames between windows so every silent gap stays at 3 s or more.
+Retimed to measured Kokoro lengths (19.30, 20.65, 16.23, 23.48, 21.45, 19.65 s): each line starts about 6 s after the previous one ends, inside the style guide's 3–8 s gap. Holding 180 s would have needed 9 s silences, so the video runs about 2:48.
 
 1. Title "Periodic Table Construction" / "Blocks & Configurations". A blank 18-column grid appears; rows labelled "Period (n)" 1–7 on the left, columns labelled "Group" 1–18 across the top.
    "The modern periodic table is ordered by atomic number, not mass. It maps electron configurations. Rows are periods, numbered by the principal quantum number of the opening s subshell. Columns are groups, numbered one to eighteen. Elements in a group share similar valence configurations."
@@ -103,7 +103,7 @@ Retimed after the first render: Kokoro speaks these lines at about 2.3 words/s (
 
 ### Stills
 
-Frames 640, 1560, 2270, 3260, 4170, 5000, 5300 (each scene's completed state, before its crossfade).
+Frames 700, 1530, 2180, 3100, 3920, 4640, 4950 (each scene's completed state, before its crossfade).
 
 ### Frame-by-frame
 

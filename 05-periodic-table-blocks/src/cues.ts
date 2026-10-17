@@ -4,11 +4,11 @@ import { SCENES, type NarratedScene } from "./theme";
 /** Kokoro clip lengths in seconds, as logged by `audio/generate.js` in CI. */
 const MEASURED_SECONDS: Record<NarratedScene, number> = {
   "ordering-groups": 19.3,
-  "building-blocks": 24.6,
-  "special-cases": 20.2,
-  "offsets-exceptions": 27.6,
-  "example-phosphorus": 25,
-  "example-vanadium": 23.2,
+  "building-blocks": 20.65,
+  "special-cases": 16.23,
+  "offsets-exceptions": 23.48,
+  "example-phosphorus": 21.45,
+  "example-vanadium": 19.65,
 };
 
 const normalize = (word: string) =>
