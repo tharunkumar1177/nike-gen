@@ -40,7 +40,7 @@ export function FormalChargeScene() {
 
   const badge = (start: number) => {
     const t = pop(frame, fps, start);
-    return { opacity: Math.min(1, t * 1.5), scale: t };
+    return { opacity: Math.min(1, t * 1.5), scale: t, dx: 0, dy: -112 };
   };
 
   const structureA = fadeIn(frame, first);
@@ -77,9 +77,9 @@ export function FormalChargeScene() {
           style={{
             position: "absolute",
             left: 200,
-            top: 520,
+            top: 480,
             width: 600,
-            height: 360,
+            height: 400,
             boxSizing: "border-box",
             borderRadius: 24,
             backgroundColor: colors.highlight,

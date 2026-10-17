@@ -11,7 +11,7 @@ export const VIDEO = {
   width: 1920,
   height: 1080,
   fps: 30,
-  durationInFrames: 5196,
+  durationInFrames: 4993,
 } as const;
 
 export const SAFE = 120;
@@ -44,12 +44,12 @@ export const type = {
 
 /** Keys match the scene ids in `audio/script.json`. */
 export const SCENES = {
-  "concept-lewis": { from: 0, to: 816 },
-  "procedure-hcn": { from: 816, to: 1914 },
-  "formal-charge-co2": { from: 1914, to: 2988 },
-  "resonance-o3": { from: 2988, to: 4013 },
-  "pitfalls-exceptions": { from: 4013, to: 4896 },
-  "closing-card": { from: 4896, to: 5196 },
+  "concept-lewis": { from: 0, to: 809 },
+  "procedure-hcn": { from: 809, to: 1841 },
+  "formal-charge-co2": { from: 1841, to: 2872 },
+  "resonance-o3": { from: 2872, to: 3788 },
+  "pitfalls-exceptions": { from: 3788, to: 4693 },
+  "closing-card": { from: 4693, to: 4993 },
 } as const;
 
 export type NarratedScene = Exclude<keyof typeof SCENES, "closing-card">;

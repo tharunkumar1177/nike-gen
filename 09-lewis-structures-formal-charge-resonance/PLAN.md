@@ -100,16 +100,18 @@ Scene ranges are budgeted from Kokoro's measured pace (about 2.45 words/s in Les
 
 F₂ in scene 1 is a counting illustration (7 + 7 = 14 valence electrons: one bonding pair, three lone pairs per F).
 
-### Timing (first pass, estimated at 2.45 words/s)
+### Timing (re-synced to measured Kokoro clips)
 
-| Scene | Frames | Narration start | Words |
+4993 frames (166 s). Every silence between narrated lines, and before the closing card, is 7.0 s.
+
+| Scene | Frames | Narration | Measured |
 | --- | --- | --- | --- |
-| 1 `concept-lewis` | 0–816 | 30 | 52 |
-| 2 `procedure-hcn` | 816–1914 | 846 | 75 |
-| 3 `formal-charge-co2` | 1914–2988 | 1944 | 73 |
-| 4 `resonance-o3` | 2988–4013 | 3018 | 69 |
-| 5 `pitfalls-exceptions` | 4013–4896 | 4043 | 55 |
-| 6 `closing-card` | 4896–5196 | silent | 0 |
+| 1 `concept-lewis` | 0–809 | 30–629 | 19.95 s |
+| 2 `procedure-hcn` | 809–1841 | 839–1661 | 27.38 s |
+| 3 `formal-charge-co2` | 1841–2872 | 1871–2692 | 27.35 s |
+| 4 `resonance-o3` | 2872–3788 | 2902–3608 | 23.52 s |
+| 5 `pitfalls-exceptions` | 3788–4693 | 3818–4513 | 23.15 s |
+| 6 `closing-card` | 4693–4993 | silent | — |
 
 ### Shared Lewis drawing conventions
 
@@ -119,9 +121,28 @@ F₂ in scene 1 is a counting illustration (7 + 7 = 14 valence electrons: one bo
 - Formal charge badge: circle r 28 at (+58, −58) from the atom centre, white fill, 4 px stroke; text 32 px / 700. Blue `#1D4ED8` for positive, red `#B91C1C` for negative, muted `#4B5563` for 0.
 - Beats are keyed to narrated phrases (each beat names the phrase that triggers it), not fixed frames.
 
+### Frame-by-frame
+
+Delivered by `designer` in three sequences (scenes 1–2, 3–4, 5–6); exact coordinates live in `src/scenes/*`. Summary:
+
+- Scene 1: title, concept sentence, F–F at (870, 640)/(1050, 640) with three lone pairs each; chips "Lone pair" (left), "Bonding pair" (below), dashed octet ring around the right F with "Octet: 8 electrons" (right).
+- Scene 2: five step panels at left (active panel highlighted emerald); electron counter chip; H–C–N at y 560 builds, N gains three lone pairs, then two of them slide into the C–N bond to form the triple bond; status chips "H is never central" → "C has only 4 e⁻" → "H 2 e⁻ · C 8 e⁻ · N 8 e⁻".
+- Scene 3: formula and legend top-left; O=C=O (left, highlighted "Preferred") and O≡C–O (right) with FC badges and per-oxygen arithmetic (+1 and −1).
+- Scene 4 (hero): two bent O₃ structures with FC badges joined by a violet resonance arrow; struck pitfall "Molecules flip between structures"; violet hybrid (solid + dashed bonds) with "128 pm" on both bonds; reference list O=O 121 pm, hybrid 128 pm, O–O 147 pm.
+- Scene 5: pitfalls box of four exception cards (H 2 e⁻, BF₃ B has 6 e⁻, NO 11 valence e⁻, SF₆ 12 e⁻ around S); struck "Formal charge is a real charge" with chip "Hypothetical bookkeeping: assumes equal sharing".
+- Closing card: 1600×600, four colour-coded takeaways staggered 20 frames.
+
+Implementation deviations (layout fixes, no content change):
+
+- Scene 1 concept sentence shortened to fit one line; "Bonding pair" chip moved below the molecule and the octet chip to the right (plan's chips overlapped each other and the ring); ring fades and grows instead of drawing on.
+- Scene 2 panels widened to 760 px with shortened labels (the plan's 540 px panels could not fit the text); build area moved right to x 1100–1460; status chips added to show the electron counts the narration states.
+- Scene 3 FC badges sit 112 px above each atom (the convention's upper-right offset touched the oxygen lone pairs); the +1 arithmetic was added beside the −1.
+- Scene 4 lone pairs and FC badges are placed by angle around the bent O₃ atoms so none collide; "Resonance hybrid" label added under the hybrid.
+- Scene 5 counts phrased "B has 6 e⁻", "12 e⁻ around S"; subtitle "The octet rule has exceptions" added above the cards.
+
 ### Stills
 
-One per scene at a fully built moment, chosen after the cue timings are known.
+Frames 769, 1460, 1800, 2830, 3745, 4650, 4950.
 
 ## Status
 
