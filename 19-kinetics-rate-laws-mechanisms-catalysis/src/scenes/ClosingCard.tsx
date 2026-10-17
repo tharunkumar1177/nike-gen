@@ -17,8 +17,8 @@ const TAKEAWAYS: { text: ReactNode; at: number }[] = [
   {
     text: (
       <>
-        Hotter means a larger fraction of collisions have at least <Ea />,
-        not just more collisions.
+        Hotter means a larger fraction of collisions have at least <Ea />, not
+        just more collisions.
       </>
     ),
     at: 70,
@@ -26,8 +26,8 @@ const TAKEAWAYS: { text: ReactNode; at: number }[] = [
   {
     text: (
       <>
-        Catalysts offer a lower-<Ea /> path; they do not change ΔH or the
-        equilibrium position.
+        Catalysts offer a lower-
+        <Ea /> path; they do not change ΔH or the equilibrium position.
       </>
     ),
     at: 95,
