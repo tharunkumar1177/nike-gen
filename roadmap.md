@@ -10,7 +10,7 @@
 - [ ] Lesson 7 — Moles, stoichiometry, limiting reagents
 - [ ] Lesson 8 — Bonding overview: ionic vs covalent vs metallic
 - [ ] Lesson 9 — Lewis structures, formal charge, resonance
-- [ ] Lesson 10 — VSEPR geometry gallery (`10-vsepr-geometry-gallery/`, Remotion + three.js, ~4.5 min narrated) — in progress
+- [x] Lesson 10 — VSEPR geometry gallery (`10-vsepr-geometry-gallery/`, Remotion + three.js, ~4.3 min narrated)
 - [ ] Lesson 11 — Hybridisation (sp→sp3d2)
 - [ ] Lesson 12 — MO theory: diatomics, bond order, paramagnetism
 - [ ] Lesson 13 — Intermolecular forces & property trends

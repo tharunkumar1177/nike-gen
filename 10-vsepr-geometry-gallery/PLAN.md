@@ -145,6 +145,14 @@ Implementation deviations (geometry and legibility only, no content change):
 - Scenes 4–5 use scene 3's gallery layout; the plan's centred hero and card overlapped the thumbnail strip.
 - Amber and light-grey text use darker tints (`#8D6E00`, `#616161`), and the green "X" in AXₘEₙ uses `#2E7D32`, for contrast on white. The pitfall check mark is teal for the same reason.
 - Step-list text is 42 px and thumbnail shape names are 28 px so they fit their columns.
+- Subscripts are drawn by `Chem` as scaled digits, because the loaded Roboto subset has no subscript glyphs. Atom symbols are omitted on atoms under 20 px radius (thumbnails).
+- Scene 2 shows the 173.1° arc in profile, then turns to look down the S axis for 101.6°, so the two labels never overlap. XeF₄'s final view is tilted 60° so the trans lone pairs stay visible above and below Xe.
+- Stills are picked from the generated timeline: mid-narration and just before each narration ends, plus the closing card.
+
+### Build notes
+
+- CI run 3 failed because the scene windows were fixed in advance and the measured narration overran them; the timeline is now generated from the measured audio (see Storyboard). Earlier runs: formatting (patch applied) and an open-ended animation window passing `Infinity` to `interpolate`.
+- Measured narration (run 39022894426): 37.9, 27.4, 46.6, 43.5, 35.9, 26.0 s; total 259.9 s.
 
 ## Status
 
@@ -152,5 +160,5 @@ Implementation deviations (geometry and legibility only, no content change):
 - [x] Brief
 - [x] Design plan
 - [x] Build
-- [ ] CI green, stills reviewed
-- [ ] Merged
+- [x] CI green, stills reviewed ([run 39022894426](https://github.com/tharunkumar1177/nike-gen/actions/runs/39022894426))
+- [x] Merged
