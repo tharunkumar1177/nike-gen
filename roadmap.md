@@ -16,7 +16,7 @@
 - [ ] Lesson 13 — Intermolecular forces & property trends
 - [ ] Lesson 14 — Gases, solutions, colligative properties
 - [ ] Lesson 15 — Thermodynamics: enthalpy, entropy, Gibbs
-- [ ] Lesson 16 — Equilibrium & Le Chatelier
+- [x] Lesson 16 — Equilibrium & Le Chatelier (`16-equilibrium-le-chatelier/`, Remotion, 191 s narrated)
 - [ ] Lesson 17 — Acids/bases: pKa, buffers, titration curves
 - [ ] Lesson 18 — Redox & electrochemical cells
 - [ ] Lesson 19 — Kinetics: rate laws, mechanisms, catalysis
