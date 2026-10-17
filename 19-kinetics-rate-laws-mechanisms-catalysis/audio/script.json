@@ -23,27 +23,27 @@
     {
       "scene": "rates-and-rate-laws",
       "text": "Imagine leaving food on the kitchen counter. It spoils quickly. But inside a refrigerator, the lower temperature slows that process so the same food remains fresh for days. What controls how fast a reaction goes, and can we control it? A reaction rate is the change in concentration over time. A rate law, rate equals k times A to the m times B to the n, tells us exactly what the rate depends on. But the orders, m and n, cannot just be read from the coefficients. They are found by experiment. So, how do we find them?",
-      "seconds": 33
+      "seconds": 26.93
     },
     {
       "scene": "initial-rates",
       "text": "To find orders, we measure them. Imagine mixing N O two and C O. Strangely, adding more C O does not speed the reaction at all, even though they react one to one! We will solve this mystery later. Let's test two N O plus C l two. Trial two has one point five times more C l two, speeding the rate by one point five. First order! Trial three has one point five times more N O, speeding the rate by one point five squared. Second order! The rate equals k times N O squared times C l two. But physically, why does concentration change the rate?",
-      "seconds": 35
+      "seconds": 26.82
     },
     {
       "scene": "collision-theory",
       "text": "Concentration matters because molecules must physically collide to react. But a match does not ignite on its own; it must be struck. Striking supplies energy. Collision theory says molecules need correct orientation and enough energy to get over the activation energy barrier, E a. The Arrhenius equation shows why the refrigerator works. Hotter does not just mean more collisions. It means a larger fraction of collisions have at least E a. As a rule of thumb, raising the temperature by ten degrees Celsius roughly doubles the rate! But does a complex reaction happen in one big collision?",
-      "seconds": 34
+      "seconds": 27.13
     },
     {
       "scene": "reaction-mechanisms",
       "text": "Often, it does not. Like cattle moving through a chute one animal at a time, reactions happen in simple elementary steps called a mechanism. The slowest step is rate determining, setting the overall rate. Remember our mystery? For N O two plus C O, the slow step is two N O two molecules colliding to make N O three and N O. C O only appears in the fast second step. That is why adding C O cannot speed it up! N O three is an intermediate, produced then consumed. If the slow step's barrier holds us back, can we go around it?",
-      "seconds": 34
+      "seconds": 25.73
     },
     {
       "scene": "catalysis",
       "text": "We cannot remove the barrier, but a catalyst opens a different, lower pathway around it. A car's catalytic converter uses a metal surface to convert toxic nitric oxide to nitrogen and oxygen, and poisonous carbon monoxide to carbon dioxide. A catalyst is put in at the start, takes part, and is regenerated. Its pathway has a lower E a, but it does not shift equilibrium or change the delta H. Temperature, concentration, mechanism, and catalysts. These are your levers to control how fast a reaction goes.",
-      "seconds": 31
+      "seconds": 26.9
     }
   ]
 }
