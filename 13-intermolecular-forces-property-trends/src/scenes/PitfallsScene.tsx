@@ -22,8 +22,7 @@ const ITEMS = [
   },
   {
     wrong: "Polar always beats nonpolar.",
-    right:
-      "Dispersion grows with size: compare polarity only at similar size.",
+    right: "Dispersion grows with size: compare polarity only at similar size.",
     at: cue(SCENE, "polar does not always beat"),
   },
 ] as const;

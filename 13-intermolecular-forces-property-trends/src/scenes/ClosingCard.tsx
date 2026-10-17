@@ -13,8 +13,7 @@ const TAKEAWAYS = [
     at: 120,
   },
   {
-    text:
-      "Stronger IMFs: higher boiling point, viscosity and surface tension; lower vapour pressure.",
+    text: "Stronger IMFs: higher boiling point, viscosity and surface tension; lower vapour pressure.",
     at: 150,
   },
 ];
