@@ -21,6 +21,8 @@
 - [ ] Lesson 12 — MO theory: diatomics, bond order, paramagnetism
 - [x] Lesson 13 — Intermolecular forces & property trends (`13-intermolecular-forces-property-trends/`, Remotion, 197 s narrated)
 - [ ] Lesson 14 — Gases, solutions, colligative properties
+- [x] Lesson 15 — Thermodynamics: enthalpy, entropy, Gibbs (`15-thermodynamics-enthalpy-entropy-gibbs/`, Remotion, 262 s narrated)
+- [ ] Lesson 16 — Equilibrium & Le Chatelier
 - [ ] Lesson 15 — Thermodynamics: enthalpy, entropy, Gibbs
 - [x] Lesson 16 — Equilibrium & Le Chatelier (`16-equilibrium-le-chatelier/`, Remotion, 191 s narrated)
 - [ ] Lesson 17 — Acids/bases: pKa, buffers, titration curves
