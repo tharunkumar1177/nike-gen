@@ -115,6 +115,6 @@ Bright textbook: white background, Roboto (latin + greek for Δ), type scale 96 
 - [x] Design
 - [x] Build
 - [x] CI green: [run 39021148998](https://github.com/tharunkumar1177/nike-gen/actions/runs/39021148998), 191.4 s, all gaps 5–6 s
-- [x] Merged
+- [ ] Merged: [PR #14](https://github.com/tharunkumar1177/nike-gen/pull/14) open
 
 Stills were not reviewed visually (verification limited to the CI build, as for Lesson 7).
