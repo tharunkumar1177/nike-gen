@@ -8,7 +8,7 @@
 - [ ] Lesson 5 — Periodic table construction & blocks
 - [ ] Lesson 6 — Periodic trends: radius, IE, EA, electronegativity
 - [ ] Lesson 7 — Moles, stoichiometry, limiting reagents
-- [ ] Lesson 8 — Bonding overview: ionic vs covalent vs metallic
+- [ ] Lesson 8 — Bonding overview: ionic vs covalent vs metallic (`08-bonding-ionic-covalent-metallic/`, Remotion, ~180 s narrated, in progress)
 - [ ] Lesson 9 — Lewis structures, formal charge, resonance
 - [ ] Lesson 10 — VSEPR geometry gallery
 - [ ] Lesson 11 — Hybridisation (sp→sp3d2)
