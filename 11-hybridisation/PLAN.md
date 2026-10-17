@@ -123,12 +123,13 @@ Implementation deviations (layout fixes, no content change):
 - Scene 3: titles shown from the scene start; panel labels name the molecule ("Ethene · sp² (33% s)").
 - Scene 4: title "Five and Six Domains" instead of "Expanded Octet" (the brief does not endorse the expanded-octet picture); molecules raised 40 px and labels merged with the geometry name so they clear the caution box.
 - Scenes 5–7: bullets are numbered and spaced to fill their boxes; closing bullets at 44 px so the longest fits.
+- After the first render (measured narration 18.10, 22.40, 19.43, 21.63, 21.03, 21.73 s; 6 s between lines, 4 s before the card; 168.3 s total): spin harpoons replaced by full ↑/↓ arrows (half-barbs read as "1"); the promoted electron travels above the 2p boxes instead of through them; sp³ lobes scaled 1.3×; scene 3 drops ethyne's tilted second p set (clutter) and instead labels bond counts from the brief ("5 σ, 1 π", "3 σ, 2 π (one π shown)"), with the σ/π legend moved top-right; scene 4's 120° arc now spans the two left equatorial Cl atoms and SF₆'s 90° arc sits between the front-right F and the lower axial F so neither crosses a bond or label.
 
 ## Status
 
 - [x] Scope confirmed
-- [ ] Brief
-- [ ] Design plan
-- [ ] Build
-- [ ] CI green, stills reviewed
-- [ ] Recorded on main
+- [x] Brief
+- [x] Design plan
+- [x] Build
+- [x] CI green, stills reviewed ([run 39020913408](https://github.com/tharunkumar1177/nike-gen/actions/runs/39020913408))
+- [x] Recorded on main
