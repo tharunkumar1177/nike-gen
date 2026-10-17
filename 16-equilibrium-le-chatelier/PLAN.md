@@ -100,11 +100,21 @@ Bright textbook: white background, Roboto (latin + greek for Δ), type scale 96 
 8. `temperature-catalyst`: "Heat + N₂O₄ ⇌ 2 NO₂", ΔH° = +57.2 kJ/mol on "only factor that changes K"; flask tints colourless → brown on "Adding heat shifts it right"; "Catalyst: reaches equilibrium faster" on "speeds up both directions"; pitfall "A catalyst does not shift the equilibrium." on "without shifting".
 9. Closing card: "Key Takeaways" with four bullets (equal rates not equal concentrations; K ratio and Q direction; Le Chatelier; only temperature changes K).
 
+### Build adjustments to the designer plan
+
+- Headings are 64 px at y 150 (inside the safe margin) instead of y 80; the reaction sits at the right of the heading row where a scene needs it.
+- Narration: the ICE line speaks the 0.042 M step ("fell by half that, leaving…"); the volume line names the fewer-moles side ("here N two O four"); the temperature line says "This reaction is endothermic" and "toward brown N O two".
+- ICE values, K and both graphs are computed from the brief's numbers in `src/equilibrium.ts`. The Le Chatelier graph adds 0.050 M N₂O₄ and solves (0.016 + 2y)² = Kc(0.092 − y) for the new levels; no hypothetical values are printed, only dashed original levels.
+- The ICE scene says "fixed temperature" rather than 25 °C (see Decisions).
+- Balance scene uses block stacks on the pans to show which side is favoured.
+
 ## Status
 
 - [x] Scope
-- [ ] Research
-- [ ] Design
-- [ ] Build
-- [ ] CI green
-- [ ] Merged
+- [x] Research
+- [x] Design
+- [x] Build
+- [x] CI green: [run 39021148998](https://github.com/tharunkumar1177/nike-gen/actions/runs/39021148998), 191.4 s, all gaps 5–6 s
+- [x] Merged
+
+Stills were not reviewed visually (verification limited to the CI build, as for Lesson 7).
