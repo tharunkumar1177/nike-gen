@@ -12,11 +12,11 @@ const n = <i>n</i>;
 const l = <i>l</i>;
 
 const RULES: { cx: number; start: number; text: ReactNode }[] = [
-  { cx: 480, start: 60, text: <>Total = {n}−1</> },
-  { cx: 960, start: 150, text: <>Angular = {l}</> },
+  { cx: 480, start: 119, text: <>Total = {n}−1</> },
+  { cx: 960, start: 195, text: <>Angular = {l}</> },
   {
     cx: 1440,
-    start: 240,
+    start: 259,
     text: (
       <>
         Radial = {n}−{l}−1
@@ -39,23 +39,23 @@ const HEADERS: ReactNode[] = [
 
 const ROWS: { thumb: OrbitalId; y: number; start: number; cells: string[] }[] =
   [
-    { thumb: "2s", y: 540, start: 400, cells: ["2s", "2", "0", "1", "0", "1"] },
+    { thumb: "2s", y: 540, start: 386, cells: ["2s", "2", "0", "1", "0", "1"] },
     {
       thumb: "3pz",
       y: 660,
-      start: 550,
+      start: 513,
       cells: ["3p", "3", "1", "1", "1", "2"],
     },
     {
       thumb: "3dxy",
       y: 780,
-      start: 700,
+      start: 628,
       cells: ["3d", "3", "2", "0", "2", "2"],
     },
     {
       thumb: "4fxyz",
       y: 900,
-      start: 850,
+      start: 742,
       cells: ["4f", "4", "3", "0", "3", "3"],
     },
   ];
@@ -63,7 +63,7 @@ const ROWS: { thumb: OrbitalId; y: number; start: number; cells: string[] }[] =
 export function NodesScene() {
   const frame = useSceneFrame();
   const { fps } = useVideoConfig();
-  const headers = progress(frame, 350, 380);
+  const headers = progress(frame, 361, 391);
 
   return (
     <>

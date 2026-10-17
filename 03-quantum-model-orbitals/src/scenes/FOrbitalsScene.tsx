@@ -26,7 +26,7 @@ export function FOrbitalsScene() {
   const { fps } = useVideoConfig();
   const rotY = 0.2 * Math.max(0, frame);
   const caption = progress(frame, 0, 30);
-  const planes = progress(frame, 300, 360);
+  const planes = progress(frame, 358, 418);
 
   return (
     <>
