@@ -11,7 +11,10 @@ import { colors, HEADING_Y, SAFE, type } from "../theme";
 const BUFFER_AT = cue("buffer-mechanism", "A buffer contains");
 const OH_AT = cue("buffer-mechanism", "the acid neutralizes added O H minus");
 const H_AT = cue("buffer-mechanism", "the base neutralizes added H plus");
-const PITFALL_AT = cue("buffer-mechanism", "does not hold p H perfectly constant");
+const PITFALL_AT = cue(
+  "buffer-mechanism",
+  "does not hold p H perfectly constant",
+);
 const HH_AT = cue("buffer-mechanism", "The Henderson Hasselbalch equation");
 
 const BEAKER = { x: 160, y: 270, width: 300, height: 330 } as const;
@@ -83,7 +86,8 @@ export function BufferMechanismScene() {
       </Text>
       <Text x={oh.x} y={340} size={type.body} weight={700} opacity={oh.opacity}>
         <span style={{ color: colors.hydroxide }}>
-          OH<Minus />
+          OH
+          <Minus />
         </span>{" "}
         + {HA}
         <Arrow />

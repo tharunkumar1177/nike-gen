@@ -17,11 +17,20 @@ const TAKEAWAYS: { text: ReactNode; at: number }[] = [
     at: 90,
   },
   {
-    text: (<>At half-equivalence, pH = pK<Sub>a</Sub>.</>),
+    text: (
+      <>
+        At half-equivalence, pH = pK<Sub>a</Sub>.
+      </>
+    ),
     at: 120,
   },
   {
-    text: (<>Strong is not concentrated, and a higher pK<Sub>a</Sub> means a weaker acid.</>),
+    text: (
+      <>
+        Strong is not concentrated, and a higher pK<Sub>a</Sub> means a weaker
+        acid.
+      </>
+    ),
     at: 150,
   },
 ];

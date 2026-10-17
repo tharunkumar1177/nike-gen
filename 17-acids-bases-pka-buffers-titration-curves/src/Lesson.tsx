@@ -24,7 +24,11 @@ const STEPS: { id: NarratedScene; name: string; scene: ReactNode }[] = [
     name: "Buffer mechanism",
     scene: <BufferMechanismScene />,
   },
-  { id: "buffer-vs-water", name: "Buffer vs water", scene: <BufferWaterScene /> },
+  {
+    id: "buffer-vs-water",
+    name: "Buffer vs water",
+    scene: <BufferWaterScene />,
+  },
   { id: "titration-curve", name: "Titration curve", scene: <TitrationScene /> },
   { id: "indicators", name: "Indicators", scene: <IndicatorScene /> },
 ];

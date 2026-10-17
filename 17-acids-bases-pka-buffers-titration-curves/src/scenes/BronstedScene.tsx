@@ -1,7 +1,13 @@
 import type { ReactNode } from "react";
 import { AbsoluteFill, interpolate, useVideoConfig } from "remotion";
 import { KW } from "../acidbase";
-import { dropped, easeInOut, fadeIn, popped, progress } from "../components/anim";
+import {
+  dropped,
+  easeInOut,
+  fadeIn,
+  popped,
+  progress,
+} from "../components/anim";
 import { Chip, type Species } from "../components/Chip";
 import { useSceneFrame } from "../components/SceneFrame";
 import { EqArrow, F, Sub, Sup, Text } from "../components/Text";
@@ -82,7 +88,12 @@ export function BronstedScene() {
   const { fps } = useVideoConfig();
   const reactants = fadeIn(frame, WATER_AT);
   const products = fadeIn(frame, PRODUCTS_AT);
-  const move = progress(frame, WATER_AT + 20, WATER_AT + 20 + TRANSFER, easeInOut);
+  const move = progress(
+    frame,
+    WATER_AT + 20,
+    WATER_AT + 20 + TRANSFER,
+    easeInOut,
+  );
   const protonOpacity = interpolate(
     frame,
     [WATER_AT + 15, WATER_AT + 20, PRODUCTS_AT, PRODUCTS_AT + 10],
@@ -131,7 +142,13 @@ export function BronstedScene() {
           </div>
         );
       })}
-      <Text x={560} y={ROW_Y} size={type.body} anchor="middle" opacity={reactants}>
+      <Text
+        x={560}
+        y={ROW_Y}
+        size={type.body}
+        anchor="middle"
+        opacity={reactants}
+      >
         +
       </Text>
       <Text
@@ -143,7 +160,13 @@ export function BronstedScene() {
       >
         <EqArrow />
       </Text>
-      <Text x={1360} y={ROW_Y} size={type.body} anchor="middle" opacity={products}>
+      <Text
+        x={1360}
+        y={ROW_Y}
+        size={type.body}
+        anchor="middle"
+        opacity={products}
+      >
         +
       </Text>
       {acid && water ? (
@@ -177,8 +200,11 @@ export function BronstedScene() {
         {...dropped(frame, KW_AT)}
       >
         K<Sub>w</Sub> = [<F>H3O</F>
-        <Sup>+</Sup>][OH<Minus />] = 1.0 × 10<Sup>{`−${Math.abs(exponent)}`}</Sup>{" "}
-        <span style={{ fontWeight: 400, color: colors.muted, fontSize: type.label }}>
+        <Sup>+</Sup>][OH
+        <Minus />] = 1.0 × 10<Sup>{`−${Math.abs(exponent)}`}</Sup>{" "}
+        <span
+          style={{ fontWeight: 400, color: colors.muted, fontSize: type.label }}
+        >
           at 25 °C
         </span>
       </Text>

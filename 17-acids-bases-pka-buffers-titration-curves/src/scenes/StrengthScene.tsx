@@ -61,13 +61,7 @@ export function StrengthScene() {
         <EqArrow />
         {H} + {A}
       </Text>
-      <Text
-        x={ka.x}
-        y={450}
-        size={type.body}
-        weight={700}
-        opacity={ka.opacity}
-      >
+      <Text x={ka.x} y={450} size={type.body} weight={700} opacity={ka.opacity}>
         K<Sub>a</Sub> =
         <Frac
           num={

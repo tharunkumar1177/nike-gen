@@ -8,7 +8,14 @@ import {
   TITRATION,
   weakCurve,
 } from "../acidbase";
-import { dropped, easeInOut, fadeIn, lerp, popped, progress } from "../components/anim";
+import {
+  dropped,
+  easeInOut,
+  fadeIn,
+  lerp,
+  popped,
+  progress,
+} from "../components/anim";
 import { Chip } from "../components/Chip";
 import { Pitfall } from "../components/Pitfall";
 import { useSceneFrame } from "../components/SceneFrame";
@@ -25,7 +32,12 @@ const STRONG_AT = cue("titration-curve", "not seven like a strong acid");
 
 const DRAW_FRAMES = 60;
 const GLIDE_FRAMES = 20;
-const PANEL = { x: 1200, chipsY: [370, 470], spacing: 120, radius: 40 } as const;
+const PANEL = {
+  x: 1200,
+  chipsY: [370, 470],
+  spacing: 120,
+  radius: 40,
+} as const;
 const CHIPS = 10;
 
 function Minus() {
@@ -34,7 +46,8 @@ function Minus() {
 
 /** Volume of NaOH under the cursor at `frame`. */
 function cursorMl(frame: number) {
-  const drawn = TITRATION.maxMl * progress(frame, DRAW_AT, DRAW_AT + DRAW_FRAMES, (t) => t);
+  const drawn =
+    TITRATION.maxMl * progress(frame, DRAW_AT, DRAW_AT + DRAW_FRAMES, (t) => t);
   if (frame < HALF_AT) return drawn;
   const toHalf = lerp(
     TITRATION.maxMl,
@@ -168,7 +181,8 @@ export function TitrationScene() {
         <EqArrow />
         <span style={{ color: colors.acidText }}>HA</span> +{" "}
         <span style={{ color: colors.hydroxide }}>
-          OH<Minus />
+          OH
+          <Minus />
         </span>
       </Text>
       <Pitfall

@@ -11,8 +11,7 @@ const PH_TICKS = [0, 2, 4, 6, 8, 10, 12, 14];
 const ML_TICKS = [0, 5, 10, 15, 20, 25, 30, 35];
 const STEP_ML = 0.05;
 
-export const xOf = (ml: number) =>
-  PLOT.x + (ml / TITRATION.maxMl) * PLOT.width;
+export const xOf = (ml: number) => PLOT.x + (ml / TITRATION.maxMl) * PLOT.width;
 export const yOf = (pH: number) =>
   PLOT.y + PLOT.height - (pH / MAX_PH) * PLOT.height;
 

@@ -40,13 +40,27 @@ function BandLabel({
   const y = yOf((band.from + band.to) / 2);
   return (
     <>
-      <Text x={LABEL_X} y={y - 40} size={type.label} weight={700} color={color} {...reveal}>
+      <Text
+        x={LABEL_X}
+        y={y - 40}
+        size={type.label}
+        weight={700}
+        color={color}
+        {...reveal}
+      >
         {name}
       </Text>
       <Text x={LABEL_X} y={y} size={28} color={colors.muted} {...reveal}>
         {range(band)}
       </Text>
-      <Text x={LABEL_X} y={y + 38} size={28} weight={500} color={color} {...reveal}>
+      <Text
+        x={LABEL_X}
+        y={y + 38}
+        size={28}
+        weight={500}
+        color={color}
+        {...reveal}
+      >
         {verdict}
       </Text>
     </>

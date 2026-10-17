@@ -109,7 +109,11 @@ export function WeakAcidScene() {
       >
         <F>CH3COOH</F>, K<Sub>a</Sub> = <Power value={KA} digits={1} /> at 25 °C
       </Text>
-      <svg width="100%" height="100%" style={{ position: "absolute", opacity: start }}>
+      <svg
+        width="100%"
+        height="100%"
+        style={{ position: "absolute", opacity: start }}
+      >
         <rect
           x={SAFE}
           y={ROWS.header - 50}
@@ -129,7 +133,13 @@ export function WeakAcidScene() {
       >
         HA
       </Text>
-      <Text x={(COLUMNS[0] + COLUMNS[1]) / 2} y={ROWS.header} size={type.body} anchor="middle" opacity={start}>
+      <Text
+        x={(COLUMNS[0] + COLUMNS[1]) / 2}
+        y={ROWS.header}
+        size={type.body}
+        anchor="middle"
+        opacity={start}
+      >
         <EqArrow />
       </Text>
       <Text
@@ -143,7 +153,13 @@ export function WeakAcidScene() {
       >
         {H3O}
       </Text>
-      <Text x={(COLUMNS[1] + COLUMNS[2]) / 2} y={ROWS.header} size={type.body} anchor="middle" opacity={start}>
+      <Text
+        x={(COLUMNS[1] + COLUMNS[2]) / 2}
+        y={ROWS.header}
+        size={type.body}
+        anchor="middle"
+        opacity={start}
+      >
         +
       </Text>
       <Text
@@ -157,7 +173,12 @@ export function WeakAcidScene() {
       >
         A<Minus />
       </Text>
-      <Row y={ROWS.initial} label="I" cells={[c, "0", "0"]} reveal={{ opacity: start }} />
+      <Row
+        y={ROWS.initial}
+        label="I"
+        cells={[c, "0", "0"]}
+        reveal={{ opacity: start }}
+      />
       <Row y={ROWS.change} label="C" cells={["−x", "+x", "+x"]} reveal={rows} />
       <Row
         y={ROWS.equilibrium}
@@ -171,7 +192,15 @@ export function WeakAcidScene() {
         size={type.body}
         {...dropped(frame, SMALL_AT)}
       >
-        <Frac num={<>x<Sup>2</Sup></>} den={c} /> = <Power value={KA} digits={1} />
+        <Frac
+          num={
+            <>
+              x<Sup>2</Sup>
+            </>
+          }
+          den={c}
+        />{" "}
+        = <Power value={KA} digits={1} />
       </Text>
       <Text
         x={STEPS_X}

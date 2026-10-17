@@ -1,6 +1,12 @@
 import { AbsoluteFill, interpolate, useVideoConfig } from "remotion";
 import { BUFFER } from "../acidbase";
-import { dropped, easeInOut, fadeIn, popped, progress } from "../components/anim";
+import {
+  dropped,
+  easeInOut,
+  fadeIn,
+  popped,
+  progress,
+} from "../components/anim";
 import { Beaker } from "../components/Beaker";
 import { Chip } from "../components/Chip";
 import { useSceneFrame } from "../components/SceneFrame";
@@ -10,7 +16,10 @@ import { colors, HEADING_Y, SAFE, type } from "../theme";
 
 const SHOW_AT = cue("buffer-vs-water", "Consider a buffer");
 const START_AT = cue("buffer-vs-water", "Its p H is four point seven four");
-const BUFFER_AT = cue("buffer-vs-water", "drops the p H to four point six five");
+const BUFFER_AT = cue(
+  "buffer-vs-water",
+  "drops the p H to four point six five",
+);
 const WATER_AT = cue("buffer-vs-water", "drops the p H from seven to two");
 
 const BEAKER = { y: 350, width: 300, height: 400 } as const;
@@ -38,10 +47,15 @@ function Drop({ frame, at, x }: { frame: number; at: number; x: number }) {
   const opacity =
     frame < at
       ? 0
-      : interpolate(frame, [at, at + 6, at + DROP.frames, at + 45], [0, 1, 1, 0], {
-          extrapolateLeft: "clamp",
-          extrapolateRight: "clamp",
-        });
+      : interpolate(
+          frame,
+          [at, at + 6, at + DROP.frames, at + 45],
+          [0, 1, 1, 0],
+          {
+            extrapolateLeft: "clamp",
+            extrapolateRight: "clamp",
+          },
+        );
   return (
     <Chip
       species="hydronium"
@@ -211,7 +225,8 @@ export function BufferWaterScene() {
         anchor="middle"
         opacity={fadeIn(frame, START_AT)}
       >
-        pH = pK<Sub>a</Sub> + log([A<Minus />] / [HA])
+        pH = pK<Sub>a</Sub> + log([A
+        <Minus />] / [HA])
       </Text>
       <Text
         x={MID}
