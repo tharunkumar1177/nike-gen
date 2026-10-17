@@ -130,7 +130,7 @@ Scenes are sized from the Kokoro clip lengths measured in CI: 1 s lead-in, narra
 | filling-o2-b2 | 2670–3570 | 2700 / 3510 | 25.77 s |
 | worked-example-o2-series | 3570–4470 | 3600 / 4410 | 25.23 s |
 | pitfalls | 4470–5070 | 4500 / 5010 | 15.13 s |
-| key-takeaways | 5070–5790 | 5100 / 5700 | pending |
+| key-takeaways | 5070–5790 | 5100 / 5700 | 18.45 s |
 
 ### Frame plans (summary)
 
@@ -149,4 +149,6 @@ Layout deviations from the designer's plans, made to avoid overlaps: scene 3 low
 
 ## Status
 
-- Scoped; research next.
+- Done. CI green (run 39020253668): typecheck, lint, format, Kokoro soundtrack (193.00 s, peak −3.0 dBFS), MP4 render and stills.
+- CI history: run 1 failed the format check (patch applied, lockfile committed); run 2 failed because the pitfalls narration overran its window by 4 frames; scenes were then retimed from measured clip lengths.
+- Stills were not reviewed against the plan: the repo guardrails ask only for a CI compile check, without downloading the render artifact.

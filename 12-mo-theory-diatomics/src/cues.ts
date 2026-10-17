@@ -10,7 +10,7 @@ const MEASURED_SECONDS: Record<SceneId, number> = {
   "filling-o2-b2": 25.77,
   "worked-example-o2-series": 25.23,
   pitfalls: 15.13,
-  "key-takeaways": 16.5,
+  "key-takeaways": 18.45,
 };
 
 const normalize = (word: string) =>
