@@ -148,7 +148,7 @@ Frames 769, 1460, 1800, 2830, 3745, 4650, 4950.
 
 - [x] Scope confirmed
 - [x] Brief
-- [ ] Design plan
-- [ ] Build
-- [ ] CI green, stills reviewed
-- [ ] Recorded on main
+- [x] Design plan
+- [x] Build
+- [x] CI green, stills reviewed ([run 39019468634](https://github.com/tharunkumar1177/nike-gen/actions/runs/39019468634))
+- [x] Recorded on main
