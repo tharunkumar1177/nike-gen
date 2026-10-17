@@ -5,7 +5,7 @@ Chemistry Foundations, Lesson 11.
 ## Scope
 
 - Audience: first-year university general chemistry
-- Length: about 3 minutes
+- Length: about 4 minutes (raised from 3 for curiosity-led narration with concept bridges)
 - Format: 1920×1080 landscape, 30 fps, H.264 MP4
 - Narration: Kokoro TTS generated in CI, with a quiet, softened synth pad generated in code
 - Scene gaps: 3–8 s between topics within the video
@@ -73,30 +73,30 @@ Worked example, acetic acid CH₃COOH: CH₃ carbon 4 domains → sp³; carbonyl
 
 ### Storyboard and narration
 
-Planned at 6 s silence between lines; the final timeline is laid out from measured narration (see Frame-by-frame).
+Each line opens with a hook and closes by setting up the next concept (`style.md`, Narration). Planned at 6 s silence between lines, about 4 minutes total; the final timeline is laid out from measured narration (see Frame-by-frame).
 
 | Scene | Planned length | Words |
 | --- | --- | --- |
-| 1 `problem-methane` | 26 s | 44 |
-| 2 `sp3-model` | 26 s | 55 |
-| 3 `sp2-sp-pi-bonds` | 26 s | 47 |
-| 4 `expanded-octet` | 27 s | 48 |
-| 5 `worked-example` | 28 s | 55 |
-| 6 `pitfalls` | 27 s | 47 |
+| 1 `problem-methane` | 39 s | 80 |
+| 2 `sp3-model` | 41 s | 84 |
+| 3 `sp2-sp-pi-bonds` | 43 s | 88 |
+| 4 `expanded-octet` | 40 s | 82 |
+| 5 `worked-example` | 41 s | 84 |
+| 6 `pitfalls` | 38 s | 76 |
 | 7 `closing-card` | 8 s | silent |
 
 1. `problem-methane`. Hero diagram: left, carbon energy diagram "C: 2s² 2p²"; right, tetrahedral CH₄ "109.5°". Concept statement: "Hybridisation mathematically combines atomic orbitals to match observed geometry."
-   "Carbon's ground state has two electrons in two s and two in two p. Yet in methane, carbon forms four identical single bonds separated by exactly one hundred nine point five degrees. How? We use a mathematical bookkeeping model called hybridisation."
+   "Let us look at carbon's ground state. It has two electrons in two s, and two in two p. Yet in methane, experiments show carbon forms four identical single bonds, separated by exactly one hundred nine point five degrees. How does it achieve this perfect symmetry from unequal atomic orbitals? To explain this, we use a mathematical bookkeeping model called hybridisation. This model mathematically combines atomic orbitals to match the observed geometry. Let us see how this mixing works in practice."
 2. `sp3-model`. Promote-then-mix: 2s and 2p levels, promotion tagged "Promotion is formal bookkeeping, not physical."; s sphere and p dumbbells become four green sp³ lobes at tetrahedral corners; "sp³ (25% s character)".
-   "Geometry is known first from experiment. To match methane's tetrahedral shape, we mathematically mix one s and three p atomic orbitals. We often draw an electron being promoted first, but this is just bookkeeping; no electron physically jumps. This forms four equivalent S P three hybrids, each with twenty five percent s character."
+   "How do we construct methane's shape? Geometry is known first from experiment, and we assign hybrids to match it. To get a tetrahedral shape, we mathematically mix one s and three p atomic orbitals. We often draw an electron being promoted first, but this is just bookkeeping; no electron physically jumps. This forms four equivalent S P three hybrids, each with twenty five percent s character. This explains four electron domains perfectly, but what if an atom has fewer than four electron domains?"
 3. `sp2-sp-pi-bonds`. Step panels: ethene (trigonal planar, "sp² (33% s)") and ethyne (linear, "sp (50% s)"); leftover p orbitals form π above/below the axis vs end-to-end σ; labels "σ: end-to-end", "π: side-by-side".
-   "For three domains, like ethene, mixing one s and two p orbitals yields three S P two hybrids at one hundred twenty degrees. For two domains, like ethyne, we get two linear S P hybrids. Leftover unhybridised p orbitals form pi bonds by overlapping side by side."
+   "When an atom has fewer domains, we mix fewer orbitals. For three domains, like ethene, mixing one s and two p orbitals yields three S P two hybrids at one hundred twenty degrees. For two domains, like ethyne, we get two linear S P hybrids. But what about the unused p orbitals? Leftover unhybridised p orbitals form pi bonds by overlapping side by side. This distinction matters because pi bonds sit above and below the internuclear axis, unlike end-to-end sigma bonds. Can we expand beyond four domains?"
 4. `expanded-octet`. Static PCl₅ (trigonal bipyramidal, 90°/120°, "sp³d") and SF₆ (octahedral, 90°, "sp³d²"); caution box "Note: d orbitals contribute very little in reality." No mixing animation, no % s.
-   "Five domains form a trigonal bipyramidal shape, labelled S P three D, like in phosphorus pentachloride. Six domains are octahedral, labelled S P three D two, as in sulfur hexafluoride. Textbooks often mix in D orbitals, but modern computations show they actually contribute very little to the bonding."
+   "Some molecules exceed four domains, requiring a different label. Five domains form a trigonal bipyramidal shape, labelled S P three D, like in phosphorus pentachloride. Six domains are octahedral, labelled S P three D two, as in sulfur hexafluoride. Here is a surprising fact: textbooks often mix in D orbitals to explain these expanded shapes, but modern computations show they actually contribute very little to the bonding. Now that we have the labels, how do we apply them to a real molecule?"
 5. `worked-example`. "Worked Example: Acetic Acid" Lewis structure; each centre highlighted in turn: "Methyl C: 4 domains = sp³", "Carbonyl C: 3 domains = sp²", "Hydroxyl O: 4 domains = sp³"; tally "7 σ, 1 π".
-   "Let's analyse acetic acid. The methyl carbon has four domains, so it is S P three. The carbonyl carbon has three domains, because a double bond counts once, making it S P two. The hydroxyl oxygen has two bonds and two lone pairs, so it is also S P three. There are seven sigma bonds and one pi bond."
+   "Counting electron domains is what lets you assign hybridisation in a real molecule. Let us analyse acetic acid. The methyl carbon has four domains, so it is S P three. The carbonyl carbon has three domains, because a double bond counts once, making it S P two. The hydroxyl oxygen has two bonds and two lone pairs, so it is also S P three. In total, there are seven sigma bonds and one pi bond. This seems straightforward, but what traps do students fall into?"
 6. `pitfalls`. Caution-coloured pitfalls box, three bullets on cue: "Geometry dictates hybrids, not vice versa." / "Domains = bonded atoms + lone pairs." / "Water's lone pairs are not identical sp³ "rabbit ears"."
-   "Remember these three pitfalls. First, hybridisation does not physically cause molecular geometry; it merely models it. Second, always count lone pairs as electron domains, not just the visible bond lines. Finally, treating water's lone pairs as two identical S P three rabbit ears is a known oversimplification."
+   "Even with the rules clear, misconceptions are common. Remember these three pitfalls. First, hybridisation does not physically cause molecular geometry; it merely models what we already observe. Second, always count lone pairs as electron domains, not just the visible bond lines. Finally, treating water's lone pairs as two identical S P three rabbit ears is a known oversimplification, as they actually have different energies. Keep these facts in mind as we review the key takeaways."
 7. `closing-card`. "Key Takeaways": "Hybridisation: bookkeeping model matching observed geometries." / "Domains set hybrids: 2 = sp, 3 = sp², 4 = sp³." / "σ bonds: end-to-end. π bonds: side-by-side." / "sp³d/sp³d² are textbook labels; d orbitals contribute little."
 
 ### Stills
@@ -118,7 +118,7 @@ Delivered by `designer` in three sequences (scenes 1–2, 3–4, 5–7); exact c
 
 Implementation deviations (layout fixes, no content change):
 
-- Animation beats are keyed to narrated phrases (`src/cues.ts`); the timeline is laid out from measured narration by `audio/generate.js`, which fails CI if any silence leaves 3–8 s or the total leaves 150–200 s.
+- Animation beats are keyed to narrated phrases (`src/cues.ts`); the timeline is laid out from measured narration by `audio/generate.js`, which fails CI if any silence leaves 3–8 s or the total leaves 210–270 s.
 - Scene 1: concept statement at 40 px (48 px overflows the safe width); "CH₄" label added under the molecule.
 - Scene 2: the 2p boxes sit at x 390–570 (not 300–480) so the merged row clears the energy axis; a "four sp³" row label replaces the 2s/2p labels after mixing; caution text uses the dark caution colour for contrast.
 - Scene 3: titles shown from the scene start; panel labels name the molecule ("Ethene · sp² (33% s)").
@@ -136,3 +136,4 @@ Implementation deviations (layout fixes, no content change):
 - [x] CI green, stills reviewed ([run 39020913408](https://github.com/tharunkumar1177/nike-gen/actions/runs/39020913408))
 - [x] Recorded on main
 - [ ] Restyled to the current style guide (font, title block, safe margin)
+- [ ] Curiosity-led narration with concept bridges (about 4 minutes)

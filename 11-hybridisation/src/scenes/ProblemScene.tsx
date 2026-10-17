@@ -21,7 +21,7 @@ import { colors, type } from "../theme";
 const SCENE = "problem-methane";
 
 const BEATS = {
-  boxes: cue(SCENE, "Carbon's ground state"),
+  boxes: cue(SCENE, "carbon's ground state"),
   sElectrons: cue(SCENE, "two electrons in two s"),
   pElectrons: cue(SCENE, "and two in two p"),
   methane: cue(SCENE, "Yet in methane"),
