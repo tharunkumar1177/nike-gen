@@ -74,7 +74,7 @@ Narration text lives in `audio/script.json`; on-screen cues are tied to spoken p
 
 ### Timing
 
-Same scheme as Lesson 7: each narrated scene lasts its declared clip length (`seconds`) plus a 180-frame gap; narration starts 30 frames in, so lines are separated by 6 s of silence. `audio/generate.js` fails CI if any gap leaves 3–8 s and prints the measured lengths. 30-frame crossfades; silent 360-frame closing card. Estimated runtime about 183 s.
+Same scheme as Lesson 7: each narrated scene lasts its declared clip length (`seconds`) plus a 180-frame gap; narration starts 30 frames in, so lines are separated by 6 s of silence. `audio/generate.js` fails CI if any gap leaves 3–8 s and prints the measured lengths. 30-frame crossfades; silent 360-frame closing card. Measured runtime 197.1 s.
 
 ### Style
 
@@ -116,5 +116,7 @@ Atoms: H r 24 white with dark outline; C r 32 #4C566A; O r 32 #BF616A; F r 32 / 
 - [x] Research
 - [x] Design
 - [x] Build
-- [ ] CI green
-- [ ] Merged
+- [x] CI green: [run 39021503631](https://github.com/tharunkumar1177/nike-gen/actions/runs/39021503631), 5912 frames (197.1 s), all gaps 5–6 s
+- [x] Merged
+
+Attempts: 1 failed Prettier check (CI patch applied, lockfile committed); 2 failed the narration gap check (Kokoro clips longer than estimated; `seconds` set to measured lengths); 3 green. Stills were not reviewed visually (verification limited to CI, as for Lesson 7).
