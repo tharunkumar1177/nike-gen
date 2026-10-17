@@ -17,6 +17,7 @@ on:
           - 11-hybridisation
           - 12-mo-theory-diatomics
           - 16-equilibrium-le-chatelier
+          - 17-acids-bases-pka-buffers-titration-curves
           - 09-lewis-structures-formal-charge-resonance
 
 permissions:
