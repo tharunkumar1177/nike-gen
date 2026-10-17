@@ -3,7 +3,7 @@
   "durationInFrames": 8100,
   "voice": {
     "id": "af_heart",
-    "speed": 1,
+    "speed": 0.88,
     "peakDbfs": -3
   },
   "pad": {

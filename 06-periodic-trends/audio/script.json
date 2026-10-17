@@ -1,0 +1,58 @@
+{
+  "fps": 30,
+  "voice": {
+    "id": "af_heart",
+    "speed": 1,
+    "peakDbfs": -3
+  },
+  "pad": {
+    "chordHz": [110, 164.81, 220, 261.63],
+    "peakDbfs": -28,
+    "duckDb": -8,
+    "duckAttackMs": 120,
+    "duckReleaseMs": 600,
+    "fadeInFrames": 60,
+    "fadeOutFrames": 120
+  },
+  "timeline": {
+    "firstLeadFrames": 120,
+    "leadFrames": 110,
+    "gapFrames": 180,
+    "crossfadeFrames": 30,
+    "endHoldFrames": 90,
+    "minGapSeconds": 3,
+    "maxGapSeconds": 8,
+    "minTotalSeconds": 150,
+    "maxTotalSeconds": 200
+  },
+  "lines": [
+    {
+      "scene": "model-zeff",
+      "text": "Periodic trends follow from Coulomb attraction between the nucleus and valence electrons. Across a period, protons are added, but electrons in the same shell shield each other poorly. Following Slater's rules, effective nuclear charge, or Z effective, rises. Protons win, and valence electrons are held tighter."
+    },
+    {
+      "scene": "atomic-radius",
+      "text": "Because Z effective rises across period two, the nucleus pulls the electron cloud closer, so atomic radius decreases. Down group one, valence electrons sit in a higher shell. This larger n value means electrons are farther from the nucleus, so atomic radius increases."
+    },
+    {
+      "scene": "ionization-energy",
+      "text": "First ionization energy is the energy required to remove the most loosely bound electron. It generally rises across a period and falls down a group. However, removing beryllium's two s electron takes nine hundred kilojoules per mole, while boron dips to eight hundred and one, because two p is higher in energy. Nitrogen to oxygen also dips, driven by ordinary Coulomb repulsion between paired electrons."
+    },
+    {
+      "scene": "electron-affinity",
+      "text": "Electron affinity is the energy change when an electron is added. By I U P A C convention, values are positive when energy is released. Affinity generally rises toward the halogens. However, nitrogen, beryllium, and neon are unbound, because the added electron must pair, or enter a higher subshell or shell. Fluorine releases less energy than chlorine, because its small size causes strong electron electron repulsion."
+    },
+    {
+      "scene": "electronegativity",
+      "text": "Electronegativity is an index of an atom's pull on bonding electrons, not a measured energy like affinity. Nitrogen shows this difference: its affinity is unbound, but its electronegativity is three point zero four. Fluorine is the highest at three point nine eight, while cesium and francium are the lowest."
+    },
+    {
+      "scene": "worked-example",
+      "text": "Let's rank an isoelectronic series by radius: oxide, fluoride, sodium, magnesium, and aluminum ions. These all have ten electrons. As we move from eight protons in oxide to thirteen in the aluminum ion, the higher nuclear charge pulls the same ten electrons closer. Therefore, the aluminum three plus ion is the smallest."
+    },
+    {
+      "scene": "closing-card",
+      "text": "Effective nuclear charge drives these trends. Radius shrinks across, but grows down. Ionization energy and affinity generally rise across. Finally, electronegativity measures bond pull, not isolated energy."
+    }
+  ]
+}
